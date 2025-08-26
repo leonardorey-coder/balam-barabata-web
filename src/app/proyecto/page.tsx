@@ -86,7 +86,7 @@ export default function Home() {
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Balam Barabata es una pequeña comunidad ubicada en Uxuxubi, Quintana Roo,
-                rodeada de selva, cenotes y fauna silvestre. Su nombre significa "lugar de los monos"
+                rodeada de selva, cenotes y fauna silvestre. Su nombre significa &quot;lugar de los monos&quot;
                 en lengua maya, ya que es común encontrar monos aulladores en la zona.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">

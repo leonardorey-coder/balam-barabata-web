@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
@@ -37,11 +38,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center gap-3">
-            <img
+            <Image
               src="/images/balam-glyph.png"
               alt="Logotipo Balam Barabata"
+              width={40}
+              height={40}
               className={clsx(
-                'w-10 h-10 transition-all duration-300',
+                'transition-all duration-300',
                 // Oscurecer sobre header blanco para no camuflarse
                 isOverlayPage && isAtTop ? '' : 'filter brightness-0 opacity-80'
               )}

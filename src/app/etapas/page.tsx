@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import StageCard from '@/components/StageCard';
 import CallToAction from '@/components/CallToAction';
 import { stages } from '@/content/stages';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Etapas | Balam Barabata',

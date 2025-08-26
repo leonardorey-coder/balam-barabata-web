@@ -18,27 +18,6 @@ export default function IdealForCarousel({ data }: IdealForCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scrollTo = (index: number) => {
-    if (scrollContainerRef.current) {
-      const cardWidth = 400; // Approximate width of each card including margin
-      scrollContainerRef.current.scrollTo({
-        left: index * cardWidth,
-        behavior: 'smooth'
-      });
-      setCurrentIndex(index);
-    }
-  };
-
-  const scrollLeft = () => {
-    const newIndex = currentIndex > 0 ? currentIndex - 1 : data.length - 1;
-    scrollTo(newIndex);
-  };
-
-  const scrollRight = () => {
-    const newIndex = currentIndex < data.length - 1 ? currentIndex + 1 : 0;
-    scrollTo(newIndex);
-  };
-
   const handleScroll = () => {
     if (scrollContainerRef.current) {
       const cardWidth = 400;

@@ -1,10 +1,8 @@
 interface TestimonialCardProps {
-  name: string;
   comment: string;
-  avatar: string;
 }
 
-export default function TestimonialCard({ name, comment, avatar }: TestimonialCardProps) {
+export default function TestimonialCard({ comment }: TestimonialCardProps) {
   return (
     <div className="flex-none w-80 mx-4">
       <div className="bg-blue-50 rounded-xl p-6 relative">
@@ -12,7 +10,7 @@ export default function TestimonialCard({ name, comment, avatar }: TestimonialCa
           <div className="w-11 h-10 bg-blue-50 transform rotate-45"></div>
         </div>
         <p className="text-gray-800 text-sm leading-relaxed mb-4">
-          "{comment}"
+          &quot;{comment}&quot;
         </p>
       </div>
       <div className="flex items-center justify-center mt-4">

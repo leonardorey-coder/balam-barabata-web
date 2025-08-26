@@ -30,9 +30,7 @@ export default function TestimonialsCarousel({
         {items.map((testimonial, index) => (
           <div key={index} className="flex-shrink-0">
             <TestimonialCard
-              name={testimonial.name}
               comment={testimonial.comment}
-              avatar={testimonial.avatar}
             />
           </div>
         ))}
