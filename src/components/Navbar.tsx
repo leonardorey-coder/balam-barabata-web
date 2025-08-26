@@ -11,17 +11,18 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
   const pathname = usePathname();
+  const isPresentacion = pathname?.startsWith('/presentacion');
   const isOverlayPage = (
     pathname === '/' ||
     pathname?.startsWith('/proyecto')
   );
 
-  // La página de presentacion usa su propio header dentro del iframe
-  if (pathname?.startsWith('/presentacion')) {
-    return null;
-  }
-
   useEffect(() => {
+    if (isPresentacion) {
+      // No listeners; esta ruta no muestra Navbar
+      setIsAtTop(true);
+      return;
+    }
     const updateTopFromWindow = () => {
       setIsAtTop(window.scrollY <= 0);
     };
@@ -33,13 +34,18 @@ export default function Navbar() {
     return () => {
       window.removeEventListener('scroll', updateTopFromWindow);
     };
-  }, [pathname]);
+  }, [pathname, isPresentacion]);
 
   const navigation = [
     { name: 'Amenidades', href: '/amenidades' },
     { name: 'Etapas', href: '/etapas' },
     { name: 'Contacto', href: '/contacto' },
   ];
+
+  // La página de presentacion usa su propio header dentro del iframe
+  if (isPresentacion) {
+    return null;
+  }
 
   return (
     <nav
