@@ -256,7 +256,7 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* Mapa conceptual */}
+      {/* Mapa real */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -268,19 +268,19 @@ export default function ContactoPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-            <div className="h-64 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-selva rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPinIcon className="w-8 h-8 text-white" />
-                </div>
-                <p className="text-lg font-semibold text-gray-700 mb-2">
-                  Mapa interactivo próximamente
-                </p>
-                <p className="text-gray-600">
-                  Carretera Mérida-Cancún Km 85
-                </p>
-              </div>
+          <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6">
+            <div className="w-full h-[450px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://maps.google.com/maps?q=20.45,-87.31&hl=es&z=14&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+                title="Mapa Balam Barabata"
+              />
             </div>
           </div>
         </div>

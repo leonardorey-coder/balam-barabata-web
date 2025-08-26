@@ -12,6 +12,7 @@ export default function Footer() {
             Sé parte de un proyecto que conserva el&nbsp;<strong>70&nbsp;%</strong> de su área
             natural para las generaciones futuras.
           </p>
+          {/* CTA removido: solo aparece en la presentación estática */}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div>
@@ -28,8 +29,13 @@ export default function Footer() {
             <h4 className="text-sm sm:text-base font-semibold mb-3">Navegación</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/presentacion/index.html" className="text-gray-300 hover:text-white transition-colors">
                   Inicio
+                </Link>
+              </li>
+              <li>
+                <Link href="/proyecto" className="text-gray-300 hover:text-white transition-colors">
+                  Proyecto
                 </Link>
               </li>
               <li>

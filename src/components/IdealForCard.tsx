@@ -27,7 +27,10 @@ export default function IdealForCard({
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-blue-600" />
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: 'url(/images/areadespa.jpeg)' }}
+          />
         )}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90" />
         

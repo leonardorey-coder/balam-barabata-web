@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
   const pathname = usePathname();
-  const isHome = pathname === '/';
+  const isOverlayPage = pathname === '/' || pathname?.startsWith('/proyecto');
 
   useEffect(() => {
     const onScroll = () => {
@@ -22,7 +22,6 @@ export default function Navbar() {
   }, []);
 
   const navigation = [
-    { name: 'Inicio', href: '/' },
     { name: 'Amenidades', href: '/amenidades' },
     { name: 'Etapas', href: '/etapas' },
     { name: 'Contacto', href: '/contacto' },
@@ -32,17 +31,26 @@ export default function Navbar() {
     <nav
       className={clsx(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isHome && isAtTop ? 'bg-white/0' : 'bg-white shadow-sm'
+        isOverlayPage && isAtTop ? 'bg-transparent' : 'bg-white shadow-sm'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center gap-3">
+            <img
+              src="/images/balam-glyph.png"
+              alt="Logotipo Balam Barabata"
+              className={clsx(
+                'w-10 h-10 transition-all duration-300',
+                // Oscurecer sobre header blanco para no camuflarse
+                isOverlayPage && isAtTop ? '' : 'filter brightness-0 opacity-80'
+              )}
+            />
             <Link
-              href="/"
+              href="/proyecto"
               className={clsx(
                 'text-2xl font-bold transition-colors duration-300',
-                isHome && isAtTop ? 'text-white drop-shadow-sm' : 'text-selva'
+                isOverlayPage && isAtTop ? 'text-white drop-shadow-sm' : 'text-selva'
               )}
             >
               Balam Barabata
@@ -57,7 +65,7 @@ export default function Navbar() {
                   href={item.href}
                   className={clsx(
                     'px-3 py-2 text-sm font-medium transition-colors duration-200',
-                    isHome && isAtTop ? 'text-white/90 hover:text-white' : 'text-gray-700 hover:text-selva'
+                    isOverlayPage && isAtTop ? 'text-white/90 hover:text-white' : 'text-gray-700 hover:text-selva'
                   )}
                 >
                   {item.name}
@@ -71,7 +79,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={clsx(
                 'inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset transition-colors duration-200',
-                isHome && isAtTop ? 'text-white hover:text-white focus:ring-white/70' : 'text-gray-700 hover:text-selva focus:ring-selva'
+                isOverlayPage && isAtTop ? 'text-white hover:text-white focus:ring-white/70' : 'text-gray-700 hover:text-selva focus:ring-selva'
               )}
               aria-label="Abrir menú principal"
             >
@@ -92,7 +100,7 @@ export default function Navbar() {
         <div
           className={clsx(
             'px-2 pt-2 pb-3 space-y-1',
-            isHome && isAtTop ? 'bg-white/10' : 'bg-white border-t'
+            isOverlayPage && isAtTop ? 'bg-white/10' : 'bg-white border-t'
           )}
         >
           {navigation.map((item) => (
@@ -101,7 +109,7 @@ export default function Navbar() {
               href={item.href}
               className={clsx(
                 'block px-3 py-2 text-base font-medium transition-colors duration-200',
-                isHome && isAtTop ? 'text-white/90 hover:text-white' : 'text-gray-700 hover:text-selva'
+                isOverlayPage && isAtTop ? 'text-white/90 hover:text-white' : 'text-gray-700 hover:text-selva'
               )}
               onClick={() => setIsMenuOpen(false)}
             >

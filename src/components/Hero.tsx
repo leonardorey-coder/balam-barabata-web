@@ -13,6 +13,7 @@ export default function Hero() {
         poster="/images/selva.jpg"
         aria-hidden="true"
       >
+        <source src="/videos/intro.mobile.mp4" media="(max-width: 768px)" type="video/mp4" />
         <source src="/videos/intro.mp4" type="video/mp4" />
       </video>
       
