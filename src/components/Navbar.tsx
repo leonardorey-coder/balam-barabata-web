@@ -11,16 +11,29 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
   const pathname = usePathname();
-  const isOverlayPage = pathname === '/' || pathname?.startsWith('/proyecto');
+  const isOverlayPage = (
+    pathname === '/' ||
+    pathname?.startsWith('/proyecto')
+  );
+
+  // La página de presentacion usa su propio header dentro del iframe
+  if (pathname?.startsWith('/presentacion')) {
+    return null;
+  }
 
   useEffect(() => {
-    const onScroll = () => {
+    const updateTopFromWindow = () => {
       setIsAtTop(window.scrollY <= 0);
     };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+
+    // Always listen to window scroll
+    updateTopFromWindow();
+    window.addEventListener('scroll', updateTopFromWindow, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', updateTopFromWindow);
+    };
+  }, [pathname]);
 
   const navigation = [
     { name: 'Amenidades', href: '/amenidades' },

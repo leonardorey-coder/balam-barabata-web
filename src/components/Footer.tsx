@@ -1,19 +1,36 @@
+"use client";
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isPresentacion = pathname?.startsWith('/presentacion');
+  const isProjectRoute = (
+    pathname === '/proyecto' ||
+    pathname?.startsWith('/amenidades') ||
+    pathname?.startsWith('/etapas') ||
+    pathname?.startsWith('/contacto')
+  );
+
+  // No mostrar footer en la presentación embebida
+  if (isPresentacion) return null;
+
   return (
     <footer className="bg-selva text-white">
       <div className="max-w-7xl mx-auto py-6 md:py-8 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
-            Únete a nosotros
-          </h2>
-          <p className="mt-2 text-base sm:text-lg text-chukum-200 max-w-2xl mx-auto">
-            Sé parte de un proyecto que conserva el&nbsp;<strong>70&nbsp;%</strong> de su área
-            natural para las generaciones futuras.
-          </p>
-          {/* CTA removido: solo aparece en la presentación estática */}
-        </div>
+        {/* Bloque superior "Únete a nosotros" oculto en rutas del proyecto para evitar duplicado con CallToAction */}
+        {!isProjectRoute && (
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">
+              Únete a nosotros
+            </h2>
+            <p className="mt-2 text-base sm:text-lg text-chukum-200 max-w-2xl mx-auto">
+              Sé parte de un proyecto que conserva el&nbsp;<strong>70&nbsp;%</strong> de su área
+              natural para las generaciones futuras.
+            </p>
+          </div>
+        )}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div>
             <h3 className="text-lg sm:text-xl font-bold mb-3">Balam Barabata</h3>
@@ -29,7 +46,7 @@ export default function Footer() {
             <h4 className="text-sm sm:text-base font-semibold mb-3">Navegación</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/presentacion/index.html" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/presentacion" className="text-gray-300 hover:text-white transition-colors">
                   Inicio
                 </Link>
               </li>
