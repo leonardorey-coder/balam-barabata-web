@@ -8,6 +8,7 @@ import Gallery from '@/components/Gallery';
 import { amenities } from '@/content/amenities';
 import { stages } from '@/content/stages';
 import Link from 'next/link';
+import SegmentedVideo from '@/components/SegmentedVideo';
 
 const testimonials = [
   {
@@ -101,13 +102,25 @@ export default function Home() {
             </div>
             
             <div className="relative">
-              {/* Video placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-green-400 to-blue-600 rounded-3xl flex items-center justify-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-                  </svg>
-                </div>
+              <div className="relative aspect-video rounded-3xl overflow-hidden">
+                <SegmentedVideo
+                  start={10}
+                  duration={5}
+                  className="w-full h-full object-cover"
+                  poster="/images/selva.jpg"
+                  sources={[
+                    {
+                      src: '/videos/intro.mobile.mp4#t=10,15',
+                      media: '(max-width: 768px)',
+                      type: 'video/mp4',
+                    },
+                    {
+                      src: '/videos/intro.mp4#t=10,15',
+                      type: 'video/mp4',
+                    },
+                  ]}
+                />
+                <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/20 via-transparent to-black/30" />
               </div>
             </div>
           </div>
@@ -221,4 +234,3 @@ export default function Home() {
     </div>
   );
 }
-

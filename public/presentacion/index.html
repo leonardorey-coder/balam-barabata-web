@@ -148,10 +148,13 @@
         
         <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl">
             
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight opacity-0 animate-fade-in-up">
+            <h1 class="text-[clamp(2rem,8vw,4.5rem)] font-bold mb-6 tracking-tight opacity-0 animate-fade-in-up">
                 BALAM BARABATA
             </h1>
-            <p class="text-xl md:text-2xl mb-8 font-light leading-relaxed opacity-0 animate-fade-in-up-delay max-w-4xl mx-auto">
+            <p class="text-[clamp(1rem,3.6vw,1.25rem)] text-white/80 mb-5 opacity-0 animate-fade-in-up-delay">
+                Reserva Natural: Tu santuario personal
+            </p>
+            <p class="text-[clamp(1rem,4.5vw,1.5rem)] mb-8 font-light leading-normal md:leading-relaxed opacity-0 animate-fade-in-up-delay max-w-4xl mx-auto">
                 Desarrollo inmobiliario premium en Uxuxubi, Riviera Maya. 
                 Inversión estratégica en sustentabilidad y conservación natural.
             </p>
@@ -195,6 +198,90 @@
                 <div class="animate-on-scroll">
                     <div class="text-3xl font-bold text-selva mb-2">200</div>
                     <div class="text-gray-600 font-medium">Lotes Totales</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosistema de Bienestar -->
+    <section id="ecosistema" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Nuestro Ecosistema de Bienestar
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">
+                    Un master plan integral donde naturaleza, salud, comunidad y economía circular conviven en armonía.
+                </p>
+            </div>
+
+            <!-- Mapa interactivo estilizado -->
+            <div class="relative mb-12 animate-on-scroll rounded-3xl overflow-hidden p-2 bg-gradient-to-br from-selva/10 to-chukum-100/20 ring-1 ring-white/20 shadow-xl">
+                <div class="relative w-full overflow-x-auto rounded-2xl">
+                  <svg viewBox="0 0 1920 1080" id="masterplan" aria-label="Master Plan Interactivo de Balam Barabata" class="w-full h-auto block">
+                    <image href="/images/masterplan.jpeg" width="1920" height="1080" />
+
+                    <circle cx="960" cy="380" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="cenote" />
+                    <circle cx="680" cy="520" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="temazcal" />
+                    <circle cx="850" cy="600" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="casa-club" />
+                    <circle cx="1200" cy="750" r="45" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="reserva-ecologica" />
+                    <circle cx="720" cy="450" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="wellness-center" />
+                    <circle cx="1050" cy="550" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="mercado" />
+                    <circle cx="1150" cy="300" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="meliponario" />
+                    <circle cx="500" cy="700" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="privada-fundadores" />
+                  </svg>
+                </div>
+                <span class="absolute top-4 left-4 text-xs font-semibold tracking-wide uppercase text-white/90 bg-black/30 border border-white/20 rounded-full px-3 py-1 backdrop-blur-sm">Masterplan</span>
+                <p class="text-center text-sm text-gray-600 mt-4">*Toca o pasa el cursor sobre los puntos para conocer más.</p>
+            </div>
+            <div id="tooltip" class="fixed z-50 hidden max-w-xs rounded-xl shadow-2xl bg-white/90 backdrop-blur-sm transition-opacity duration-200" style="pointer-events: none;"></div>
+
+            <!-- Cuatro pilares -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pilares 1‑4 -->
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-semibold text-selva mb-1">Santuario Ecológico</h3>
+                    <p class="text-gray-600 text-sm mb-3">ADVC certificada, 70 % de conservación por lote, meliponarios y senderos botánicos.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                        <i data-lucide="recycle" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4">
+                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-semibold text-selva mb-1">Salud Holística</h3>
+                    <p class="text-gray-600 text-sm mb-3">Temazcal, cenote privado, cámara hiperbárica y saberes ancestrales en un solo lugar.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90">
+                        <i data-lucide="activity" class="w-4 h-4"></i>
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-semibold text-selva mb-1">Certeza Patrimonial</h3>
+                    <p class="text-gray-600 text-sm mb-3">Fideicomiso en régimen condominal, plusvalía exponencial desde la etapa fundadora.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90">
+                        <i data-lucide="shield" class="w-4 h-4"></i>
+                        <i data-lucide="check-circle" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-semibold text-selva mb-1">Comunidad Exclusiva</h3>
+                    <p class="text-gray-600 text-sm mb-3">Solo 200 familias, con mercado, plaza, centro de negocios y amenities de clase mundial.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -413,12 +500,161 @@
                 <img id="modalImage" src="" alt="" class="max-h-[80vh] w-auto object-contain" />
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
                     <h3 id="modalTitle" class="text-white font-semibold text-xl"></h3>
+                    <p id="modalDesc" class="text-white/90 text-sm mt-1"></p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Benefits Section -->
+    <!-- Gift Models Section (Etapa II) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Modelos de Regalo Exclusivos · Etapa II
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">
+                    Explora la colección de modelos de cortesía disponibles para la Etapa II. Diseño elegante, materiales auténticos y lista para inspirarte.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Modelo I -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo1.jpeg" 
+                        alt="Modelo I — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo I
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo II -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo2.jpeg" 
+                        alt="Modelo II — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo II
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo III -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo3.jpeg" 
+                        alt="Modelo III — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo III
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo IV -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo4.jpeg" 
+                        alt="Modelo IV — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo IV
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo V -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo5.jpeg" 
+                        alt="Modelo V — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo V
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo VI -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo6.jpeg" 
+                        alt="Modelo VI — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo VI
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="beneficios" class="py-20 bg-selva">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -568,6 +804,56 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Oferta Fundadores -->
+    <section class="py-20 bg-chukum-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Oferta Fundadores · Etapa 1
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto animate-on-scroll">
+                    Sé uno de los <strong>40 lotes pioneros</strong> y obtén descuento escalonado por lanzamiento.
+                </p>
+            </div>
+
+            <div class="animate-on-scroll">
+                <div class="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-200 bg-white">
+                    <div class="absolute -inset-x-1 -top-1 h-1 bg-gradient-to-r from-selva via-chukum-600 to-selva"></div>
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-gradient-to-r from-selva to-chukum-700 text-white">
+                            <tr>
+                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Lotes</th>
+                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Precio especial</th>
+                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Descuento vs. mercado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-chukum-50/70 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-selva">1‑10</td>
+                                <td class="px-6 py-4 font-semibold">$840,000 MXN</td>
+                                <td class="px-6 py-4 font-semibold text-chukum-700">‑30 %</td>
+                            </tr>
+                            <tr class="hover:bg-chukum-50/70 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-selva">11‑25</td>
+                                <td class="px-6 py-4 font-semibold">$960,000 MXN</td>
+                                <td class="px-6 py-4 font-semibold text-chukum-700">‑20 %</td>
+                            </tr>
+                            <tr class="hover:bg-chukum-50/70 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-selva">26‑40</td>
+                                <td class="px-6 py-4 font-semibold">$1,080,000 MXN</td>
+                                <td class="px-6 py-4 font-semibold text-chukum-700">‑10 %</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="mt-6 text-center text-sm text-gray-600 animate-on-scroll">
+                *Precios de lanzamiento. Incluye alberca y temazcal exclusivos para la privada de la Etapa 1.
+            </p>
         </div>
     </section>
 
@@ -770,13 +1056,15 @@
         });
     </script>
     <script>
-        // Gallery Modal functionality
-        document.addEventListener('DOMContentLoaded', function() {
+            // Gallery Modal functionality (project gallery + gift models)
+            document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('imageModal');
             const modalImage = document.getElementById('modalImage');
             const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
             const closeModal = document.getElementById('closeModal');
             const galleryItems = document.querySelectorAll('.gallery-item');
+            const giftItems = document.querySelectorAll('.gift-gallery-item');
 
             // Gallery data
             const galleryData = [
@@ -809,7 +1097,34 @@
                     modalImage.src = imageData.src;
                     modalImage.alt = imageData.alt;
                     modalTitle.textContent = imageData.title;
+                    if (modalDesc) modalDesc.textContent = '';
                     
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Gift models data
+            const giftData = [
+                { src: '../images/galery/modelo1.jpeg', title: 'Modelo I', alt: 'Modelo I — Cortesía Etapa II' },
+                { src: '../images/galery/modelo2.jpeg', title: 'Modelo II', alt: 'Modelo II — Cortesía Etapa II' },
+                { src: '../images/galery/modelo3.jpeg', title: 'Modelo III', alt: 'Modelo III — Cortesía Etapa II' },
+                { src: '../images/galery/modelo4.jpeg', title: 'Modelo IV', alt: 'Modelo IV — Cortesía Etapa II' },
+                { src: '../images/galery/modelo5.jpeg', title: 'Modelo V', alt: 'Modelo V — Cortesía Etapa II' },
+                { src: '../images/galery/modelo6.jpeg', title: 'Modelo VI', alt: 'Modelo VI — Cortesía Etapa II' },
+            ];
+
+            // Add click event to gift model items
+            giftItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    const imageData = giftData[index];
+                    if (!imageData) return;
+                    modalImage.src = imageData.src;
+                    modalImage.alt = imageData.alt;
+                    modalTitle.textContent = imageData.title;
+                    if (modalDesc) modalDesc.textContent = '';
+
                     modal.classList.remove('hidden');
                     modal.classList.add('flex');
                     document.body.style.overflow = 'hidden';
@@ -839,6 +1154,81 @@
                 }
             });
         });
+    </script>
+    <script type="module">
+      // Masterplan hotspots interactions
+      import { hotspots } from '/content/masterplan-hotspots.js';
+
+      const tooltipContainer = document.getElementById('tooltip');
+      const svg = document.getElementById('masterplan');
+      if (tooltipContainer && svg) {
+        const allHotspots = svg.querySelectorAll('.hotspot');
+
+        let currentHotspotId = null;
+
+        allHotspots.forEach((element) => {
+          element.addEventListener('mouseenter', showTooltip);
+          element.addEventListener('mouseleave', hideTooltip);
+          element.addEventListener('mousemove', positionTooltip);
+          element.addEventListener('click', openModalFromHotspot);
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!(e.target instanceof Element)) return;
+          if (!e.target.classList.contains('hotspot')) {
+            hideTooltip();
+          }
+        });
+
+        function showTooltip(event) {
+          const target = event.target;
+          const data = hotspots.find((h) => h.id === target.dataset.id);
+          if (!data) return;
+          tooltipContainer.innerHTML = `
+            <img src="${data.img}" alt="${data.title}" class="w-full h-32 object-cover rounded-t-xl" />
+            <div class="p-4">
+              <h4 class="font-bold text-gray-800 mb-1 text-lg">${data.title}</h4>
+              <p class="text-sm text-gray-600">${data.description}</p>
+            </div>`;
+          tooltipContainer.classList.remove('hidden');
+          currentHotspotId = data.id;
+          positionTooltip(event);
+        }
+
+        function hideTooltip() {
+          tooltipContainer.classList.add('hidden');
+          currentHotspotId = null;
+        }
+
+        function positionTooltip(event) {
+          // Offset of 15px to avoid flicker
+          tooltipContainer.style.left = event.pageX + 15 + 'px';
+          tooltipContainer.style.top = event.pageY + 15 + 'px';
+        }
+
+        function openModalFromHotspot(event) {
+          event.stopPropagation();
+          const target = event.target;
+          const data = hotspots.find((h) => h.id === target.dataset.id);
+          if (!data) return;
+          // Populate existing gallery modal
+          const modal = document.getElementById('imageModal');
+          const modalImage = document.getElementById('modalImage');
+          const modalTitle = document.getElementById('modalTitle');
+          const modalDesc = document.getElementById('modalDesc');
+          if (!modal || !modalImage || !modalTitle) return;
+          modalImage.src = data.img;
+          modalImage.alt = data.title;
+          modalTitle.textContent = data.title;
+          if (modalDesc) modalDesc.textContent = data.description || '';
+          // Show modal
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+          // Hide tooltip when opening modal
+          hideTooltip();
+        }
+      }
     </script>
     <script>
         // Mobile menu toggle with animated hamburger
