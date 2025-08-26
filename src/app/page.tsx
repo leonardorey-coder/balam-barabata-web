@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 export default function Page() {
   const router = useRouter()
   useEffect(() => {
-    router.replace('/presentacion-app')
+    router.replace('/presentacion')
   }, [router])
   return null
 }

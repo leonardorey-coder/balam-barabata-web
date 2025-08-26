@@ -11,7 +11,7 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: '/images/galery/area de camara hiperbárica y terapias.jpeg',
+    src: '/images/galery/area-camara-spa.jpeg',
     title: 'Área de Cámara Hiperbárica y Terapias',
     alt: 'Área de Cámara Hiperbárica y Terapias en Balam Barabata'
   },
