@@ -11,11 +11,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
   const pathname = usePathname();
-  const isPresentacion = pathname?.startsWith('/presentacion');
-  const isOverlayPage = (
-    pathname === '/' ||
-    pathname?.startsWith('/proyecto')
-  );
+  const isPresentacion = pathname?.startsWith('/presentacion-app');
+  const isOverlayPage = pathname === '/' || pathname?.startsWith('/proyecto');
 
   useEffect(() => {
     if (isPresentacion) {
