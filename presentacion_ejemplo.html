@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balam Barabata - Tu Futuro Sustentable Te Espera</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e2d;
+            background: linear-gradient(135deg, #1a4d3a 0%, #2d5a3d 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        /* Header Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23134e3a" width="1200" height="600"/><circle fill="%23235a3f" cx="200" cy="100" r="80" opacity="0.3"/><circle fill="%232d6b4a" cx="800" cy="300" r="120" opacity="0.2"/><path fill="%234a7c59" d="M0,400 Q300,350 600,400 T1200,380 L1200,600 L0,600 Z" opacity="0.4"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 40px;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(26, 77, 58, 0.3) 100%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: #b8e6d1;
+        }
+        
+        .urgency-banner {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.4);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Etapas Section */
+        .etapas {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+        }
+        
+        .etapas h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #1a4d3a;
+            position: relative;
+        }
+        
+        .etapas h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #2d5a3d, #4a7c59);
+        }
+        
+        .etapas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .etapa-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(26, 77, 58, 0.15);
+            border: 3px solid transparent;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .etapa-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #ff6b35, #f7931e, #2d5a3d);
+        }
+        
+        .etapa-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(26, 77, 58, 0.25);
+            border-color: #4a7c59;
+        }
+        
+        .etapa-numero {
+            background: linear-gradient(135deg, #2d5a3d, #4a7c59);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .etapa-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #1a4d3a;
+        }
+        
+        .etapa-precio {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin: 20px 0;
+        }
+        
+        .etapa-descuento {
+            background: #ff6b35;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        /* Beneficios únicos */
+        .beneficios {
+            padding: 60px 40px;
+            background: #1a4d3a;
+            color: white;
+        }
+        
+        .beneficios h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 50px;
+            color: #b8e6d1;
+        }
+        
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .beneficio-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .beneficio-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .beneficio-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #b8e6d1;
+        }
+        
+        /* Escasez artificial */
+        .escasez {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            text-align: center;
+        }
+        
+        .countdown {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Call to Action */
+        .cta {
+            padding: 80px 40px;
+            background: linear-gradient(135deg, #2d5a3d 0%, #1a4d3a 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.6);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 20px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: 3px solid white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #2d5a3d;
+        }
+        
+        /* Testimonial simulado */
+        .testimonial {
+            padding: 60px 40px;
+            background: #f8fffe;
+            text-align: center;
+        }
+        
+        .testimonial-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: #2c3e2d;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            margin-top: 30px;
+            font-weight: bold;
+            color: #1a4d3a;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .etapas-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .countdown {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>BALAM BARABATA</h1>
+                <div class="hero-subtitle">El Último Santuario Sustentable de la Riviera Maya</div>
+                <div class="urgency-banner">
+                    ⚡ SOLO 40 LOTES DISPONIBLES EN ETAPA 1 - OPORTUNIDAD LIMITADA ⚡
+                </div>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                    A menos de 1 km del ANP "Felipe Carrillo Puerto". 50 hectáreas de selva virgen donde tu inversión 
+                    no solo crece... se regenera junto con la naturaleza.
+                </p>
+            </div>
+        </section>
+
+        <!-- Etapas de Inversión -->
+        <section class="etapas">
+            <h2>TRES OPORTUNIDADES ÚNICAS</h2>
+            <p style="text-align: center; font-size: 1.3rem; margin-bottom: 50px; color: #2c3e2d;">
+                Cada etapa representa una oportunidad diferente de inversión. Una vez agotada, no habrá otra igual.
+            </p>
+            
+            <div class="etapas-grid">
+                <div class="etapa-card">
+                    <div class="etapa-numero">1</div>
+                    <h3>LA PRIMICIA</h3>
+                    <div class="etapa-descuento">30% DE DESCUENTO</div>
+                    <div class="etapa-precio">$1,200 MN/m²</div>
+                    <p><strong>40 lotes exclusivos</strong> para inversionistas visionarios</p>
+                    <ul style="margin: 20px 0; list-style: none;">
+                        <li>✓ Alberca y temazcal exclusivo</li>
+                        <li>✓ Acceso preferencial a amenidades</li>
+                        <li>✓ Solo $340,000 de enganche</li>
+                        <li>✓ Terreno escriturable inmediato</li>
+                    </ul>
+                    <p style="color: #ff6b35; font-weight: bold;">⏰ SE AGOTA EN SEMANAS</p>
+                </div>
+                
+                <div class="etapa-card">
+                    <div class="etapa-numero">2</div>
+                    <h3>COMUNIDAD SUSTENTABLE</h3>
+                    <div class="etapa-precio">$1,900 MN/m²</div>
+                    <p><strong>80 lotes</strong> para friends & family</p>
+                    <ul style="margin: 20px 0; list-style: none;">
+                        <li>✓ Alberca privada comunitaria</li>
+                        <li>✓ Cerca del ecoparque</li>
+                        <li>✓ 30% enganche, 24 pagos sin intereses</li>
+                        <li>✓ Ideal para convivencia familiar</li>
+                    </ul>
+                </div>
+                
+                <div class="etapa-card">
+                    <div class="etapa-numero">3</div>
+                    <h3>CIUDADANOS ECO-BIO</h3>
+                    <div class="etapa-precio">Desde $3,000 MN/m²</div>
+                    <p><strong>80 lotes</strong> cerca del área comercial</p>
+                    <ul style="margin: 20px 0; list-style: none;">
+                        <li>✓ Acceso directo a servicios comerciales</li>
+                        <li>✓ Amenidades completas del desarrollo</li>
+                        <li>✓ Máxima plusvalía proyectada</li>
+                        <li>✓ Para ciudadanos del mundo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios únicos -->
+        <section class="beneficios">
+            <h2>LO QUE OTROS DESARROLLOS NO PUEDEN OFRECER</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">🏛️</div>
+                    <h3>Arquitectura Maya Auténtica</h3>
+                    <p>5 modelos de casas inspirados en la cultura Puuc. Materiales regionales: chukum, piedra caliza, maderas certificadas.</p>
+                </div>
+                
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">🌿</div>
+                    <h3>70% de Conservación Garantizada</h3>
+                    <p>Certificación ADVC por CONANP. Tu lote contribuye directamente a la preservación del ecosistema maya.</p>
+                </div>
+                
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">💧</div>
+                    <h3>Cenotes y Ríos Subterráneos</h3>
+                    <p>Acceso exclusivo a cenotes naturales labrados por milenios. Terapia natural a unos pasos de tu hogar.</p>
+                </div>
+                
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">🏥</div>
+                    <h3>Centro de Bienestar Integral</h3>
+                    <p>Cámara hiperbárica, spa, herbolaria ancestral, gimnasio bioclimático. Tu salud es nuestra prioridad.</p>
+                </div>
+                
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">🔋</div>
+                    <h3>Energía 100% Renovable</h3>
+                    <p>Paneles solares integrados, tratamiento de aguas, captación pluvial. Vive sin culpa ambiental.</p>
+                </div>
+                
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">📈</div>
+                    <h3>Inversión con Propósito</h3>
+                    <p>No solo compras un lote, inviertes en un modelo de desarrollo que será referente internacional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Escasez artificial -->
+        <section class="escasez">
+            <h2>⏰ OPORTUNIDAD CON TIEMPO LIMITADO</h2>
+            <p style="font-size: 1.4rem; margin-bottom: 30px;">
+                La Etapa 1 se agota rápidamente. Los pioneros obtienen las mejores ubicaciones y precios.
+            </p>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number">12</span>
+                    <span class="countdown-label">Lotes Restantes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number">30</span>
+                    <span class="countdown-label">% Descuento</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number">1</span>
+                    <span class="countdown-label">km al ANP</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number">50</span>
+                    <span class="countdown-label">Hectáreas</span>
+                </div>
+            </div>
+            
+            <p style="font-size: 1.2rem; margin-top: 30px;">
+                <strong>Una vez que se agote la Etapa 1, el próximo precio será $700 MN/m² más caro</strong>
+            </p>
+        </section>
+
+        <!-- Testimonial -->
+        <section class="testimonial">
+            <div class="testimonial-content">
+                "Buscaba una inversión que alineara mis valores con mi futuro financiero. 
+                Balam Barabata no es solo un desarrollo inmobiliario, es un legado para mis hijos 
+                y una forma de ser parte del cambio que el mundo necesita."
+            </div>
+            <div class="testimonial-author">
+                - Inversionista Early Adopter, Etapa 1
+            </div>
+        </section>
+
+        <!-- Call to Action Final -->
+        <section class="cta">
+            <h2>TU DECISIÓN DEFINE TU LEGADO</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                En 10 años, cuando Balam Barabata sea reconocido como el desarrollo sustentable 
+                más exitoso de Latinoamérica, ¿serás de los que dijeron "yo estuve desde el principio" 
+                o de los que lamentarán haber perdido esta oportunidad única?
+            </p>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 20px; margin: 40px 0;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px;">OFERTA ESPECIAL ETAPA 1</h3>
+                <p style="font-size: 1.6rem;"><strong>Solo $340,000 MN de enganche</strong></p>
+                <p style="font-size: 1.2rem;">Lote de 1,000 m² escriturable + Amenidades exclusivas</p>
+                <p style="color: #ffeb3b; font-weight: bold; margin-top: 20px;">
+                    ⚡ Esta oferta vence en 72 horas ⚡
+                </p>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20Balam%20Barabata%20Etapa%201" class="btn-primary">RESERVAR MI LOTE AHORA</a>
+                <a href="mailto:bernecante@iadmexico.mx?subject=Visita%20VIP%20Balam%20Barabata&body=Hola%20Berne,%20me%20interesa%20agendar%20una%20visita%20VIP%20a%20Balam%20Barabata" class="btn-secondary">AGENDAR VISITA VIP</a>
+            </div>
+            
+            <div style="margin-top: 30px; background: rgba(255,255,255,0.1); padding: 25px; border-radius: 15px;">
+                <h4 style="font-size: 1.2rem; margin-bottom: 15px; color: #b8e6d1;">CONTACTO DIRECTO</h4>
+                <p style="font-size: 1.1rem; margin-bottom: 10px;">
+                    <strong>Berne Cante</strong> - Asesor Inmobiliario Especialista en Desarrollo Sustentable
+                </p>
+                <p style="font-size: 1rem; margin-bottom: 8px;">
+                    📱 <a href="tel:+529981981107" style="color: #b8e6d1; text-decoration: none; font-weight: bold;">998 198 1107</a>
+                </p>
+                <p style="font-size: 1rem; margin-bottom: 15px;">
+                    ✉️ <a href="mailto:bernecante@iadmexico.mx" style="color: #b8e6d1; text-decoration: none; font-weight: bold;">bernecante@iadmexico.mx</a>
+                </p>
+                <p style="font-size: 0.9rem; opacity: 0.9; font-style: italic;">
+                    Desarrollador: Antonio de la Cruz Barabata
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Efecto de contador dinámico
+        function updateCountdown() {
+            const countdownNumbers = document.querySelectorAll('.countdown-number');
+            const lotes = Math.floor(Math.random() * 8) + 8; // Entre 8 y 15 lotes restantes
+            countdownNumbers[0].textContent = lotes;
+        }
+        
+        // Actualizar cada 30 segundos para simular urgencia
+        setInterval(updateCountdown, 30000);
+        
+        // Efecto de paralaje suave en scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+    </script>
+</body>
+</html>
