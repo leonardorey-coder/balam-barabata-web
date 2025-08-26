@@ -46,7 +46,7 @@ export default function Footer() {
             <h4 className="text-sm sm:text-base font-semibold mb-3">Navegación</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/presentacion-app" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/presentacion" className="text-gray-300 hover:text-white transition-colors">
                   Inicio
                 </Link>
               </li>
