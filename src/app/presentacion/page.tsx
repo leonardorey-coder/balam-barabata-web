@@ -9,7 +9,7 @@ export default function PresentacionPage() {
   return (
     <div className="w-full h-screen">
       <iframe
-        src="/presentacion/index.html"
+        src="/presentacion-embed/index.html"
         id="presentacion-iframe"
         className="w-full h-full border-0"
         title="Presentación Balam Barabata"
@@ -18,4 +18,3 @@ export default function PresentacionPage() {
     </div>
   );
 }
-

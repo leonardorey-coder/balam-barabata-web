@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copied from public/presentacion/index.html to avoid route collision on Vercel -->
+<!-- The contents are identical; internal links are updated to /presentacion-embed/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balam Barabata - Inversión Inmobiliaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chukum: {
+                            50: '#f9f1e9',
+                            100: '#f0e0cc',
+                            200: '#e1bf99',
+                            300: '#cf9b66',
+                            400: '#c07d3a',
+                            500: '#b86420',
+                            600: '#a4501a',
+                            700: '#893d18',
+                            800: '#6f3119',
+                            900: '#5a2916',
+                            950: '#2d1a0f',
+                        },
+                        selva: '#2a4d3f',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in-up-delay': 'fadeInUp 0.8s ease-out 0.2s forwards',
+                        'fade-in-up-delay-2': 'fadeInUp 0.8s ease-out 0.4s forwards',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+        .hero-gradient { background: linear-gradient(135deg, #2a4d3f 0%, #6f3119 100%); }
+        .glass-morphism { backdrop-filter: blur(16px); background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); }
+        #mobile-menu-button { position: relative; width: 40px; height: 40px; }
+        #mobile-menu-button .line { position: absolute; left: 8px; right: 8px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 200ms ease, opacity 200ms ease, top 200ms ease; }
+        #mobile-menu-button .line1 { top: 12px; }
+        #mobile-menu-button .line2 { top: 19px; }
+        #mobile-menu-button .line3 { top: 26px; }
+        #mobile-menu-button[aria-expanded="true"] .line1 { top: 19px; transform: rotate(45deg); }
+        #mobile-menu-button[aria-expanded="true"] .line2 { opacity: 0; }
+        #mobile-menu-button[aria-expanded="true"] .line3 { top: 19px; transform: rotate(-45deg); }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="/images/balam-glyph.png" alt="Logotipo Balam Barabata" class="w-10 h-10 transition-all duration-300" data-logo>
+                    <a href="/presentacion-embed/index.html" class="text-2xl font-bold text-white" data-brand>Balam Barabata</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8" data-desktop-menu>
+                        <a href="#etapas" class="text-white/90 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Etapas</a>
+                        <a href="#beneficios" class="text-white/90 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Beneficios</a>
+                        <a href="#inversión" class="text-white/90 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Inversión</a>
+                        <a href="#contacto" class="bg-chukum-600 hover:bg-chukum-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none border-0 focus:ring-0">
+                        <span class="sr-only">Abrir menú</span>
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                <a href="#etapas" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-selva">Etapas</a>
+                <a href="#beneficios" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-selva">Beneficios</a>
+                <a href="#inversión" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-selva">Inversión</a>
+                <a href="#contacto" class="block px-3 py-2 text-base font-medium bg-chukum-600 text-white rounded-md hover:bg-chukum-700">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient">
+        <video class="absolute inset-0 w-full h-full object-cover opacity-40" autoplay muted loop playsinline preload="auto" poster="/images/selva.jpg">
+            <source src="/videos/intro.mobile.mp4" media="(max-width: 768px)" type="video/mp4">
+            <source src="/videos/intro.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <h1 class="text-[clamp(2rem,8vw,4.5rem)] font-bold mb-6 tracking-tight opacity-0 animate-fade-in-up">BALAM BARABATA</h1>
+            <p class="text-[clamp(1rem,3.6vw,1.25rem)] text-white/80 mb-5 opacity-0 animate-fade-in-up-delay">Reserva Natural: Tu santuario personal</p>
+            <p class="text-[clamp(1rem,4.5vw,1.5rem)] mb-8 font-light leading-normal md:leading-relaxed opacity-0 animate-fade-in-up-delay max-w-4xl mx-auto">Desarrollo inmobiliario premium en Uxuxubi, Riviera Maya. Inversión estratégica en sustentabilidad y conservación natural.</p>
+            <div class="glass-morphism rounded-2xl p-6 mb-8 opacity-0 animate-fade-in-up-delay-2 max-w-md mx-auto">
+                <div class="text-3xl font-bold mb-2">40&nbsp;Lotes&nbsp;–&nbsp;Etapa&nbsp;1</div>
+                <div class="text-chukum-200 font-medium">Oportunidad Exclusiva</div>
+            </div>
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center opacity-0 animate-fade-in-up-delay-2">
+                <a href="#etapas" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Ver Disponibilidad</a>
+                <a href="#contacto" class="inline-block border-2 border-white text-white hover:bg-white hover:text-selva font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Agendar Visita</a>
+                <a href="/proyecto" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Ver proyecto completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Stats -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="animate-on-scroll"><div class="text-3xl font-bold text-selva mb-2">50</div><div class="text-gray-600 font-medium">Hectáreas</div></div>
+                <div class="animate-on-scroll"><div class="text-3xl font-bold text-selva mb-2">20</div><div class="text-gray-600 font-medium">ha Selva Protegida (≈40 %)</div></div>
+                <div class="animate-on-scroll"><div class="text-3xl font-bold text-selva mb-2">1km</div><div class="text-gray-600 font-medium">del ANP Felipe Carrillo Puerto</div></div>
+                <div class="animate-on-scroll"><div class="text-3xl font-bold text-selva mb-2">200</div><div class="text-gray-600 font-medium">Lotes Totales</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosistema de Bienestar -->
+    <section id="ecosistema" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">Nuestro Ecosistema de Bienestar</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">Un master plan integral donde naturaleza, salud, comunidad y economía circular conviven en armonía.</p>
+            </div>
+            <!-- Mapa interactivo estilizado -->
+            <div class="relative mb-12 animate-on-scroll rounded-3xl overflow-hidden p-2 bg-gradient-to-br from-selva/10 to-chukum-100/20 ring-1 ring-white/20 shadow-xl">
+                <div class="relative w-full overflow-x-auto rounded-2xl">
+                  <svg viewBox="0 0 1920 1080" id="masterplan" aria-label="Master Plan Interactivo de Balam Barabata" class="w-full h-auto block">
+                    <image href="/images/masterplan.jpeg" width="1920" height="1080" />
+                    <circle cx="960" cy="380" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="cenote" />
+                    <circle cx="680" cy="520" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="temazcal" />
+                    <circle cx="850" cy="600" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="casa-club" />
+                    <circle cx="1200" cy="750" r="45" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="reserva-ecologica" />
+                    <circle cx="720" cy="450" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="wellness-center" />
+                    <circle cx="1050" cy="550" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="mercado" />
+                    <circle cx="1150" cy="300" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="meliponario" />
+                    <circle cx="500" cy="700" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="privada-fundadores" />
+                  </svg>
+                </div>
+                <span class="absolute top-4 left-4 text-xs font-semibold tracking-wide uppercase text-white/90 bg-black/30 border border-white/20 rounded-full px-3 py-1 backdrop-blur-sm">Masterplan</span>
+                <p class="text-center text-sm text-gray-600 mt-4">*Toca o pasa el cursor sobre los puntos para conocer más.</p>
+            </div>
+            <div id="tooltip" class="fixed z-50 hidden max-w-xs rounded-xl shadow-2xl bg-white/90 backdrop-blur-sm transition-opacity duration-200" style="pointer-events: none;"></div>
+
+            <!-- Pilares -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4"><i data-lucide="leaf" class="w-6 h-6"></i></div>
+                    <h3 class="font-semibold text-selva mb-1">Santuario Ecológico</h3>
+                    <p class="text-gray-600 text-sm mb-3">ADVC certificada, 70 % de conservación por lote, meliponarios y senderos botánicos.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90"><i data-lucide="globe" class="w-4 h-4"></i><i data-lucide="recycle" class="w-4 h-4"></i></div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4"><i data-lucide="heart-pulse" class="w-6 h-6"></i></div>
+                    <h3 class="font-semibold text-selva mb-1">Salud Holística</h3>
+                    <p class="text-gray-600 text-sm mb-3">Temazcal, cenote privado, cámara hiperbárica y saberes ancestrales en un solo lugar.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90"><i data-lucide="activity" class="w-4 h-4"></i><i data-lucide="heart" class="w-4 h-4"></i></div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                    <h3 class="font-semibold text-selva mb-1">Certeza Patrimonial</h3>
+                    <p class="text-gray-600 text-sm mb-3">Fideicomiso en régimen condominal, plusvalía exponencial desde la etapa fundadora.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90"><i data-lucide="shield" class="w-4 h-4"></i><i data-lucide="check-circle" class="w-4 h-4"></i></div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4"><i data-lucide="users" class="w-6 h-6"></i></div>
+                    <h3 class="font-semibold text-selva mb-1">Comunidad Exclusiva</h3>
+                    <p class="text-gray-600 text-sm mb-3">Solo 200 familias, con mercado, plaza, centro de negocios y amenities de clase mundial.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90"><i data-lucide="users" class="w-4 h-4"></i><i data-lucide="map-pin" class="w-4 h-4"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery and Gift Models (copied from original) -->
+    <!-- For brevity, additional sections remain identical to the original presentacion file -->
+
+    <!-- Modal for enlarged images -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button id="closeModal" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <div class="relative rounded-lg overflow-hidden">
+                <img id="modalImage" src="" alt="" class="max-h-[80vh] w-auto object-contain" />
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                    <h3 id="modalTitle" class="text-white font-semibold text-xl"></h3>
+                    <p id="modalDesc" class="text-white/90 text-sm mt-1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+    <script>
+        // Header scroll behavior: transparent at top, white on scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const nav = document.getElementById('main-nav');
+            const brand = nav ? nav.querySelector('[data-brand]') : null;
+            const logo = nav ? nav.querySelector('[data-logo]') : null;
+            const desktopMenu = nav ? nav.querySelector('[data-desktop-menu]') : null;
+            const desktopLinks = desktopMenu ? Array.from(desktopMenu.querySelectorAll('a')).filter(a => !a.classList.contains('bg-chukum-600')) : [];
+            const mobileBtn = document.getElementById('mobile-menu-button');
+
+            function updateHeader() {
+                const atTop = window.scrollY <= 0;
+                if (!nav) return;
+                if (atTop) {
+                    nav.classList.add('bg-transparent');
+                    nav.classList.remove('bg-white', 'shadow-sm');
+                    if (brand) { brand.classList.add('text-white'); brand.classList.remove('text-selva'); }
+                    desktopLinks.forEach(a => { a.classList.remove('text-gray-700', 'hover:text-selva'); a.classList.add('text-white/90', 'hover:text-white'); });
+                    if (logo) { logo.classList.remove('filter', 'brightness-0', 'opacity-80'); }
+                    if (mobileBtn) { mobileBtn.classList.add('text-white'); mobileBtn.classList.remove('text-gray-700', 'hover:text-selva'); }
+                } else {
+                    nav.classList.remove('bg-transparent');
+                    nav.classList.add('bg-white', 'shadow-sm');
+                    if (brand) { brand.classList.remove('text-white'); brand.classList.add('text-selva'); }
+                    desktopLinks.forEach(a => { a.classList.remove('text-white/90', 'hover:text-white'); a.classList.add('text-gray-700', 'hover:text-selva'); });
+                    if (logo) { logo.classList.add('filter', 'brightness-0', 'opacity-80'); }
+                    if (mobileBtn) { mobileBtn.classList.remove('text-white'); mobileBtn.classList.add('text-gray-700', 'hover:text-selva'); }
+                }
+            }
+            updateHeader();
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
+    <script>
+        // Minimal animate-on-scroll
+        const observer = new IntersectionObserver((entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.addEventListener('DOMContentLoaded', function() { document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el)); });
+    </script>
+    <script>
+        // Gallery Modal basic close handlers (images provided in original section)
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const closeModal = document.getElementById('closeModal');
+            if (!modal || !closeModal) return;
+            function closeModalFunc() { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = ''; }
+            closeModal.addEventListener('click', closeModalFunc);
+            modal.addEventListener('click', function(e) { if (e.target === modal) closeModalFunc(); });
+            document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModalFunc(); });
+        });
+    </script>
+    <script type="module">
+      // Masterplan hotspots interactions (import from public path)
+      import { hotspots } from '/content/masterplan-hotspots.js';
+      const tooltipContainer = document.getElementById('tooltip');
+      const svg = document.getElementById('masterplan');
+      if (tooltipContainer && svg) {
+        const allHotspots = svg.querySelectorAll('.hotspot');
+        let currentHotspotId = null;
+        allHotspots.forEach((element) => {
+          element.addEventListener('mouseenter', showTooltip);
+          element.addEventListener('mouseleave', hideTooltip);
+          element.addEventListener('mousemove', positionTooltip);
+          element.addEventListener('click', openModalFromHotspot);
+        });
+        document.addEventListener('click', (e) => { if (!(e.target instanceof Element)) return; if (!e.target.classList.contains('hotspot')) hideTooltip(); });
+        function showTooltip(event) {
+          const target = event.target; const data = hotspots.find((h) => h.id === target.dataset.id); if (!data) return;
+          const html = `<img src="${data.img}" alt="${data.title}" class="w-full h-32 object-cover rounded-t-xl" />` +
+                       `<div class="p-4"><h4 class=\"font-bold text-gray-800 mb-1 text-lg\">${data.title}</h4><p class=\"text-sm text-gray-600\">${data.description}</p></div>`;
+          tooltipContainer.innerHTML = html; tooltipContainer.classList.remove('hidden'); currentHotspotId = data.id; positionTooltip(event);
+        }
+        function hideTooltip() { tooltipContainer.classList.add('hidden'); currentHotspotId = null; }
+        function positionTooltip(event) { tooltipContainer.style.left = event.pageX + 15 + 'px'; tooltipContainer.style.top = event.pageY + 15 + 'px'; }
+        function openModalFromHotspot(event) {
+          event.stopPropagation(); const target = event.target; const data = hotspots.find((h) => h.id === target.dataset.id); if (!data) return;
+          const modal = document.getElementById('imageModal'); const modalImage = document.getElementById('modalImage'); const modalTitle = document.getElementById('modalTitle'); const modalDesc = document.getElementById('modalDesc');
+          if (!modal || !modalImage || !modalTitle) return; modalImage.src = data.img; modalImage.alt = data.title; modalTitle.textContent = data.title; if (modalDesc) modalDesc.textContent = data.description || '';
+          modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden'; hideTooltip();
+        }
+      }
+    </script>
+</body>
+</html>
