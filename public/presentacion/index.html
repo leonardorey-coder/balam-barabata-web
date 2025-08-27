@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balam Barabata - Inversión Inmobiliaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chukum: {
+                            50: '#f9f1e9',
+                            100: '#f0e0cc',
+                            200: '#e1bf99',
+                            300: '#cf9b66',
+                            400: '#c07d3a',
+                            500: '#b86420',
+                            600: '#a4501a',
+                            700: '#893d18',
+                            800: '#6f3119',
+                            900: '#5a2916',
+                            950: '#2d1a0f',
+                        },
+                        selva: '#2a4d3f',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in-up-delay': 'fadeInUp 0.8s ease-out 0.2s forwards',
+                        'fade-in-up-delay-2': 'fadeInUp 0.8s ease-out 0.4s forwards',
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #2a4d3f 0%, #6f3119 100%);
+        }
+        
+        .glass-morphism {
+            backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Animated hamburger -> X */
+        #mobile-menu-button { position: relative; width: 40px; height: 40px; }
+        #mobile-menu-button .line {
+            position: absolute;
+            left: 8px; right: 8px;
+            height: 2px;
+            background: currentColor;
+            border-radius: 2px;
+            transition: transform 200ms ease, opacity 200ms ease, top 200ms ease;
+        }
+        #mobile-menu-button .line1 { top: 12px; }
+        #mobile-menu-button .line2 { top: 19px; }
+        #mobile-menu-button .line3 { top: 26px; }
+        #mobile-menu-button[aria-expanded="true"] .line1 { top: 19px; transform: rotate(45deg); }
+        #mobile-menu-button[aria-expanded="true"] .line2 { opacity: 0; }
+        #mobile-menu-button[aria-expanded="true"] .line3 { top: 19px; transform: rotate(-45deg); }
+    
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="/images/balam-glyph.png" alt="Logotipo Balam Barabata" class="w-10 h-10 transition-all duration-300" data-logo>
+                    <a href="/presentacion/" class="text-2xl font-bold text-white" data-brand>Balam Barabata</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8" data-desktop-menu>
+                        <a href="#etapas" class="text-white/90 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Etapas</a>
+                        <a href="#beneficios" class="text-white/90 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Beneficios</a>
+                        <a href="#inversión" class="text-white/90 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Inversión</a>
+                        <a href="#contacto" class="bg-chukum-600 hover:bg-chukum-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">Contacto</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none border-0 focus:ring-0">
+                        <span class="sr-only">Abrir menú</span>
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu panel -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
+                <a href="#etapas" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-selva">Etapas</a>
+                <a href="#beneficios" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-selva">Beneficios</a>
+                <a href="#inversión" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-selva">Inversión</a>
+                <a href="#contacto" class="block px-3 py-2 text-base font-medium bg-chukum-600 text-white rounded-md hover:bg-chukum-700">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient">
+        <video
+            class="absolute inset-0 w-full h-full object-cover opacity-40"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="/images/selva.jpg"
+        >
+            <source src="/videos/intro.mobile.mp4" media="(max-width: 768px)" type="video/mp4">
+            <source src="/videos/intro.mp4" type="video/mp4">
+        </video>
+        
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+        
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl">
+            
+            <h1 class="text-[clamp(2rem,8vw,4.5rem)] font-bold mb-6 tracking-tight opacity-0 animate-fade-in-up">
+                BALAM BARABATA
+            </h1>
+            <p class="text-[clamp(1rem,3.6vw,1.25rem)] text-white/80 mb-5 opacity-0 animate-fade-in-up-delay">
+                Reserva Natural: Tu santuario personal
+            </p>
+            <p class="text-[clamp(1rem,4.5vw,1.5rem)] mb-8 font-light leading-normal md:leading-relaxed opacity-0 animate-fade-in-up-delay max-w-4xl mx-auto">
+                Desarrollo inmobiliario premium en Uxuxubi, Riviera Maya. 
+                Inversión estratégica en sustentabilidad y conservación natural.
+            </p>
+            
+            <!-- Investment Highlight -->
+            <div class="glass-morphism rounded-2xl p-6 mb-8 opacity-0 animate-fade-in-up-delay-2 max-w-md mx-auto">
+                <div class="text-3xl font-bold mb-2">40&nbsp;Lotes&nbsp;–&nbsp;Etapa&nbsp;1</div>
+                <div class="text-chukum-200 font-medium">Oportunidad Exclusiva</div>
+            </div>
+            
+            <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center opacity-0 animate-fade-in-up-delay-2">
+                <a href="#etapas" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Ver Disponibilidad
+                </a>
+                <a href="#contacto" class="inline-block border-2 border-white text-white hover:bg-white hover:text-selva font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    Agendar Visita
+                </a>
+                <a href="/proyecto" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Ver proyecto completo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Stats -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="animate-on-scroll">
+                    <div class="text-3xl font-bold text-selva mb-2">50</div>
+                    <div class="text-gray-600 font-medium">Hectáreas</div>
+                </div>
+                <div class="animate-on-scroll">
+                    <div class="text-3xl font-bold text-selva mb-2">20</div>
+                    <div class="text-gray-600 font-medium">ha Selva Protegida (≈40 %)</div>
+                </div>
+                <div class="animate-on-scroll">
+                    <div class="text-3xl font-bold text-selva mb-2">1km</div>
+                    <div class="text-gray-600 font-medium">del ANP Felipe Carrillo Puerto</div>
+                </div>
+                <div class="animate-on-scroll">
+                    <div class="text-3xl font-bold text-selva mb-2">200</div>
+                    <div class="text-gray-600 font-medium">Lotes Totales</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosistema de Bienestar -->
+    <section id="ecosistema" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Nuestro Ecosistema de Bienestar
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">
+                    Un master plan integral donde naturaleza, salud, comunidad y economía circular conviven en armonía.
+                </p>
+            </div>
+
+            <!-- Mapa interactivo estilizado -->
+            <div class="relative mb-12 animate-on-scroll rounded-3xl overflow-hidden p-2 bg-gradient-to-br from-selva/10 to-chukum-100/20 ring-1 ring-white/20 shadow-xl">
+                <div class="relative w-full overflow-x-auto rounded-2xl">
+                  <svg viewBox="0 0 1920 1080" id="masterplan" aria-label="Master Plan Interactivo de Balam Barabata" class="w-full h-auto block">
+                    <image href="/images/masterplan.jpeg" width="1920" height="1080" />
+
+                    <circle cx="960" cy="380" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="cenote" />
+                    <circle cx="680" cy="520" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="temazcal" />
+                    <circle cx="850" cy="600" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="casa-club" />
+                    <circle cx="1200" cy="750" r="45" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="reserva-ecologica" />
+                    <circle cx="720" cy="450" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="wellness-center" />
+                    <circle cx="1050" cy="550" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="mercado" />
+                    <circle cx="1150" cy="300" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="meliponario" />
+                    <circle cx="500" cy="700" r="35" class="hotspot fill-yellow-400/40 stroke-2 stroke-white/80 hover:fill-yellow-400/60 cursor-pointer transition-all duration-300" data-id="privada-fundadores" />
+                  </svg>
+                </div>
+                <span class="absolute top-4 left-4 text-xs font-semibold tracking-wide uppercase text-white/90 bg-black/30 border border-white/20 rounded-full px-3 py-1 backdrop-blur-sm">Masterplan</span>
+                <p class="text-center text-sm text-gray-600 mt-4">*Toca o pasa el cursor sobre los puntos para conocer más.</p>
+            </div>
+            <div id="tooltip" class="fixed z-50 hidden max-w-xs rounded-xl shadow-2xl bg-white/90 backdrop-blur-sm transition-opacity duration-200" style="pointer-events: none;"></div>
+
+            <!-- Cuatro pilares -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pilares 1‑4 -->
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-semibold text-selva mb-1">Santuario Ecológico</h3>
+                    <p class="text-gray-600 text-sm mb-3">ADVC certificada, 70 % de conservación por lote, meliponarios y senderos botánicos.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                        <i data-lucide="recycle" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4">
+                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-semibold text-selva mb-1">Salud Holística</h3>
+                    <p class="text-gray-600 text-sm mb-3">Temazcal, cenote privado, cámara hiperbárica y saberes ancestrales en un solo lugar.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90">
+                        <i data-lucide="activity" class="w-4 h-4"></i>
+                        <i data-lucide="heart" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-semibold text-selva mb-1">Certeza Patrimonial</h3>
+                    <p class="text-gray-600 text-sm mb-3">Fideicomiso en régimen condominal, plusvalía exponencial desde la etapa fundadora.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90">
+                        <i data-lucide="shield" class="w-4 h-4"></i>
+                        <i data-lucide="check-circle" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                <div class="glass-morphism rounded-2xl p-6 animate-on-scroll hover:bg-white/15 transition-colors duration-300">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-chukum-600 to-selva text-white grid place-items-center shadow-md mb-4">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-semibold text-selva mb-1">Comunidad Exclusiva</h3>
+                    <p class="text-gray-600 text-sm mb-3">Solo 200 familias, con mercado, plaza, centro de negocios y amenities de clase mundial.</p>
+                    <div class="flex items-center gap-3 text-chukum-600/90">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Stages -->
+    <section id="etapas" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Etapas de Inversión
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">
+                    Tres fases estratégicas de desarrollo con diferentes oportunidades de inversión y retorno proyectado.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Etapa 1 -->
+                <div class="bg-gradient-to-br from-chukum-50 to-chukum-100 rounded-2xl p-8 border border-chukum-200 animate-on-scroll relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-chukum-600 to-selva"></div>
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-selva text-white rounded-full font-bold text-xl mb-6">1</div>
+                    <h3 class="text-2xl font-bold text-selva mb-2">La Primicia</h3>
+                    <div class="text-chukum-700 font-semibold mb-4">Descuento Especial 30%</div>
+                    <div class="text-3xl font-bold text-selva mb-4">$1,200/m²</div>
+                    <p class="text-gray-700 mb-6">40 lotes exclusivos para inversionistas estratégicos con acceso preferencial a amenidades premium.</p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-chukum-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Alberca privada exclusiva
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-chukum-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Temazcal y spa
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-chukum-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Escrituración inmediata
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-chukum-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Enganche desde $340,000 MN
+                        </li>
+                    </ul>
+                    
+                    <div class="text-sm font-semibold text-chukum-700 bg-chukum-200 px-3 py-2 rounded-full inline-block">
+                        Disponibilidad Limitada
+                    </div>
+                </div>
+
+                <!-- Etapa 2 -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-gray-200 animate-on-scroll relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-400 to-gray-500"></div>
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gray-600 text-white rounded-full font-bold text-xl mb-6">2</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Comunidad Sustentable</h3>
+                    <div class="text-3xl font-bold text-gray-800 mb-4">$1,900/m²</div>
+                    <p class="text-gray-700 mb-6">80 lotes para desarrollo comunitario sostenible con amenidades compartidas de alta calidad.</p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-gray-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Alberca comunitaria
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-gray-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ecoparque natural
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-gray-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            24 pagos sin intereses
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Etapa 3 -->
+                <div class="bg-white rounded-2xl p-8 border-2 border-gray-200 animate-on-scroll relative opacity-60">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-gray-300 to-gray-400"></div>
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-gray-400 text-white rounded-full font-bold text-xl mb-6">3</div>
+                    <h3 class="text-2xl font-bold text-gray-600 mb-2">Ciudadanos Eco-Bio</h3>
+                    <div class="text-3xl font-bold text-gray-600 mb-4">Desde $3,000/m²</div>
+                    <p class="text-gray-600 mb-6">80 lotes en zona comercial con máxima plusvalía proyectada y servicios completos.</p>
+                    
+                    <div class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-2 rounded-full inline-block">
+                        Fase Futura
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Galería del Proyecto
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">
+                    Descubre los espacios únicos que hacen de Balam Barabata un destino excepcional.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/area-camara-spa.jpeg" 
+                        alt="Área de Cámara Hiperbárica y Terapias en Balam Barabata"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Área de Cámara Hiperbárica y Terapias
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/barabata-acceso.jpeg" 
+                        alt="Acceso principal a Balam Barabata"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Acceso Principal Barabata
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/lobby2.jpeg" 
+                        alt="Lobby principal de Balam Barabata"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Lobby Premium
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/loby.jpeg" 
+                        alt="Área de recepción en Balam Barabata"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Área de Recepción
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for enlarged images -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button id="closeModal" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <div class="relative rounded-lg overflow-hidden">
+                <img id="modalImage" src="" alt="" class="max-h-[80vh] w-auto object-contain" />
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                    <h3 id="modalTitle" class="text-white font-semibold text-xl"></h3>
+                    <p id="modalDesc" class="text-white/90 text-sm mt-1"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <!-- Gift Models Section (Etapa II) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Modelos de Regalo Exclusivos · Etapa II
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">
+                    Explora la colección de modelos de cortesía disponibles para la Etapa II. Diseño elegante, materiales auténticos y lista para inspirarte.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Modelo I -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo1.jpeg" 
+                        alt="Modelo I — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo I
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo II -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo2.jpeg" 
+                        alt="Modelo II — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo II
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo III -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo3.jpeg" 
+                        alt="Modelo III — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo III
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo IV -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo4.jpeg" 
+                        alt="Modelo IV — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo IV
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo V -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo5.jpeg" 
+                        alt="Modelo V — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo V
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modelo VI -->
+                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                    <img 
+                        src="../images/galery/modelo6.jpeg" 
+                        alt="Modelo VI — Cortesía Etapa II"
+                        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-semibold text-lg leading-tight">
+                            Modelo VI
+                        </h3>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center glass-morphism">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-20 bg-selva">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 animate-on-scroll">
+                    Ventajas Competitivas Únicas
+                </h2>
+                <p class="text-xl text-chukum-200 max-w-3xl mx-auto animate-on-scroll">
+                    Características distintivas que posicionan a Balam Barabata como una inversión de clase mundial.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="landmark" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Arquitectura Maya Auténtica</h3>
+                    <p class="text-chukum-100">5 modelos de casas inspirados en la cultura Puuc. Materiales regionales: chukum, piedra caliza, maderas certificadas.</p>
+                </div>
+
+                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="badge-check" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">70 % Certificación de Conservación</h3>
+                    <p class="text-chukum-100">Cada lote conserva el <span class="font-semibold">70 %</span> de selva; además, 20 ha del desarrollo estarán certificadas (ADVC) por CONANP. Garantía legal de preservación del ecosistema natural.</p>
+                </div>
+
+                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="sun" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Infraestructura Autosuficiente</h3>
+                    <p class="text-chukum-100">Sistema integrado de energía renovable, tratamiento de aguas y captación pluvial para máxima eficiencia.</p>
+                </div>
+
+                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="bubbles" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Centro de Bienestar Integral</h3>
+                    <p class="text-chukum-100">Spa integral con cámara hiperbárica, herbolaria ancestral y gimnasio bioclimático.</p>
+                </div>
+
+                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="droplets" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Acceso a Cenotes</h3>
+                    <p class="text-chukum-100">Red privada de cenotes naturales y ríos subterráneos para experiencias únicas.</p>
+                </div>
+
+                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="chart-bar" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">ROI Proyectado Superior</h3>
+                    <p class="text-chukum-100">Modelo de inversión respaldado por la creciente demanda de turismo sustentable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Analysis -->
+    <section id="inversión" class="py-20 bg-gradient-to-br from-chukum-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Análisis de Inversión
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">
+                    Fundamentals sólidos que respaldan el potencial de crecimiento y rentabilidad del proyecto.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-on-scroll">
+                    <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold text-selva mb-4">Demand Drivers</h3>
+                        <div class="space-y-4 text-gray-700">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-chukum-100 rounded-lg flex items-center justify-center">
+                                    <div class="w-3 h-3 bg-chukum-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Turismo Sustentable</h4>
+                                    <p class="text-gray-600">Creciente preferencia por experiencias eco-conscientes y wellness en la Riviera Maya.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-chukum-100 rounded-lg flex items-center justify-center">
+                                    <div class="w-3 h-3 bg-chukum-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Plusvalía Regional</h4>
+                                    <p class="text-gray-600">Expansión sostenida del corredor Tulum–Akumal y proyectos de infraestructura.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-8 h-8 bg-chukum-100 rounded-lg flex items-center justify-center">
+                                    <div class="w-3 h-3 bg-chukum-600 rounded-full"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">Escasez de Oferta</h4>
+                                    <p class="text-gray-600">Limitadas opciones de desarrollo sustentable certificado en la región.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <div class="bg-selva rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Proyección Financiera</h3>
+                        
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-chukum-200 mb-2">25-30%</div>
+                                <div class="text-sm text-chukum-100">ROI&nbsp;*Proyectado&nbsp;Anual</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-chukum-200 mb-2">5-7 años</div>
+                                <div class="text-sm text-chukum-100">Horizonte de Inversión</div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="glass-morphism rounded-lg p-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">Inversión Inicial</span>
+                                    <span class="font-bold">$340,000 MN</span>
+                                </div>
+                            </div>
+                            <div class="glass-morphism rounded-lg p-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">Valor Proyectado 5 años</span>
+                                    <span class="font-bold text-chukum-200">$1,200,000 MN</span>
+                                </div>
+                            </div>
+                            <div class="glass-morphism rounded-lg p-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-medium">Plusvalía Estimada</span>
+                                    <span class="font-bold text-chukum-200">+250%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta Fundadores -->
+    <section class="py-20 bg-chukum-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">
+                    Oferta Fundadores · Etapa 1
+                </h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto animate-on-scroll">
+                    Sé uno de los <strong>40 lotes pioneros</strong> y obtén descuento escalonado por lanzamiento.
+                </p>
+            </div>
+
+            <div class="animate-on-scroll">
+                <div class="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-200 bg-white">
+                    <div class="absolute -inset-x-1 -top-1 h-1 bg-gradient-to-r from-selva via-chukum-600 to-selva"></div>
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-gradient-to-r from-selva to-chukum-700 text-white">
+                            <tr>
+                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Lotes</th>
+                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Precio especial</th>
+                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Descuento vs. mercado</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-chukum-50/70 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-selva">1‑10</td>
+                                <td class="px-6 py-4 font-semibold">$840,000 MXN</td>
+                                <td class="px-6 py-4 font-semibold text-chukum-700">‑30 %</td>
+                            </tr>
+                            <tr class="hover:bg-chukum-50/70 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-selva">11‑25</td>
+                                <td class="px-6 py-4 font-semibold">$960,000 MXN</td>
+                                <td class="px-6 py-4 font-semibold text-chukum-700">‑20 %</td>
+                            </tr>
+                            <tr class="hover:bg-chukum-50/70 transition-colors">
+                                <td class="px-6 py-4 font-semibold text-selva">26‑40</td>
+                                <td class="px-6 py-4 font-semibold">$1,080,000 MXN</td>
+                                <td class="px-6 py-4 font-semibold text-chukum-700">‑10 %</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="mt-6 text-center text-sm text-gray-600 animate-on-scroll">
+                *Precios de lanzamiento. Incluye alberca y temazcal exclusivos para la privada de la Etapa 1.
+            </p>
+        </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section id="contacto" class="py-20 hero-gradient">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 animate-on-scroll">
+                Asegura Tu Posición en Balam Barabata
+            </h2>
+            <p class="text-xl text-chukum-100 mb-12 animate-on-scroll leading-relaxed">
+                La Etapa 1 representa una oportunidad única de formar parte del desarrollo sustentable 
+                más exclusivo de la Riviera Maya desde su fase inicial.
+            </p>
+            
+            <div class="glass-morphism rounded-2xl p-8 mb-12 animate-on-scroll">
+                <h3 class="text-2xl font-bold text-white mb-4">Oferta Exclusiva Etapa 1</h3>
+                <div class="text-4xl font-bold text-chukum-200 mb-2">$340,000 MN</div>
+                <p class="text-chukum-100 mb-4">Enganche para lote de 1,000 m² + Amenidades exclusivas</p>
+                <div class="inline-flex items-center space-x-2 bg-chukum-600/20 rounded-full px-4 py-2">
+                    <svg class="w-5 h-5 text-chukum-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-chukum-100 font-medium">Disponibilidad limitada</span>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center animate-on-scroll">
+                <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20Balam%20Barabata%20Etapa%201" 
+                   class="bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Reservar Lote Ahora
+                </a>
+                <a href="mailto:bernecante@iadmexico.mx?subject=Visita%20VIP%20Balam%20Barabata&body=Hola%20Berne,%20me%20interesa%20agendar%20una%20visita%20VIP%20a%20Balam%20Barabata" 
+                   class="border-2 border-white text-white hover:bg-white hover:text-selva font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    Agendar Visita VIP
+                </a>
+            </div>
+            
+            <!-- CTA to full project within Final CTA section -->
+            <div class="mt-8 animate-on-scroll">
+                <a href="/proyecto" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+                    Ver proyecto completo
+                </a>
+            </div>
+            
+            <div class="mt-12 glass-morphism rounded-xl p-6 animate-on-scroll">
+                <h4 class="text-lg font-semibold text-chukum-200 mb-4">Asesoría Especializada</h4>
+                <div class="text-white space-y-2">
+                    <p class="font-medium">Berne Cante - Consultor en Inversión Inmobiliaria Sustentable</p>
+                    <div class="flex justify-center space-x-6 text-sm">
+                        <a href="tel:+529981981107" class="text-chukum-200 hover:text-white transition-colors font-medium">
+                            📱 998 198 1107
+                        </a>
+                        <a href="mailto:bernecante@iadmexico.mx" class="text-chukum-200 hover:text-white transition-colors font-medium">
+                            ✉️ bernecante@iadmexico.mx
+                        </a>
+                    </div>
+                    <p class="text-chukum-100 text-sm mt-4 italic">
+                        Desarrollador: Antonio de la Cruz Barabata
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
+    <script>
+        // Header scroll behavior: transparent at top, white on scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const nav = document.getElementById('main-nav');
+            const brand = nav ? nav.querySelector('[data-brand]') : null;
+            const logo = nav ? nav.querySelector('[data-logo]') : null;
+            const desktopMenu = nav ? nav.querySelector('[data-desktop-menu]') : null;
+            const desktopLinks = desktopMenu ? Array.from(desktopMenu.querySelectorAll('a')).filter(a => !a.classList.contains('bg-chukum-600')) : [];
+            const mobileBtn = document.getElementById('mobile-menu-button');
+
+            function updateHeader() {
+                const atTop = window.scrollY <= 0;
+                if (!nav) return;
+                if (atTop) {
+                    nav.classList.add('bg-transparent');
+                    nav.classList.remove('bg-white', 'shadow-sm');
+                    if (brand) {
+                        brand.classList.add('text-white');
+                        brand.classList.remove('text-selva');
+                    }
+                    desktopLinks.forEach(a => {
+                        a.classList.remove('text-gray-700', 'hover:text-selva');
+                        a.classList.add('text-white/90', 'hover:text-white');
+                    });
+                    if (logo) {
+                        logo.classList.remove('filter', 'brightness-0', 'opacity-80');
+                    }
+                    if (mobileBtn) {
+                        mobileBtn.classList.add('text-white');
+                        mobileBtn.classList.remove('text-gray-700', 'hover:text-selva');
+                    }
+                } else {
+                    nav.classList.remove('bg-transparent');
+                    nav.classList.add('bg-white', 'shadow-sm');
+                    if (brand) {
+                        brand.classList.remove('text-white');
+                        brand.classList.add('text-selva');
+                    }
+                    desktopLinks.forEach(a => {
+                        a.classList.remove('text-white/90', 'hover:text-white');
+                        a.classList.add('text-gray-700', 'hover:text-selva');
+                    });
+                    if (logo) {
+                        logo.classList.add('filter', 'brightness-0', 'opacity-80');
+                    }
+                    if (mobileBtn) {
+                        mobileBtn.classList.remove('text-white');
+                        mobileBtn.classList.add('text-gray-700', 'hover:text-selva');
+                    }
+                }
+            }
+
+            updateHeader();
+            window.addEventListener('scroll', updateHeader, { passive: true });
+        });
+    </script>
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with animate-on-scroll class
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Dynamic stats counter animation
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.innerHTML = value;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // Animate stats when they come into view (only for Key Stats section)
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const number = entry.target.querySelector('.text-3xl');
+                    // Only animate if it's in the stats section and contains only numbers
+                    if (number && !number.classList.contains('animated') && entry.target.closest('.py-16.bg-gray-50')) {
+                        const textContent = number.textContent.trim();
+                        const finalValue = parseInt(textContent);
+                        if (!isNaN(finalValue)) {
+                            number.classList.add('animated');
+                            animateValue(number, 0, finalValue, 2000);
+                        }
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Only observe stats in the Key Stats section (not investment stages)
+            const statsSection = document.querySelector('.py-16.bg-gray-50');
+            if (statsSection) {
+                const statsElements = statsSection.querySelectorAll('.animate-on-scroll');
+                statsElements.forEach(el => statsObserver.observe(el));
+            }
+        });
+    </script>
+    <script>
+            // Gallery Modal functionality (project gallery + gift models)
+            document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const closeModal = document.getElementById('closeModal');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const giftItems = document.querySelectorAll('.gift-gallery-item');
+
+            // Gallery data
+            const galleryData = [
+                {
+                    src: '../images/galery/area-camara-spa.jpeg',
+                    title: 'Área de Cámara Hiperbárica y Terapias',
+                    alt: 'Área de Cámara Hiperbárica y Terapias en Balam Barabata'
+                },
+                {
+                    src: '../images/galery/barabata-acceso.jpeg',
+                    title: 'Acceso Principal Barabata',
+                    alt: 'Acceso principal a Balam Barabata'
+                },
+                {
+                    src: '../images/galery/lobby2.jpeg',
+                    title: 'Lobby Premium',
+                    alt: 'Lobby principal de Balam Barabata'
+                },
+                {
+                    src: '../images/galery/loby.jpeg',
+                    title: 'Área de Recepción',
+                    alt: 'Área de recepción en Balam Barabata'
+                }
+            ];
+
+            // Add click event to gallery items
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    const imageData = galleryData[index];
+                    modalImage.src = imageData.src;
+                    modalImage.alt = imageData.alt;
+                    modalTitle.textContent = imageData.title;
+                    if (modalDesc) modalDesc.textContent = '';
+                    
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Gift models data
+            const giftData = [
+                { src: '../images/galery/modelo1.jpeg', title: 'Modelo I', alt: 'Modelo I — Cortesía Etapa II' },
+                { src: '../images/galery/modelo2.jpeg', title: 'Modelo II', alt: 'Modelo II — Cortesía Etapa II' },
+                { src: '../images/galery/modelo3.jpeg', title: 'Modelo III', alt: 'Modelo III — Cortesía Etapa II' },
+                { src: '../images/galery/modelo4.jpeg', title: 'Modelo IV', alt: 'Modelo IV — Cortesía Etapa II' },
+                { src: '../images/galery/modelo5.jpeg', title: 'Modelo V', alt: 'Modelo V — Cortesía Etapa II' },
+                { src: '../images/galery/modelo6.jpeg', title: 'Modelo VI', alt: 'Modelo VI — Cortesía Etapa II' },
+            ];
+
+            // Add click event to gift model items
+            giftItems.forEach((item, index) => {
+                item.addEventListener('click', function() {
+                    const imageData = giftData[index];
+                    if (!imageData) return;
+                    modalImage.src = imageData.src;
+                    modalImage.alt = imageData.alt;
+                    modalTitle.textContent = imageData.title;
+                    if (modalDesc) modalDesc.textContent = '';
+
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            // Close modal functions
+            function closeModalFunc() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+
+            closeModal.addEventListener('click', closeModalFunc);
+            
+            // Close when clicking on backdrop
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModalFunc();
+                }
+            });
+
+            // Close with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    closeModalFunc();
+                }
+            });
+        });
+    </script>
+    <script type="module">
+      // Masterplan hotspots interactions
+      import { hotspots } from '/content/masterplan-hotspots.js';
+
+      const tooltipContainer = document.getElementById('tooltip');
+      const svg = document.getElementById('masterplan');
+      if (tooltipContainer && svg) {
+        const allHotspots = svg.querySelectorAll('.hotspot');
+
+        let currentHotspotId = null;
+
+        allHotspots.forEach((element) => {
+          element.addEventListener('mouseenter', showTooltip);
+          element.addEventListener('mouseleave', hideTooltip);
+          element.addEventListener('mousemove', positionTooltip);
+          element.addEventListener('click', openModalFromHotspot);
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!(e.target instanceof Element)) return;
+          if (!e.target.classList.contains('hotspot')) {
+            hideTooltip();
+          }
+        });
+
+        function showTooltip(event) {
+          const target = event.target;
+          const data = hotspots.find((h) => h.id === target.dataset.id);
+          if (!data) return;
+          tooltipContainer.innerHTML = `
+            <img src="${data.img}" alt="${data.title}" class="w-full h-32 object-cover rounded-t-xl" />
+            <div class="p-4">
+              <h4 class="font-bold text-gray-800 mb-1 text-lg">${data.title}</h4>
+              <p class="text-sm text-gray-600">${data.description}</p>
+            </div>`;
+          tooltipContainer.classList.remove('hidden');
+          currentHotspotId = data.id;
+          positionTooltip(event);
+        }
+
+        function hideTooltip() {
+          tooltipContainer.classList.add('hidden');
+          currentHotspotId = null;
+        }
+
+        function positionTooltip(event) {
+          // Offset of 15px to avoid flicker
+          tooltipContainer.style.left = event.pageX + 15 + 'px';
+          tooltipContainer.style.top = event.pageY + 15 + 'px';
+        }
+
+        function openModalFromHotspot(event) {
+          event.stopPropagation();
+          const target = event.target;
+          const data = hotspots.find((h) => h.id === target.dataset.id);
+          if (!data) return;
+          // Populate existing gallery modal
+          const modal = document.getElementById('imageModal');
+          const modalImage = document.getElementById('modalImage');
+          const modalTitle = document.getElementById('modalTitle');
+          const modalDesc = document.getElementById('modalDesc');
+          if (!modal || !modalImage || !modalTitle) return;
+          modalImage.src = data.img;
+          modalImage.alt = data.title;
+          modalTitle.textContent = data.title;
+          if (modalDesc) modalDesc.textContent = data.description || '';
+          // Show modal
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+          // Hide tooltip when opening modal
+          hideTooltip();
+        }
+      }
+    </script>
+    <script>
+        // Mobile menu toggle with animated hamburger
+        (function() {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            if (!button || !menu) return;
+
+            function toggleMenu() {
+                const willOpen = menu.classList.contains('hidden');
+                menu.classList.toggle('hidden');
+                button.setAttribute('aria-expanded', String(willOpen));
+                button.setAttribute('aria-label', willOpen ? 'Cerrar menú' : 'Abrir menú');
+            }
+
+            button.addEventListener('click', toggleMenu);
+
+            // Close menu after clicking a link
+            menu.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => {
+                    if (!menu.classList.contains('hidden')) toggleMenu();
+                });
+            });
+
+            // Close menu when clicking outside of menu and button
+            document.addEventListener('click', (event) => {
+                const target = event.target;
+                const isOpen = !menu.classList.contains('hidden');
+                if (!isOpen) return;
+                if (target instanceof Node && !menu.contains(target) && !button.contains(target)) {
+                    toggleMenu();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
