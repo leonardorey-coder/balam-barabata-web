@@ -451,6 +451,44 @@
         document.addEventListener('DOMContentLoaded', function() { document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el)); });
     </script>
     <script>
+        // Dynamic stats counter animation (Key Stats at top)
+        function animateValue(element, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.innerHTML = value;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const number = entry.target.querySelector('.text-3xl');
+                    if (number && !number.classList.contains('animated')) {
+                        const textContent = number.textContent.trim();
+                        const finalValue = parseInt(textContent.replace(/[^0-9]/g, ''));
+                        if (!isNaN(finalValue)) {
+                            number.classList.add('animated');
+                            animateValue(number, 0, finalValue, 2000);
+                        }
+                    }
+                }
+            });
+        }, { threshold: 0.3 });
+        document.addEventListener('DOMContentLoaded', function() {
+            const statsSection = document.querySelector('.py-16.bg-gray-50');
+            if (statsSection) {
+                const statsElements = statsSection.querySelectorAll('.animate-on-scroll');
+                statsElements.forEach(el => statsObserver.observe(el));
+            }
+        });
+    </script>
+    <script>
         // Gallery and Gift Models modal logic
         document.addEventListener('DOMContentLoaded', function() {
             const modal = document.getElementById('imageModal');
@@ -544,5 +582,58 @@
         }
       }
     </script>
+
+    <footer class="bg-selva text-white">
+      <div class="max-w-7xl mx-auto py-6 md:py-8 px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">Únete a nosotros</h2>
+          <p class="mt-2 text-base sm:text-lg text-chukum-200 max-w-2xl mx-auto">
+            Sé parte de un proyecto que conserva el <strong>70&nbsp;%</strong> de su área natural para las generaciones futuras.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div>
+            <h3 class="text-lg sm:text-xl font-bold mb-3">Balam Barabata</h3>
+            <p class="text-sm sm:text-base text-gray-300 mb-4">Desarrollo inmobiliario regenerativo en el corazón de la selva yucateca.</p>
+            <p class="text-sm text-gray-400">Comprometidos con la sustentabilidad y el respeto por la naturaleza.</p>
+          </div>
+          <div>
+            <h4 class="text-sm sm:text-base font-semibold mb-3">Navegación</h4>
+            <ul class="space-y-2">
+              <li><a href="/presentacion/" class="text-gray-300 hover:text-white transition-colors">Inicio</a></li>
+              <li><a href="/proyecto/" class="text-gray-300 hover:text-white transition-colors">Proyecto</a></li>
+              <li><a href="/amenidades/" class="text-gray-300 hover:text-white transition-colors">Amenidades</a></li>
+              <li><a href="/etapas/" class="text-gray-300 hover:text-white transition-colors">Etapas</a></li>
+              <li><a href="/contacto/" class="text-gray-300 hover:text-white transition-colors">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-sm sm:text-base font-semibold mb-3">Contacto</h4>
+            <div class="space-y-2 text-gray-300">
+              <p>📍 Selva de Yucatán, México</p>
+              <p>📞 +52 999 123 4567</p>
+              <p>✉️ info@balambarabata.com</p>
+            </div>
+            <div class="mt-4">
+              <p class="text-sm text-gray-400">Síguenos en redes sociales</p>
+              <div class="flex space-x-4 mt-2">
+                <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Facebook">Facebook</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 pt-5 border-t border-gray-700">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-400">© <span id="year"></span> Balam Barabata. Todos los derechos reservados.</p>
+            <div class="mt-4 md:mt-0">
+              <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors mr-6">Aviso de Privacidad</a>
+              <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Términos y Condiciones</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>document.addEventListener('DOMContentLoaded',function(){var y=document.getElementById('year');if(y) y.textContent=String(new Date().getFullYear());});</script>
+    </footer>
 </body>
 </html>
