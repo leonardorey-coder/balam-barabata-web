@@ -119,7 +119,7 @@ export default function ContactoPage() {
                 </h3>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/share/1HGHNhMKKB/"
                     className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
                     aria-label="Facebook"
                   >
