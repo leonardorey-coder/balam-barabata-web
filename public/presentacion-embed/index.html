@@ -717,5 +717,38 @@
       </div>
       <script>document.addEventListener('DOMContentLoaded',function(){var y=document.getElementById('year');if(y) y.textContent=String(new Date().getFullYear());});</script>
     </footer>
+    
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+                    
+                    // Toggle aria-expanded
+                    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                    
+                    // Toggle menu visibility
+                    if (isExpanded) {
+                        mobileMenu.classList.add('hidden');
+                    } else {
+                        mobileMenu.classList.remove('hidden');
+                    }
+                });
+                
+                // Close menu when clicking on a link
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
