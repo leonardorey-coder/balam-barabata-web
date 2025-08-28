@@ -91,7 +91,7 @@ export default function Footer() {
                 <a href="#" className="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
                   Instagram
                 </a>
-                <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20Balam%20Barabata" className="text-gray-300 hover:text-white transition-colors" aria-label="WhatsApp">
+                <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20Balam%20Barabata" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors" aria-label="WhatsApp">
                   WhatsApp
                 </a>
               </div>
