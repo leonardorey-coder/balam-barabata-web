@@ -24,8 +24,8 @@ export default function Hero() {
           Enamórate de Uxuxubi
         </h1>
         <p className="text-xl md:text-2xl mb-8 font-light leading-relaxed opacity-0 motion-safe:animate-fade-in-up motion-safe:[animation-delay:150ms]">
-          Terrenos en Uxuxubi, un paraíso natural cerca de Tulum. 
-          Invierte seguro en un desarrollo sustentable con plusvalía, acceso controlado y amenidades únicas.
+          Reserva Natural: Tu santuario personal. Invierte con valor en un Ecosistema resiliente lleno 
+          de vida, no solo es una propiedad. Terrenos en Uxuxubí, un paraíso natural cerca de Tulum.
         </p>
         <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
           <Link

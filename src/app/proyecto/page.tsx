@@ -86,9 +86,12 @@ export default function Home() {
                 ¿Qué es el proyecto Balam Barabata?
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                Balam Barabata es una pequeña comunidad ubicada en Uxuxubi, Quintana Roo,
-                rodeada de selva, cenotes y fauna silvestre. Su nombre significa &quot;lugar de los monos&quot;
-                en lengua maya, ya que es común encontrar monos aulladores en la zona.
+                Balam Barabata es un desarrollo sustentable ubicado en Uxuxubí, Quintana Roo,
+                rodeado de selva, cenotes y fauna silvestre. El nombre &quot;Balam Barabata&quot; significa &quot;Jaguar Valiente&quot;
+                (Balam significa &quot;jaguar&quot; en maya y Barabata &quot;bravata&quot; o &quot;valiente&quot; según el diccionario histórico 
+                de la lengua española evocando resiliencia y valor). Uxuxubí quiere decir &quot;el que silva&quot;, 
+                el nombre se originó en los campamentos chicleros, cuando los trabajadores se comunicaban 
+                entre sí con un silvido diferente de acuerdo a lo que deseaban comunicar.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Este paraíso natural se ha convertido en un área de alto interés inmobiliario, 
@@ -97,7 +100,7 @@ export default function Home() {
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
                 Balam Barabata no solo es un lugar para invertir, sino una oportunidad para formar 
-                parte del futuro sostenible de Uxuxubi y la Riviera Maya.
+                parte del futuro sostenible de Uxuxubí y la Riviera Maya.
               </p>
             </div>
             
