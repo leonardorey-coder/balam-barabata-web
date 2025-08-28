@@ -35,7 +35,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg sm:text-xl font-bold mb-3">Balam Barabata</h3>
             <p className="text-sm sm:text-base text-gray-300 mb-4">
-              Desarrollo inmobiliario regenerativo en el corazón de la selva yucateca.
+              Desarrollo inmobiliario regenerativo en el corazón de la selva maya.
             </p>
             <p className="text-sm text-gray-400">
               Comprometidos con la sustentabilidad y el respeto por la naturaleza.
@@ -76,20 +76,23 @@ export default function Footer() {
           <div>
             <h4 className="text-sm sm:text-base font-semibold mb-3">Contacto</h4>
             <div className="space-y-2 text-gray-300">
-              <p>📍 Selva de Yucatán, México</p>
-              <p>📞 +52 999 123 4567</p>
-              <p>✉️ info@balambarabata.com</p>
+              <p>📍 12 km del poblado de Uxuxubí y a 1 km del ANP "Felipe Carrillo Puerto", Selva de Yucatán, México</p>
+              <p>📞 +52 998 198 1107</p>
+              <p>✉️ info@balambarabata.com, ventas@balambarabata.com</p>
             </div>
             <div className="mt-4">
               <p className="text-sm text-gray-400">
                 Síguenos en redes sociales
               </p>
               <div className="flex space-x-4 mt-2">
-                <a href="#" className="text-gray-300 hover:text-white transition-colors" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1HGHNhMKKB/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors" aria-label="Facebook">
                   Facebook
                 </a>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
                   Instagram
+                </a>
+                <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20Balam%20Barabata" className="text-gray-300 hover:text-white transition-colors" aria-label="WhatsApp">
+                  WhatsApp
                 </a>
               </div>
             </div>
