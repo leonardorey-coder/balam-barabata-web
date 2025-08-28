@@ -103,7 +103,7 @@ export default async function StageDetailPage({ params }: StageDetailPageProps) 
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Precio por m²</h3>
                     <p className="text-gray-600">
-                      ${stage.price.toLocaleString()} USD/m²
+                      ${stage.price.toLocaleString()} pesos M.N/m²
                       {stage.slug === 'primicia' && ' (Con descuento del 30% en preventa)'}
                     </p>
                   </div>

@@ -28,7 +28,7 @@ export default function StageCard({ stage }: StageCardProps) {
           <div className="flex justify-between items-center mb-3 text-sm text-gray-600">
             <span>{stage.lots} lotes disponibles</span>
             <span className="font-semibold text-chukum-600">
-              ${stage.price.toLocaleString()} USD/m²
+              ${stage.price.toLocaleString()} pesos M.N/m²
             </span>
           </div>
           
