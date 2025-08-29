@@ -78,7 +78,7 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <p>📍 12 km del poblado de Uxuxubí y a 1 km del ANP &quot;Felipe Carrillo Puerto&quot;, Selva de Yucatán, México</p>
               <p>📞 +52 998 198 1107</p>
-              <p>✉️ info@balambarabata.com, ventas@balambarabata.com</p>
+              <p>✉️ contacto@balambarabata.page</p>
             </div>
             <div className="mt-4">
               <p className="text-sm text-gray-400">

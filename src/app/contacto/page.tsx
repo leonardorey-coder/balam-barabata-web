@@ -28,8 +28,6 @@ export default function ContactoPage() {
     setSubmitMessage('');
     
     try {
-      console.log('Enviando formulario:', formData);
-      
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -38,16 +36,12 @@ export default function ContactoPage() {
         body: JSON.stringify(formData),
       });
 
-      console.log('Respuesta recibida:', response.status, response.statusText);
-
       if (!response.ok) {
         const errorText = await response.text();
-        console.error('Error response:', errorText);
         throw new Error(`HTTP ${response.status}: ${errorText}`);
       }
 
       const data = await response.json();
-      console.log('Data recibida:', data);
 
       setSubmitMessage('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.');
       setFormData({
@@ -58,7 +52,6 @@ export default function ContactoPage() {
         mensaje: '',
       });
     } catch (error) {
-      console.error('Error completo al enviar formulario:', error);
       setSubmitMessage(`Error: ${error instanceof Error ? error.message : 'No se pudo enviar el mensaje'}`);
     } finally {
       setIsSubmitting(false);
@@ -109,8 +102,7 @@ export default function ContactoPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@balambarabata.com</p>
-                    <p className="text-gray-600">ventas@balambarabata.com</p>
+                    <p className="text-gray-600">contacto@balambarabata.page</p>
                   </div>
                 </div>
 

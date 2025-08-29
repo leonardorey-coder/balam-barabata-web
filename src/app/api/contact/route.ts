@@ -9,16 +9,11 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('API Contact: Recibida petición POST');
-    
     const body = await request.json();
-    console.log('API Contact: Body recibido:', body);
-    
     const { nombre, email, telefono, interes, mensaje } = body;
 
     // Validación básica
     if (!nombre || !email) {
-      console.log('API Contact: Validación fallida - falta nombre o email');
       return NextResponse.json(
         { error: 'Nombre y email son requeridos' },
         { status: 400 }
@@ -27,7 +22,6 @@ export async function POST(request: NextRequest) {
 
     // Verificar que tenemos la API key
     if (!process.env.RESEND_API_KEY) {
-      console.log('API Contact: RESEND_API_KEY no configurada');
       return NextResponse.json(
         { error: 'Servicio de email no configurado' },
         { status: 500 }
@@ -88,20 +82,15 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    console.log('API Contact: Intentando enviar email...');
-    
     // Enviar el email
     const { data, error } = await resend.emails.send(emailData);
     
     if (error) {
-      console.error('API Contact: Error de Resend:', error);
       return NextResponse.json(
         { error: 'Error al enviar el email', details: error.message },
         { status: 500 }
       );
     }
-
-    console.log('API Contact: Email enviado exitosamente:', data);
 
     // Responder con éxito
     return NextResponse.json(
@@ -110,7 +99,6 @@ export async function POST(request: NextRequest) {
     );
 
   } catch (error) {
-    console.error('API Contact: Error completo:', error);
     return NextResponse.json(
       { error: 'Error interno del servidor', details: error instanceof Error ? error.message : 'Error desconocido' },
       { status: 500 }
