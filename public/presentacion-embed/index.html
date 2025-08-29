@@ -58,6 +58,105 @@
         #mobile-menu-button[aria-expanded="true"] .line1 { top: 19px; transform: rotate(45deg); }
         #mobile-menu-button[aria-expanded="true"] .line2 { opacity: 0; }
         #mobile-menu-button[aria-expanded="true"] .line3 { top: 19px; transform: rotate(-45deg); }
+        
+        /* Gallery Show More Styles */
+        #gallery-grid {
+            transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        #gallery-overlay {
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            background: linear-gradient(to top, 
+                rgba(255, 255, 255, 1) 0%, 
+                rgba(255, 255, 255, 0.95) 30%, 
+                rgba(255, 255, 255, 0.8) 60%, 
+                rgba(255, 255, 255, 0.4) 80%, 
+                transparent 100%);
+        }
+        
+        /* Responsive adjustments for gallery items */
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .gift-gallery-item {
+                aspect-ratio: 1;
+                height: 260px;
+                width: 260px;
+                max-width: 260px;
+                margin: 0 auto 28px auto;
+            }
+            
+            #gallery-grid {
+                gap: 28px !important;
+                grid-template-columns: 1fr !important;
+                justify-items: center;
+                padding: 0 8px;
+            }
+        }
+        
+        /* Small screens */
+        @media (min-width: 481px) and (max-width: 767px) {
+            .gift-gallery-item {
+                aspect-ratio: 1;
+                height: 280px;
+                width: 280px;
+                max-width: 280px;
+                margin: 0 auto 32px auto;
+            }
+            
+            #gallery-grid {
+                gap: 32px !important;
+                grid-template-columns: 1fr !important;
+                justify-items: center;
+            }
+        }
+        
+        /* Medium screens */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .gift-gallery-item {
+                aspect-ratio: 1;
+                height: 320px;
+                width: 320px;
+                max-width: 320px;
+                margin-bottom: 24px;
+            }
+            
+            #gallery-grid {
+                gap: 24px !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                justify-items: center;
+            }
+        }
+        
+        /* Large screens */
+        @media (min-width: 1024px) {
+            .gift-gallery-item {
+                aspect-ratio: 1;
+                height: 350px;
+                width: 350px;
+                max-width: 350px;
+                margin-bottom: 24px;
+            }
+            
+            #gallery-grid {
+                gap: 24px !important;
+                grid-template-columns: repeat(3, 1fr) !important;
+                justify-items: center;
+            }
+        }
+        
+        /* Ensure proper centering and spacing */
+        #gallery-grid {
+            width: 100%;
+            box-sizing: border-box;
+            display: grid;
+            place-items: center;
+        }
+        
+        .gift-gallery-item {
+            box-sizing: border-box;
+            flex-shrink: 0;
+            position: relative;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -116,7 +215,7 @@
             <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center opacity-0 animate-fade-in-up-delay-2">
                 <a href="#etapas" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Ver Disponibilidad</a>
                 <a href="#contacto" class="inline-block border-2 border-white text-white hover:bg-white hover:text-selva font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Agendar Visita</a>
-                <a href="/proyecto" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Ver proyecto completo</a>
+                <a href="/proyecto" class="inline-block bg-gradient-to-br from-chukum-50 to-white border border-chukum-200 text-selva font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:from-chukum-100 hover:to-white">Ver proyecto completo</a>
             </div>
         </div>
     </section>
@@ -237,51 +336,72 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">Modelos de corteria para fase II</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">Explora la colección de modelos de cortesía disponibles para la fase II. Diseño elegante, materiales auténticos y lista para inspirarte.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo1.jpeg" alt="Modelo I — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo I</h3></div>
+            
+            <!-- Gallery Container with Show More Effect -->
+            <div id="gallery-container" class="relative">
+                <!-- Main Gallery Grid -->
+                <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-6 transition-all duration-700 ease-in-out w-full" style="max-height: 400px; overflow: hidden;">
+                    <!-- First 3 items - Always visible -->
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo1.jpeg" alt="Modelo I — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo I</h3></div>
+                    </div>
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo2.jpeg" alt="Modelo II — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo II</h3></div>
+                    </div>
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo3.jpeg" alt="Modelo III — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo III</h3></div>
+                    </div>
+                    
+                    <!-- Remaining items - Initially hidden by max-height -->
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo4.jpeg" alt="Modelo IV — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo IV</h3></div>
+                    </div>
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo5.jpeg" alt="Modelo V — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo V</h3></div>
+                    </div>
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo6.jpeg" alt="Modelo VI — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo VI</h3></div>
+                    </div>
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo7.jpeg" alt="Modelo VII — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo VII</h3></div>
+                    </div>
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo8.jpeg" alt="Modelo VIII — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo VIII</h3></div>
+                    </div>
+                    <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                        <img src="/images/galery/modelo9.jpeg" alt="Modelo IX — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo IX</h3></div>
+                    </div>
                 </div>
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo2.jpeg" alt="Modelo II — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo II</h3></div>
-                </div>
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo3.jpeg" alt="Modelo III — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo III</h3></div>
-                </div>
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo4.jpeg" alt="Modelo IV — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo IV</h3></div>
-                </div>
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo5.jpeg" alt="Modelo V — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo V</h3></div>
-                </div>
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo6.jpeg" alt="Modelo VI — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo VI</h3></div>
-                </div>
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo7.jpeg" alt="Modelo VII — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo VII</h3></div>
-                </div>
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo8.jpeg" alt="Modelo VIII — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo VIII</h3></div>
-                </div>
-                <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
-                    <img src="/images/galery/modelo9.jpeg" alt="Modelo IX — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-4"><h3 class="text-white font-semibold text-lg leading-tight">Modelo IX</h3></div>
+                
+                <!-- White Overlay with Gradient -->
+                <div id="gallery-overlay" class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/90 to-transparent pointer-events-none transition-opacity duration-500"></div>
+                
+                <!-- Show More Button -->
+                <div id="show-more-container" class="text-center mt-8">
+                    <button id="show-more-btn" class="bg-chukum-500 hover:bg-chukum-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        <span id="btn-text">Ver más modelos</span>
+                        <svg id="btn-arrow" class="inline-block ml-2 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -639,7 +759,7 @@
         
         <!-- CTA to full project within Final CTA section -->
         <div class="mt-8 animate-on-scroll">
-            <a href="/proyecto" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+            <a href="/proyecto" class="inline-block bg-gradient-to-br from-chukum-50 to-white border border-chukum-200 text-selva font-semibold py-3 px-8 rounded-lg transition-all duration-200 hover:from-chukum-100 hover:to-white">
                 Ver proyecto completo
             </a>
         </div>
@@ -717,6 +837,84 @@
       </div>
       <script>document.addEventListener('DOMContentLoaded',function(){var y=document.getElementById('year');if(y) y.textContent=String(new Date().getFullYear());});</script>
     </footer>
+    
+    <script>
+        // Gallery Show More functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryGrid = document.getElementById('gallery-grid');
+            const galleryOverlay = document.getElementById('gallery-overlay');
+            const showMoreBtn = document.getElementById('show-more-btn');
+            const btnText = document.getElementById('btn-text');
+            const btnArrow = document.getElementById('btn-arrow');
+            
+            let isExpanded = false;
+            
+            if (galleryGrid && galleryOverlay && showMoreBtn && btnText && btnArrow) {
+                // Function to calculate responsive max-height
+                function getCollapsedHeight() {
+                    const screenWidth = window.innerWidth;
+                    if (screenWidth >= 1024) { // lg breakpoint - 3 columns
+                        // Show exactly 1 row of 3 items: 350px height + 24px margin-bottom = 374px
+                        return 374;
+                    } else if (screenWidth >= 768) { // md breakpoint - 2 columns  
+                        // Show exactly 1 row of 2 items: 320px height + 24px margin-bottom = 344px
+                        return 344;
+                    } else if (screenWidth >= 481) { // small screens - 1 column
+                        // Show exactly 2.5 items: 2.5 × (280px height + 32px margin) = 2.5 × 312px = 780px
+                        return 780;
+                    } else { // extra small screens - 1 column
+                        // Show exactly 2.5 items: 2.5 × (260px height + 28px margin) = 2.5 × 288px = 720px
+                        return 720;
+                    }
+                }
+                
+                // Set initial collapsed state
+                function setCollapsedState() {
+                    const collapsedHeight = getCollapsedHeight();
+                    galleryGrid.style.maxHeight = collapsedHeight + 'px';
+                    galleryOverlay.style.opacity = '1';
+                    galleryOverlay.style.visibility = 'visible';
+                    btnText.textContent = 'Ver más modelos';
+                    btnArrow.style.transform = 'rotate(0deg)';
+                    isExpanded = false;
+                }
+                
+                // Set expanded state
+                function setExpandedState() {
+                    galleryGrid.style.maxHeight = 'none';
+                    galleryOverlay.style.opacity = '0';
+                    galleryOverlay.style.visibility = 'hidden';
+                    btnText.textContent = 'Ver menos';
+                    btnArrow.style.transform = 'rotate(180deg)';
+                    isExpanded = true;
+                }
+                
+                // Initialize collapsed state
+                setCollapsedState();
+                
+                // Handle button click
+                showMoreBtn.addEventListener('click', function() {
+                    if (isExpanded) {
+                        setCollapsedState();
+                        // Smooth scroll back to gallery top
+                        document.getElementById('gallery-container').scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    } else {
+                        setExpandedState();
+                    }
+                });
+                
+                // Handle window resize to recalculate collapsed height
+                window.addEventListener('resize', function() {
+                    if (!isExpanded) {
+                        setCollapsedState();
+                    }
+                });
+            }
+        });
+    </script>
     
     <script>
         // Mobile menu functionality

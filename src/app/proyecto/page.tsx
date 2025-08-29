@@ -38,37 +38,43 @@ const idealForData = [
     title: "Refugio personal",
     description: "Un lugar tranquilo y exclusivo para vivir o vacacionar.",
     price: "$ 2,500",
-    location: "Balam Barabata – Quintana Roo"
+    location: "Balam Barabata – Quintana Roo",
+    backgroundImage: "/images/galery/modelo1.jpeg",
   },
   {
     title: "Desarrollos inmobiliarios",
     description: "Oportunidad para crear proyectos residenciales o ecológicos.",
     price: "$ 3,000",
-    location: "Balam Barabata – Riviera Maya"
+    location: "Balam Barabata – Riviera Maya",
+    backgroundImage: "/images/galery/modelo2.jpeg",
   },
   {
     title: "Familias y parejas",
     description: "Privacidad, tranquilidad y naturaleza a pocos minutos de Tulum y Playa del Carmen.",
     price: "$ 8,000",
-    location: "Balam Barabata – Akumal"
+    location: "Balam Barabata – Akumal",
+    backgroundImage: "/images/galery/modelo3.jpeg",
   },
   {
     title: "Emprendedores ecológicos",
     description: "El lugar ideal para proyectos sostenibles con impacto ambiental positivo.",
     price: "$ 2,700",
-    location: "Balam Barabata – Riviera Maya"
+    location: "Balam Barabata – Riviera Maya",
+    backgroundImage: "/images/galery/modelo4.jpeg",
   },
   {
     title: "Proyectos turísticos",
     description: "Ideal para cabañas, glamping o retiros en plena selva.",
     price: "$ 4,200",
-    location: "Balam Barabata – Quintana Roo"
+    location: "Balam Barabata – Quintana Roo",
+    backgroundImage: "/images/galery/modelo5.jpeg",
   },
   {
     title: "Inversionistas visionarios",
     description: "Terrenos con alta plusvalía en un entorno natural único.",
     price: "$ 3,000",
-    location: "Balam Barabata – Riviera Maya"
+    location: "Balam Barabata – Riviera Maya",
+    backgroundImage: "/images/galery/modelo6.jpeg",
   }
 ];
 

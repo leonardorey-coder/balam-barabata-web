@@ -8,6 +8,7 @@ interface IdealForData {
   description: string;
   price: string;
   location: string;
+  backgroundImage?: string;
 }
 
 interface IdealForCarouselProps {
@@ -49,6 +50,7 @@ export default function IdealForCarousel({ data }: IdealForCarouselProps) {
               description={item.description}
               price={item.price}
               location={item.location}
+              backgroundImage={item.backgroundImage}
             />
           </div>
         ))}

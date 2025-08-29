@@ -11,14 +11,14 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: '/images/galery/area-camara-spa.jpeg',
-    title: 'Área de Cámara Hiperbárica y Terapias',
-    alt: 'Área de Cámara Hiperbárica y Terapias en Balam Barabata'
-  },
-  {
     src: '/images/galery/barabata-acceso.jpeg',
     title: 'Acceso Principal Barabata',
     alt: 'Acceso principal a Balam Barabata'
+  },
+  {
+    src: '/images/galery/area-camara-spa.jpeg',
+    title: 'Área de Cámara Hiperbárica y Terapias',
+    alt: 'Área de Cámara Hiperbárica y Terapias en Balam Barabata'
   },
   {
     src: '/images/galery/lobby2.jpeg',
