@@ -25,10 +25,30 @@ export default function ContactoPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitMessage('');
     
-    // Simular envío del formulario
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      console.log('Enviando formulario:', formData);
+      
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log('Respuesta recibida:', response.status, response.statusText);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
+      }
+
+      const data = await response.json();
+      console.log('Data recibida:', data);
+
       setSubmitMessage('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.');
       setFormData({
         nombre: '',
@@ -37,7 +57,12 @@ export default function ContactoPage() {
         interes: '',
         mensaje: '',
       });
-    }, 1500);
+    } catch (error) {
+      console.error('Error completo al enviar formulario:', error);
+      setSubmitMessage(`Error: ${error instanceof Error ? error.message : 'No se pudo enviar el mensaje'}`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -160,8 +185,16 @@ export default function ContactoPage() {
               </h3>
 
               {submitMessage && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-green-700">{submitMessage}</p>
+                <div className={`mb-6 p-4 rounded-lg ${
+                  submitMessage.includes('Error') || submitMessage.includes('error')
+                    ? 'bg-red-50 border border-red-200'
+                    : 'bg-green-50 border border-green-200'
+                }`}>
+                  <p className={submitMessage.includes('Error') || submitMessage.includes('error')
+                    ? 'text-red-700' : 'text-green-700'
+                  }>
+                    {submitMessage}
+                  </p>
                 </div>
               )}
 

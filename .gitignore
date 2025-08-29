@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# SETUP
+/.yarn
+/CONTACT_SETUP.md
