@@ -7,7 +7,7 @@ export const hotspots = [
     title: 'Cenote Privado',
     description:
       'Un santuario de agua cristalina exclusivo para residentes, el corazón de nuestro ecosistema de bienestar.',
-    img: '/images/selva.jpg',
+    img: '/images/galery/cenote.jpeg',
   },
   {
     id: 'temazcal',
@@ -59,4 +59,3 @@ export const hotspots = [
     img: '/images/galery/barabata-acceso.jpeg',
   },
 ];
-

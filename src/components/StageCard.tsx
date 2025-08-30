@@ -1,4 +1,4 @@
-import Link from 'next/link';
+  import Link from 'next/link';
 import Image from 'next/image';
 import { Stage } from '@/content/stages';
 
@@ -7,24 +7,38 @@ interface StageCardProps {
 }
 
 export default function StageCard({ stage }: StageCardProps) {
+  // Mapeo de las etapas a sus respectivas imágenes
+  const getStageImage = (slug: string) => {
+    const imageMap: { [key: string]: string } = {
+      'primicia': '/images/etapa1.png',
+      'comunidad-sustentable': '/images/etapa2.png',
+      'ciudadanos-eco-bio': '/images/etapa3.png'
+    };
+    return imageMap[slug] || '/images/etapa1.png';
+  };
+
   return (
     <Link href={`/etapas/${stage.slug}`} className="block group">
       <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:scale-105">
-        <div className="relative h-48 bg-gradient-to-br from-chukum-100 to-chukum-200">
+        <div className="relative h-56">
           <Image
-            src={`https://placehold.co/400x200/2a4d3f/ffffff?text=${encodeURIComponent(stage.name)}`}
+            src={getStageImage(stage.slug)}
             alt={stage.name}
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-selva/20" />
+          {/* Overlay oscuro transparente para mejorar legibilidad */}
+          <div className="absolute inset-0 bg-black/40" />
+          
+          {/* Solo el nombre de la etapa sobre la imagen */}
+          <div className="absolute inset-0 flex items-center justify-center text-center p-4">
+            <h3 className="text-2xl font-bold text-white drop-shadow-lg">
+              {stage.name}
+            </h3>
+          </div>
         </div>
         
         <div className="p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-selva transition-colors">
-            {stage.name}
-          </h3>
-          
           <div className="flex justify-between items-center mb-3 text-sm text-gray-600">
             <span>{stage.lots} lotes disponibles</span>
             <span className="font-semibold text-chukum-600">
