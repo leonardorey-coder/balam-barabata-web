@@ -5,6 +5,7 @@ import CallToAction from '@/components/CallToAction';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import IdealForCarousel from '@/components/IdealForCarousel';
 import Gallery from '@/components/Gallery';
+import QualitiesMarquee from '@/components/QualitiesMarquee';
 import { amenities } from '@/content/amenities';
 import { stages } from '@/content/stages';
 import Link from 'next/link';
@@ -83,8 +84,13 @@ export default function Home() {
     <div>
       <Hero />
       
+      {/* Cualidades y garantías del proyecto - Marquee */}
+      <div className="my-8 md:my-10">
+        <QualitiesMarquee />
+      </div>
+      
       {/* Sección Qué es Balam Barabata */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
