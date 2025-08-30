@@ -41,7 +41,7 @@ export default function ContactoPage() {
         throw new Error(`HTTP ${response.status}: ${errorText}`);
       }
 
-      const data = await response.json();
+      await response.json();
 
       setSubmitMessage('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.');
       setFormData({
