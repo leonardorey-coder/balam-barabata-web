@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ChatBot from '@/components/chatbot/ChatBot';
+
 
 export const metadata: Metadata = {
   title: "Balam Barabata - Desarrollo Inmobiliario Regenerativo",
@@ -28,6 +30,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ChatBot />
       </body>
     </html>
   );

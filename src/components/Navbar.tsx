@@ -36,6 +36,7 @@ export default function Navbar() {
   const navigation = [
     { name: 'Amenidades', href: '/amenidades' },
     { name: 'Etapas', href: '/etapas' },
+    { name: 'FAQ', href: '/faq' },
     { name: 'Contacto', href: '/contacto' },
   ];
 
