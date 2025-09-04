@@ -113,7 +113,7 @@ export default function ContactoPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Ubicación</h3>
                     <p className="text-gray-600">12 km del poblado de Uxuxubí y a 1 km del ANP &quot;Felipe Carrillo Puerto&quot;</p>
-                    <p className="text-gray-600">Selva de Yucatán, México</p>
+                    <p className="text-gray-600">Selva Maya en el municipio de Solidaridad, México</p>
                   </div>
                 </div>
 

@@ -81,7 +81,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm sm:text-base font-semibold mb-3">Contacto</h4>
             <div className="space-y-2 text-gray-300">
-              <p>📍 12 km del poblado de Uxuxubí y a 1 km del ANP &quot;Felipe Carrillo Puerto&quot;, Selva de Yucatán, México</p>
+              <p>📍 12 km del poblado de Uxuxubí y a 1 km del ANP &quot;Felipe Carrillo Puerto&quot;, Selva Maya en el municipio de Solidaridad, México</p>
               <p>📞 +52 998 198 1107</p>
               <p>✉️ contacto@balambarabata.page</p>
             </div>
@@ -110,10 +110,10 @@ export default function Footer() {
               © {new Date().getFullYear()} Balam Barabata. Todos los derechos reservados.
             </p>
             <div className="mt-4 md:mt-0">
-              <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors mr-6">
+              <Link href="/aviso-de-privacidad" className="text-sm text-gray-400 hover:text-white transition-colors mr-6">
                 Aviso de Privacidad
               </Link>
-              <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
+              <Link href="/terminos-y-condiciones" className="text-sm text-gray-400 hover:text-white transition-colors">
                 Términos y Condiciones
               </Link>
             </div>
