@@ -45,7 +45,7 @@ export default function AvisoDePrivacidadPage() {
 
             <div className="space-y-8">
               <p className="text-gray-700 leading-relaxed">
-                De conformidad con lo dispuesto en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en adelante "la Ley"), <strong>Balam Barabata S.A. de C.V.</strong> (en adelante "BALAM BARABATA"), con domicilio fiscal en Avenida Bonampak, Supermanzana 6, Cancún, Quintana Roo, C.P. 77500, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:
+                De conformidad con lo dispuesto en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (en adelante &ldquo;la Ley&rdquo;), <strong>Balam Barabata S.A. de C.V.</strong> (en adelante &ldquo;BALAM BARABATA&rdquo;), con domicilio fiscal en Avenida Bonampak, Supermanzana 6, Cancún, Quintana Roo, C.P. 77500, es el responsable del uso y protección de sus datos personales, y al respecto le informamos lo siguiente:
               </p>
 
               <div className="bg-white border-l-4 border-chukum-500 pl-6">
@@ -116,7 +116,7 @@ export default function AvisoDePrivacidadPage() {
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">¿Cómo puede acceder, rectificar o cancelar sus datos personales, u oponerse a su uso (Derechos ARCO)?</h4>
                 
                 <p className="text-gray-700 mb-4">
-                  Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.
+                  Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (&ldquo;Acceso&rdquo;). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (&ldquo;Rectificación&rdquo;); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (&ldquo;Cancelación&rdquo;); así como oponerse al uso de sus datos personales para fines específicos (&ldquo;Oposición&rdquo;). Estos derechos se conocen como derechos ARCO.
                 </p>
                 
                 <p className="text-gray-700">
@@ -140,7 +140,7 @@ export default function AvisoDePrivacidadPage() {
                 </p>
                 
                 <p className="text-gray-700 mt-4">
-                  Al proporcionar sus datos personales a través de nuestro sitio web, usted consiente el tratamiento de su información de conformidad con los términos de este Aviso de Privacidad.
+                  Al proporcionar sus datos personales a través de nuestro sitio web, usted consiente el tratamiento de su información de conformidad con los términos de este &ldquo;Aviso de Privacidad&rdquo;.
                 </p>
               </div>
             </div>

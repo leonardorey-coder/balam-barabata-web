@@ -45,20 +45,20 @@ export default function TerminosYCondicionesPage() {
 
             <div className="space-y-8">
               <p className="text-gray-700 leading-relaxed">
-                Bienvenido al sitio web oficial de Balam Barabata (https://www.balambarabata.page/). A continuación, se describen los términos y condiciones que rigen el uso de este sitio web (en adelante, el "Sitio"). Al acceder y utilizar el Sitio, usted (en adelante, el "Usuario") acepta y se obliga a cumplir con los presentes Términos y Condiciones.
+                Bienvenido al sitio web oficial de Balam Barabata (https://www.balambarabata.page/). A continuación, se describen los términos y condiciones que rigen el uso de este sitio web (en adelante, el &ldquo;Sitio&rdquo;). Al acceder y utilizar el Sitio, usted (en adelante, el &ldquo;Usuario&rdquo;) acepta y se obliga a cumplir con los presentes Términos y Condiciones.
               </p>
 
               <div className="bg-white border-l-4 border-chukum-500 pl-6">
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">1. Objeto del Sitio</h4>
                 <p className="text-gray-700">
-                  El Sitio tiene como finalidad principal la presentación, promoción y difusión de información relativa al proyecto inmobiliario "Balam Barabata", incluyendo sus características, concepto, etapas de desarrollo, precios y formas de contacto. La información aquí contenida es de carácter puramente informativo.
+                  El Sitio tiene como finalidad principal la presentación, promoción y difusión de información relativa al proyecto inmobiliario &ldquo;Balam Barabata&rdquo;, incluyendo sus características, concepto, etapas de desarrollo, precios y formas de contacto. La información aquí contenida es de carácter puramente informativo.
                 </p>
               </div>
 
               <div className="bg-white border-l-4 border-selva pl-6">
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">2. Propiedad Intelectual</h4>
                 <p className="text-gray-700">
-                  Todo el contenido publicado en el Sitio, incluyendo, pero no limitado a, textos, gráficos, logotipos, iconos, imágenes, renders, videos, y el diseño del sitio, es propiedad exclusiva de <strong>Balam Barabata S.A. de C.V.</strong> ("BALAM BARABATA") o de sus licenciantes, y está protegido por las leyes de propiedad intelectual y derechos de autor de México y tratados internacionales. Queda estrictamente prohibida la reproducción, distribución, modificación o uso de dicho contenido sin el consentimiento previo y por escrito de BALAM BARABATA.
+                  Todo el contenido publicado en el Sitio, incluyendo, pero no limitado a, textos, gráficos, logotipos, iconos, imágenes, renders, videos, y el diseño del sitio, es propiedad exclusiva de <strong>Balam Barabata S.A. de C.V.</strong> (&ldquo;BALAM BARABATA&rdquo;) o de sus licenciantes, y está protegido por las leyes de propiedad intelectual y derechos de autor de México y tratados internacionales. Queda estrictamente prohibida la reproducción, distribución, modificación o uso de dicho contenido sin el consentimiento previo y por escrito de BALAM BARABATA.
                 </p>
               </div>
 
@@ -77,7 +77,7 @@ export default function TerminosYCondicionesPage() {
               <div className="bg-white border-l-4 border-selva pl-6">
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">4. Información del Proyecto y Limitación de Responsabilidad</h4>
                 <p className="text-gray-700 mb-4">
-                  La información presentada en el Sitio, como precios, disponibilidad, planes maestros, renders, amenidades y fechas de entrega, es de carácter ilustrativo y preliminar. BALAM BARABATA se reserva el derecho de modificar dicha información en cualquier momento y sin previo aviso.
+                  La información presentada en el Sitio, como precios, disponibilidad, planes maestros, renders, amenidades y fechas de entrega, es de carácter ilustrativo y preliminar. &ldquo;BALAM BARABATA&rdquo; se reserva el derecho de modificar dicha información en cualquier momento y sin previo aviso.
                 </p>
                 <p className="text-gray-700 mb-4">
                   La información del Sitio no constituye una oferta formal de venta ni un contrato. Cualquier operación de inversión o compraventa se formalizará exclusivamente a través de los instrumentos legales correspondientes (contrato de fideicomiso, contrato de promesa de compraventa, etc.), los cuales serán proporcionados y firmados por las partes interesadas fuera de este Sitio.
@@ -104,7 +104,7 @@ export default function TerminosYCondicionesPage() {
               <div className="bg-white border-l-4 border-chukum-500 pl-6">
                 <h4 className="text-xl font-semibold text-gray-900 mb-4">7. Ley Aplicable y Jurisdicción</h4>
                 <p className="text-gray-700">
-                  Para la interpretación y cumplimiento de los presentes Términos y Condiciones, el Usuario y BALAM BARABATA se someten expresamente a las leyes federales de los Estados Unidos Mexicanos y a la jurisdicción de los tribunales competentes de la ciudad de Cancún, Quintana Roo, renunciando a cualquier otro fuero que por razón de sus domicilios presentes o futuros pudiera corresponderles.
+                  Para la interpretación y cumplimiento de los presentes Términos y Condiciones, el Usuario y &ldquo;BALAM BARABATA&rdquo; se someten expresamente a las leyes federales de los Estados Unidos Mexicanos y a la jurisdicción de los tribunales competentes de la ciudad de Cancún, Quintana Roo, renunciando a cualquier otro fuero que por razón de sus domicilios presentes o futuros pudiera corresponderles.
                 </p>
               </div>
 
