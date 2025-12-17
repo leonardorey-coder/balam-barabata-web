@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-// import Image from 'next/image';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
@@ -56,7 +56,6 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center gap-3">
             {/* Logo removido hasta obtener el registro en IMPI */}
-            {/*
             <Image
               src="/images/balam-glyph.png"
               alt="Logotipo Balam Barabata"
@@ -68,7 +67,6 @@ export default function Navbar() {
                 isOverlayPage && isAtTop ? '' : 'filter brightness-0 opacity-80'
               )}
             />
-            */}
             <Link
               href="/proyecto"
               className={clsx(
