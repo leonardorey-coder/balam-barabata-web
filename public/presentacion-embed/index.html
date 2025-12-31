@@ -79,17 +79,16 @@
         @media (max-width: 480px) {
             .gift-gallery-item {
                 aspect-ratio: 1;
-                height: 260px;
-                width: 260px;
-                max-width: 260px;
-                margin: 0 auto 28px auto;
+                height: auto;
+                width: 100%;
+                max-width: none;
             }
             
             #gallery-grid {
-                gap: 28px !important;
-                grid-template-columns: 1fr !important;
-                justify-items: center;
-                padding: 0 8px;
+                gap: 12px !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                justify-items: stretch;
+                padding: 0 4px;
             }
         }
         
@@ -97,16 +96,15 @@
         @media (min-width: 481px) and (max-width: 767px) {
             .gift-gallery-item {
                 aspect-ratio: 1;
-                height: 280px;
-                width: 280px;
-                max-width: 280px;
-                margin: 0 auto 32px auto;
+                height: auto;
+                width: 100%;
+                max-width: none;
             }
             
             #gallery-grid {
-                gap: 32px !important;
-                grid-template-columns: 1fr !important;
-                justify-items: center;
+                gap: 16px !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                justify-items: stretch;
             }
         }
         
@@ -114,16 +112,15 @@
         @media (min-width: 768px) and (max-width: 1023px) {
             .gift-gallery-item {
                 aspect-ratio: 1;
-                height: 320px;
-                width: 320px;
-                max-width: 320px;
-                margin-bottom: 24px;
+                height: auto;
+                width: 100%;
+                max-width: none;
             }
             
             #gallery-grid {
                 gap: 24px !important;
                 grid-template-columns: repeat(2, 1fr) !important;
-                justify-items: center;
+                justify-items: stretch;
             }
         }
         
@@ -131,16 +128,15 @@
         @media (min-width: 1024px) {
             .gift-gallery-item {
                 aspect-ratio: 1;
-                height: 350px;
-                width: 350px;
-                max-width: 350px;
-                margin-bottom: 24px;
+                height: auto;
+                width: 100%;
+                max-width: none;
             }
             
             #gallery-grid {
                 gap: 24px !important;
                 grid-template-columns: repeat(3, 1fr) !important;
-                justify-items: center;
+                justify-items: stretch;
             }
         }
         
@@ -149,13 +145,15 @@
             width: 100%;
             box-sizing: border-box;
             display: grid;
-            place-items: center;
+            align-content: start;
+            align-items: start;
+            grid-auto-rows: max-content;
         }
         
         .gift-gallery-item {
             box-sizing: border-box;
-            flex-shrink: 0;
             position: relative;
+            width: 100%;
         }
     </style>
 </head>
@@ -233,7 +231,7 @@
             </div>
         </div>
 
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-80">
+        <div class="absolute bottom-2 inset-x-0 flex justify-center animate-bounce opacity-80 pointer-events-none">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
@@ -380,7 +378,7 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
                     <div class="group relative flex flex-col gap-6 cursor-pointer" data-parallax-card data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCIsjIGtCkrzVrhCk5zEriwo7fkhbUZQ9cdWRX859E5HgnFVlPvanrYYJEtD3J2gNB2dFOjHwHngtdnC0Wu-SkHtRGU0YDedjADMEKn6o5rYnlQf51_Ak4rzzwCNWPzzMwgg698fzYr1kioo-X247fFwFXq3fJvq9vhCTkNl2LXFJ85A3IopRZSCaS8f7Y6KoAJ3g9VqUsmR7HxXskdcOhxtSq5kaLZ24gDikvR3avVwDegwL_iL5WtA5FAS2kYvl1ZjJ7oawUzEDt1" data-modal-title="Reconexión" data-modal-desc="Volver al origen. Espacios diseñados para silenciar el ruido externo y escuchar el pulso de la selva.">
                         <div class="overflow-hidden rounded-lg aspect-[3/4] relative z-0 shadow-xl border border-white/10" data-parallax-container>
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-20 duration-500 pointer-events-none"></div>
@@ -456,8 +454,8 @@
                     </p>
                 </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:auto-rows-[240px]">
-                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[400px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuAdKxNey4bZhfQ_qef8C7-iPvVZxRHpqrqfncZRmDLrwkr02ALmm9PdPI3d1YCmTuNboiM0ZLUxXcAR4oFMoDj2710UJYGMk1F0uXRKNRJ3Baluw0fXurSkCSO4QOWZcpTHsxNSuBKLGle8DoL1sj5t_9xwtSlx-4mzxA4CrswwcQIjk4_6dARdRN_cijMGGi4r5_74yJAPpr5rKimdJL9CRJ5H2crw4IFeXmrLnNPwyFiKrgFk4ftXhympO4jgOVibX4Ihs53DSxf_" data-modal-title="Cenote Spa" data-modal-desc="Rituales mayas de sanación y piscinas naturales subterráneas para reconectar con su esencia interior.">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[160px] md:auto-rows-[240px]">
+                <div class="col-span-2 row-span-2 md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[280px] md:min-h-[400px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuAdKxNey4bZhfQ_qef8C7-iPvVZxRHpqrqfncZRmDLrwkr02ALmm9PdPI3d1YCmTuNboiM0ZLUxXcAR4oFMoDj2710UJYGMk1F0uXRKNRJ3Baluw0fXurSkCSO4QOWZcpTHsxNSuBKLGle8DoL1sj5t_9xwtSlx-4mzxA4CrswwcQIjk4_6dARdRN_cijMGGi4r5_74yJAPpr5rKimdJL9CRJ5H2crw4IFeXmrLnNPwyFiKrgFk4ftXhympO4jgOVibX4Ihs53DSxf_" data-modal-title="Cenote Spa" data-modal-desc="Rituales mayas de sanación y piscinas naturales subterráneas para reconectar con su esencia interior.">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
                     <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
                         <i data-lucide="zoom-in" class="w-4 h-4"></i>
@@ -476,7 +474,7 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDhEtwfRdPwekFGPZjKUOCjG1Hl7lhgI6wTUrykI-loLwbfG2FwgA8Way28jfTwv83zzMKsJMmiqIvECdR1k-oDrf9YCTR1_nMPj-wIH5xaC-D_ZRTg30FJXzqbtgUC2VmPbMeTKZkzuJL5ElpC72-wuaxVnIoiCRPAY6QlVgCz1g8ZKZdqPQIU6BparX2LY2xTT6EDo6-bXEhH9fcv9_7P78yLsaYWpPEUlAEUfoUSHVm9akaU1j5l_I-goZ4UAEhi4xuTAaR-IG8p" data-modal-title="Jungle Gym" data-modal-desc="Entrenamiento funcional inmerso en la naturaleza viva.">
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDhEtwfRdPwekFGPZjKUOCjG1Hl7lhgI6wTUrykI-loLwbfG2FwgA8Way28jfTwv83zzMKsJMmiqIvECdR1k-oDrf9YCTR1_nMPj-wIH5xaC-D_ZRTg30FJXzqbtgUC2VmPbMeTKZkzuJL5ElpC72-wuaxVnIoiCRPAY6QlVgCz1g8ZKZdqPQIU6BparX2LY2xTT6EDo6-bXEhH9fcv9_7P78yLsaYWpPEUlAEUfoUSHVm9akaU1j5l_I-goZ4UAEhi4xuTAaR-IG8p" data-modal-title="Jungle Gym" data-modal-desc="Entrenamiento funcional inmerso en la naturaleza viva.">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
                     <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
                         <i data-lucide="zoom-in" class="w-4 h-4"></i>
@@ -495,7 +493,7 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCvQNHnqFZ2GQRvjb8DsX8vPHgIWaludjxOAOKXFl8rB2SMRJ3vhqAH-cfH6ZEn6Lb3rM2UsUqFA1AhNZqnfH2E5Qmsrk7CVVl9Qi98PumIc77_afJAbRjJC7t7ydUsH3eUhOErIN9ON1iyo-wF-p_5tMSB8SwZJQFokWhKd7uNizKbRczJl4FAWBoq85OYXV4DEawZ-AvcAvldE4CmmgljNQVNDoLFajUmrrAPMwOFelLm1MJQfxgV0lOD2zEAazEYZeFMM4ImvTbP" data-modal-title="Infinity Pools" data-modal-desc="Espejos de agua que se funden con el horizonte selvático.">
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCvQNHnqFZ2GQRvjb8DsX8vPHgIWaludjxOAOKXFl8rB2SMRJ3vhqAH-cfH6ZEn6Lb3rM2UsUqFA1AhNZqnfH2E5Qmsrk7CVVl9Qi98PumIc77_afJAbRjJC7t7ydUsH3eUhOErIN9ON1iyo-wF-p_5tMSB8SwZJQFokWhKd7uNizKbRczJl4FAWBoq85OYXV4DEawZ-AvcAvldE4CmmgljNQVNDoLFajUmrrAPMwOFelLm1MJQfxgV0lOD2zEAazEYZeFMM4ImvTbP" data-modal-title="Infinity Pools" data-modal-desc="Espejos de agua que se funden con el horizonte selvático.">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
                     <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
                         <i data-lucide="zoom-in" class="w-4 h-4"></i>
@@ -514,7 +512,7 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBXs5KUNziqvYYVnf6hiU4QICMf61RoK1-aDgw33dHM9ClgOsw6brbVg35tcZ54B_qfY1YLlsHmkBM3w6070fGdgmDxGPDcpcTGZIn4nuXoqGslmJJT2VpObuV3Gb4nJt0wGZAukHlYfqJ_d_0q6YEEt5jQTmWnlKzUEf9sPV1gckiWO29tPNoeUbAz7pU9-ff5FDqdmjrWmyeRkLltOlzlAC7Aa2AVehhTZwqyjVqOo2LebZmk8P4QuEwSZS3NSDyea_LMAyBbA-zY" data-modal-title="Central Plaza" data-modal-desc="El corazón palpitante de nuestra comunidad consciente.">
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBXs5KUNziqvYYVnf6hiU4QICMf61RoK1-aDgw33dHM9ClgOsw6brbVg35tcZ54B_qfY1YLlsHmkBM3w6070fGdgmDxGPDcpcTGZIn4nuXoqGslmJJT2VpObuV3Gb4nJt0wGZAukHlYfqJ_d_0q6YEEt5jQTmWnlKzUEf9sPV1gckiWO29tPNoeUbAz7pU9-ff5FDqdmjrWmyeRkLltOlzlAC7Aa2AVehhTZwqyjVqOo2LebZmk8P4QuEwSZS3NSDyea_LMAyBbA-zY" data-modal-title="Central Plaza" data-modal-desc="El corazón palpitante de nuestra comunidad consciente.">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
                     <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
                         <i data-lucide="zoom-in" class="w-4 h-4"></i>
@@ -533,7 +531,7 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop" data-modal-title="Gastronomía" data-modal-desc="Fusión culinaria de ingredientes locales y técnicas globales.">
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop" data-modal-title="Gastronomía" data-modal-desc="Fusión culinaria de ingredientes locales y técnicas globales.">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
                     <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
                         <i data-lucide="zoom-in" class="w-4 h-4"></i>
@@ -552,7 +550,7 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070&auto=format&fit=crop" data-modal-title="Yoga Shala" data-modal-desc="Santuario de bambú para alinear cuerpo, mente y espíritu.">
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070&auto=format&fit=crop" data-modal-title="Yoga Shala" data-modal-desc="Santuario de bambú para alinear cuerpo, mente y espíritu.">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
                     <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
                         <i data-lucide="zoom-in" class="w-4 h-4"></i>
@@ -571,7 +569,7 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2049&auto=format&fit=crop" data-modal-title="Beach Club" data-modal-desc="Su extensión privada hacia las aguas turquesas del Caribe.">
+                <div class="col-span-2 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2049&auto=format&fit=crop" data-modal-title="Beach Club" data-modal-desc="Su extensión privada hacia las aguas turquesas del Caribe.">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
                     <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
                         <i data-lucide="zoom-in" class="w-4 h-4"></i>
@@ -590,7 +588,7 @@
                     </div>
                 </div>
 
-                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer bg-white/10 border border-white/10 flex flex-col items-center justify-center p-6 text-center hover:bg-white/15 transition-colors min-h-[240px] h-full">
+                <div class="col-span-2 md:col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer bg-white/10 border border-white/10 flex flex-col items-center justify-center p-6 text-center hover:bg-white/15 transition-colors min-h-[160px] md:min-h-[240px] h-full">
                     <span class="text-chukum-200 text-5xl mb-2 block transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">+15</span>
                     <p class="text-white font-medium mb-4 relative z-10">Más Amenidades Exclusivas</p>
                     <span class="text-xs text-white/70 uppercase tracking-widest border-b border-white/30 pb-1 group-hover:border-chukum-200 group-hover:text-white transition-all duration-300 group-hover:scale-110">Desvelar todas</span>
@@ -752,29 +750,29 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">Galería del Proyecto</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">Descubre los espacios únicos que hacen de Balam Barabata un destino excepcional.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+                <div class="gallery-item relative aspect-square rounded-xl md:rounded-2xl overflow-hidden cursor-pointer group">
                     <img src="/images/galery/barabata-acceso.jpeg" alt="Acceso principal a Balam Barabata" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-4">
                         <h3 class="text-white font-semibold text-lg leading-tight">Acceso Principal Barabata</h3>
                     </div>
                 </div>
-                <div class="gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                <div class="gallery-item relative aspect-square rounded-xl md:rounded-2xl overflow-hidden cursor-pointer group">
                     <img src="/images/galery/area-camara-spa.jpeg" alt="Área de Cámara Hiperbárica y Terapias en Balam Barabata" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-4">
                         <h3 class="text-white font-semibold text-lg leading-tight">Área de Cámara Hiperbárica y Terapias</h3>
                     </div>
                 </div>
-                <div class="gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                <div class="gallery-item relative aspect-square rounded-xl md:rounded-2xl overflow-hidden cursor-pointer group">
                     <img src="/images/galery/lobby2.jpeg" alt="Lobby principal de Balam Barabata" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-4">
                         <h3 class="text-white font-semibold text-lg leading-tight">Lobby Premium</h3>
                     </div>
                 </div>
-                <div class="gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
+                <div class="gallery-item relative aspect-square rounded-xl md:rounded-2xl overflow-hidden cursor-pointer group">
                     <img src="/images/galery/loby.jpeg" alt="Área de recepción en Balam Barabata" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
                     <div class="absolute bottom-0 left-0 right-0 p-4">
@@ -796,7 +794,7 @@
             <!-- Gallery Container with Show More Effect -->
             <div id="gallery-container" class="relative">
                 <!-- Main Gallery Grid -->
-                <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-6 transition-all duration-700 ease-in-out w-full" style="max-height: 400px; overflow: hidden;">
+                <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-6 transition-all duration-700 ease-in-out w-full overflow-hidden">
                     <!-- First 3 items - Always visible -->
                     <div class="gift-gallery-item relative aspect-square rounded-2xl overflow-hidden cursor-pointer group">
                         <img src="/images/galery/modelo1.jpeg" alt="Modelo I — Cortesía Etapa II" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
@@ -870,36 +868,36 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 animate-on-scroll">Ventajas Competitivas Únicas</h2>
                 <p class="text-xl text-chukum-200 max-w-3xl mx-auto animate-on-scroll">Características distintivas que posicionan a Balam Barabata como una inversión de clase mundial.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
-                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4"><i data-lucide="landmark" class="w-6 h-6 text-white"></i></div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Arquitectura Maya Auténtica</h3>
-                    <p class="text-chukum-100">Modelos de casas inspirados en la cultura Puuc. Materiales regionales: chukum, piedra caliza, maderas certificadas.</p>
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
+                <div class="glass-morphism rounded-xl p-4 md:p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-3 md:mb-4"><i data-lucide="landmark" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                    <h3 class="text-base md:text-xl font-semibold text-white mb-2 md:mb-3">Arquitectura Maya Auténtica</h3>
+                    <p class="text-chukum-100 text-xs md:text-base">Modelos de casas inspirados en la cultura Puuc. Materiales regionales: chukum, piedra caliza, maderas certificadas.</p>
                 </div>
-                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg白/20 transition-all duration-300">
-                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4"><i data-lucide="badge-check" class="w-6 h-6 text-white"></i></div>
-                    <h3 class="text-xl font-semibold text-white mb-3">70 % Conservación Garantizada</h3>
-                    <p class="text-chukum-100">Cada lote conserva el <span class="font-semibold">70 %</span> de selva; además, 20 has del desarrollo serán certificadas (ADVC) por CONANP.</p>
+                <div class="glass-morphism rounded-xl p-4 md:p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-3 md:mb-4"><i data-lucide="badge-check" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                    <h3 class="text-base md:text-xl font-semibold text-white mb-2 md:mb-3">70 % Conservación Garantizada</h3>
+                    <p class="text-chukum-100 text-xs md:text-base">Cada lote conserva el <span class="font-semibold">70 %</span> de selva; además, 20 has del desarrollo serán certificadas (ADVC) por CONANP.</p>
                 </div>
-                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
-                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4"><i data-lucide="leaf" class="w-6 h-6 text-white"></i></div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Ecosistema Regenerativo</h3>
-                    <p class="text-chukum-100">Meliponarios, senderos botánicos y mercado comunitario para impulsar la economía circular.</p>
+                <div class="glass-morphism rounded-xl p-4 md:p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-3 md:mb-4"><i data-lucide="leaf" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                    <h3 class="text-base md:text-xl font-semibold text-white mb-2 md:mb-3">Ecosistema Regenerativo</h3>
+                    <p class="text-chukum-100 text-xs md:text-base">Meliponarios, senderos botánicos y mercado comunitario para impulsar la economía circular.</p>
                 </div>
-                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
-                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4"><i data-lucide="shield-check" class="w-6 h-6 text-white"></i></div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Certeza Jurídica</h3>
-                    <p class="text-chukum-100">Fideicomiso con régimen condominal y reglas claras de conservación.</p>
+                <div class="glass-morphism rounded-xl p-4 md:p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-3 md:mb-4"><i data-lucide="shield-check" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                    <h3 class="text-base md:text-xl font-semibold text-white mb-2 md:mb-3">Certeza Jurídica</h3>
+                    <p class="text-chukum-100 text-xs md:text-base">Fideicomiso con régimen condominal y reglas claras de conservación.</p>
                 </div>
-                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
-                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4"><i data-lucide="trending-up" class="w-6 h-6 text-white"></i></div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Plusvalía Proyectada</h3>
-                    <p class="text-chukum-100">Etapa fundadora con descuentos escalonados y retorno potencial atractivo en 5 años.</p>
+                <div class="glass-morphism rounded-xl p-4 md:p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-3 md:mb-4"><i data-lucide="trending-up" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                    <h3 class="text-base md:text-xl font-semibold text-white mb-2 md:mb-3">Plusvalía Proyectada</h3>
+                    <p class="text-chukum-100 text-xs md:text-base">Etapa fundadora con descuentos escalonados y retorno potencial atractivo en 5 años.</p>
                 </div>
-                <div class="glass-morphism rounded-xl p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
-                    <div class="w-12 h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-4"><i data-lucide="users" class="w-6 h-6 text-white"></i></div>
-                    <h3 class="text-xl font-semibold text-white mb-3">Comunidad sustentable</h3>
-                    <p class="text-chukum-100">Solo 200 familias en un entorno seguro, con amenidades y servicios integrados.</p>
+                <div class="glass-morphism rounded-xl p-4 md:p-6 animate-on-scroll hover:bg-white/20 transition-all duration-300">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-chukum-600 rounded-lg flex items-center justify-center mb-3 md:mb-4"><i data-lucide="users" class="w-5 h-5 md:w-6 md:h-6 text-white"></i></div>
+                    <h3 class="text-base md:text-xl font-semibold text-white mb-2 md:mb-3">Comunidad sustentable</h3>
+                    <p class="text-chukum-100 text-xs md:text-base">Solo 200 familias en un entorno seguro, con amenidades y servicios integrados.</p>
                 </div>
             </div>
         </div>
@@ -1639,20 +1637,26 @@
             if (galleryGrid && galleryOverlay && showMoreBtn && btnText && btnArrow) {
                 // Function to calculate responsive max-height
                 function getCollapsedHeight() {
-                    const screenWidth = window.innerWidth;
-                    if (screenWidth >= 1024) { // lg breakpoint - 3 columns
-                        // Show exactly 1 row of 3 items: 350px height + 24px margin-bottom = 374px
-                        return 374;
-                    } else if (screenWidth >= 768) { // md breakpoint - 2 columns  
-                        // Show exactly 1 row of 2 items: 320px height + 24px margin-bottom = 344px
-                        return 344;
-                    } else if (screenWidth >= 481) { // small screens - 1 column
-                        // Show exactly 2.5 items: 2.5 × (280px height + 32px margin) = 2.5 × 312px = 780px
-                        return 780;
-                    } else { // extra small screens - 1 column
-                        // Show exactly 2.5 items: 2.5 × (260px height + 28px margin) = 2.5 × 288px = 720px
-                        return 720;
-                    }
+                    const gridElement = document.getElementById('gallery-grid');
+                    if (!gridElement) return 400;
+
+                    const firstItem = gridElement.querySelector('.gift-gallery-item');
+                    if (!firstItem) return 400;
+
+                    const style = window.getComputedStyle(gridElement);
+                    const rowGap = parseInt(style.rowGap) || parseInt(style.gap) || 0;
+
+                    // Determine current number of columns from computed layout
+                    const templateCols = (style.gridTemplateColumns || '').trim();
+                    const numColumns = templateCols ? templateCols.split(' ').length : 1;
+
+                    // Keep "first 3" visible when collapsed:
+                    // - 3+ columns: 1 row shows 3
+                    // - 1-2 columns: 2 rows shows at least 3
+                    const rowsToShow = numColumns >= 3 ? 1 : 2;
+
+                    const itemHeight = firstItem.getBoundingClientRect().height;
+                    return Math.ceil((rowsToShow * itemHeight) + ((rowsToShow - 1) * rowGap) + 2);
                 }
                 
                 // Set initial collapsed state
