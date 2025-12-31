@@ -588,10 +588,281 @@
                     </div>
                 </div>
 
-                <div class="col-span-2 md:col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer bg-white/10 border border-white/10 flex flex-col items-center justify-center p-6 text-center hover:bg-white/15 transition-colors min-h-[160px] md:min-h-[240px] h-full">
-                    <span class="text-chukum-200 text-5xl mb-2 block transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">+15</span>
+                <!-- Show More Amenities Button -->
+                <div id="show-more-amenities-btn" class="col-span-2 md:col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer bg-white/10 border border-white/10 flex flex-col items-center justify-center p-6 text-center hover:bg-white/15 transition-colors min-h-[160px] md:min-h-[240px] h-full">
+                    <span id="amenities-count" class="text-chukum-200 text-5xl mb-2 block transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">+13</span>
                     <p class="text-white font-medium mb-4 relative z-10">Más Amenidades Exclusivas</p>
-                    <span class="text-xs text-white/70 uppercase tracking-widest border-b border-white/30 pb-1 group-hover:border-chukum-200 group-hover:text-white transition-all duration-300 group-hover:scale-110">Desvelar todas</span>
+                    <span id="amenities-toggle-text" class="text-xs text-white/70 uppercase tracking-widest border-b border-white/30 pb-1 group-hover:border-chukum-200 group-hover:text-white transition-all duration-300 group-hover:scale-110">Desvelar todas</span>
+                </div>
+
+                <!-- Hidden Amenities (Initially hidden) - Bento Grid Layout -->
+                <!-- Layout: 5 filas perfectas de 3 columnas = 15 celdas -->
+                <!-- 2 items de col-span-2 (4 celdas) + 11 items de 1x1 (11 celdas) = 15 celdas -->
+                <div id="hidden-amenities" class="contents hidden">
+                    <!-- Fila 1: Temazcal (2x1) + Meliponario (1x1) = 3 celdas -->
+                    <!-- Temazcal - Wide 2x1 (destacado) -->
+                    <div class="col-span-2 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop" data-modal-title="Temazcal" data-modal-desc="Ritual ancestral maya de purificación y renovación espiritual.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="flame" class="text-chukum-200 w-6 h-6"></i>
+                                    <h4 class="text-2xl text-white font-semibold">Temazcal</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Ritual ancestral maya de purificación y renovación espiritual.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Meliponario - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070&auto=format&fit=crop" data-modal-title="Meliponario" data-modal-desc="Santuario de abejas meliponas, productoras de miel sagrada maya.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="hexagon" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Meliponario</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Abejas meliponas sagradas mayas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2: Senderos (1x1) + Huertos (1x1) + Deportiva (1x1) = 3 celdas -->
+                    <!-- Senderos Botánicos - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop" data-modal-title="Senderos Botánicos" data-modal-desc="Rutas interpretativas con flora medicinal y especies nativas.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="trees" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Senderos Botánicos</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Flora medicinal y especies nativas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Huertos Orgánicos - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2070&auto=format&fit=crop" data-modal-title="Huertos Orgánicos" data-modal-desc="Cultivo de milpa tradicional y sistemas de composta comunitarios.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="sprout" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Huertos Orgánicos</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Milpa tradicional y composta.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Área Deportiva - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" data-modal-title="Área Deportiva" data-modal-desc="Pista de atletismo y cancha multiusos para actividades recreativas.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="trophy" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Área Deportiva</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Pista y cancha multiusos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3: Spa (1x1) + Meditación (1x1) + Coworking (1x1) = 3 celdas -->
+                    <!-- Spa de Bienestar - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop" data-modal-title="Spa de Bienestar" data-modal-desc="Tratamientos holísticos y terapias ancestrales de relajación.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="heart" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Spa de Bienestar</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Terapias holísticas ancestrales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Centro de Meditación - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1588286840104-8957b019727f?q=80&w=2070&auto=format&fit=crop" data-modal-title="Centro de Meditación" data-modal-desc="Espacio sagrado para prácticas contemplativas y mindfulness.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1588286840104-8957b019727f?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="moon" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Centro de Meditación</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Mindfulness y contemplación.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coworking - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" data-modal-title="Coworking & Business Center" data-modal-desc="Espacios de trabajo compartido con conectividad de alta velocidad.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="laptop" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Coworking</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Alta velocidad y productividad.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 4: Zona Infantil (1x1) + Mercado (1x1) + Salón (1x1) = 3 celdas -->
+                    <!-- Zona Infantil - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=2070&auto=format&fit=crop" data-modal-title="Zona Infantil" data-modal-desc="Áreas de juego seguras y educativas para los más pequeños.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="baby" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Zona Infantil</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Juego seguro y educativo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mercado Orgánico - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop" data-modal-title="Mercado Orgánico" data-modal-desc="Productos locales frescos y artesanías de la comunidad.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="store" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Mercado Orgánico</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Productos locales y artesanías.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Salón de Eventos - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2070&auto=format&fit=crop" data-modal-title="Salón de Eventos" data-modal-desc="Espacio versátil para celebraciones y reuniones comunitarias.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="party-popper" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Salón de Eventos</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Celebraciones y reuniones.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fila 5: Observatorio (1x1) + Reserva Ecológica (2x1) = 3 celdas -->
+                    <!-- Observatorio - 1x1 -->
+                    <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2074&auto=format&fit=crop" data-modal-title="Observatorio Astronómico" data-modal-desc="Contempla las estrellas como lo hacían los antiguos mayas.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2074&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="star" class="text-chukum-200 w-5 h-5"></i>
+                                    <h4 class="text-lg text-white">Observatorio</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    Estrellas como los mayas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reserva Ecológica - Wide 2x1 (destacado) -->
+                    <div class="col-span-2 row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[160px] md:min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1524863479829-916d8e77f114?q=80&w=2070&auto=format&fit=crop" data-modal-title="Reserva Ecológica" data-modal-desc="20 hectáreas de selva protegida con biodiversidad nativa.">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                        <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                            <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1524863479829-916d8e77f114?q=80&w=2070&auto=format&fit=crop');"></div>
+                        <div class="absolute bottom-8 left-6 right-6 z-20">
+                            <div class="relative">
+                                <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                    <i data-lucide="leaf" class="text-chukum-200 w-6 h-6"></i>
+                                    <h4 class="text-2xl text-white font-semibold">Reserva Ecológica</h4>
+                                </div>
+                                <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                    20 hectáreas de selva protegida con biodiversidad nativa certificada ADVC.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1707,6 +1978,51 @@
         });
     </script>
     
+    <script>
+        // Show More Amenities functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const showMoreBtn = document.getElementById('show-more-amenities-btn');
+            const hiddenAmenities = document.getElementById('hidden-amenities');
+            const amenitiesCount = document.getElementById('amenities-count');
+            const toggleText = document.getElementById('amenities-toggle-text');
+            
+            let isExpanded = false;
+            
+            if (showMoreBtn && hiddenAmenities && amenitiesCount && toggleText) {
+                showMoreBtn.addEventListener('click', function() {
+                    isExpanded = !isExpanded;
+                    
+                    if (isExpanded) {
+                        // Show hidden amenities
+                        hiddenAmenities.classList.remove('hidden');
+                        amenitiesCount.textContent = '-13';
+                        toggleText.textContent = 'Ocultar';
+                        showMoreBtn.classList.add('bg-chukum-600/30');
+                        
+                        // Reinitialize Lucide icons for the new elements
+                        if (typeof lucide !== 'undefined') {
+                            lucide.createIcons();
+                        }
+                        
+                        // Scroll to show the new content
+                        setTimeout(() => {
+                            hiddenAmenities.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }, 100);
+                    } else {
+                        // Hide amenities
+                        hiddenAmenities.classList.add('hidden');
+                        amenitiesCount.textContent = '+13';
+                        toggleText.textContent = 'Desvelar todas';
+                        showMoreBtn.classList.remove('bg-chukum-600/30');
+                        
+                        // Scroll back to button
+                        showMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            }
+        });
+    </script>
+
     <script>
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
