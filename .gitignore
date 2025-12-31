@@ -43,3 +43,8 @@ next-env.d.ts
 # SETUP
 /.yarn
 /CONTACT_SETUP.md
+
+# Cursor y VSCode
+.cursorrules
+.cursor/
+.vscode/mcp.json

@@ -199,26 +199,44 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient">
-        <video class="absolute inset-0 w-full h-full object-cover opacity-40" autoplay muted loop playsinline preload="auto" poster="/images/selva.jpg">
+    <!-- Hero Narrativo (Index2) -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient snap-center">
+        <video class="absolute inset-0 w-full h-full object-cover opacity-60" autoplay muted loop playsinline preload="auto" poster="/images/selva.jpg">
             <source src="/videos/intro.mobile.mp4" media="(max-width: 768px)" type="video/mp4">
             <source src="/videos/intro.mp4" type="video/mp4">
         </video>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
-        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <h1 class="text-[clamp(2rem,8vw,4.5rem)] font-bold mb-6 tracking-tight opacity-0 animate-fade-in-up">BALAM BARABATA</h1>
-            <p class="text-[clamp(1rem,3.6vw,1.25rem)] text-white/80 mb-5 opacity-0 animate-fade-in-up-delay">Reserva Natural: Tu santuario personal</p>
-            <p class="text-[clamp(1rem,4.5vw,1.5rem)] mb-8 font-light leading-normal md:leading-relaxed opacity-0 animate-fade-in-up-delay max-w-4xl mx-auto">Desarrollo inmobiliario premium en Uxuxubi, Riviera Maya. Inversión estratégica en sustentabilidad y conservación natural.</p>
-            <div class="glass-morphism rounded-2xl p-6 mb-8 opacity-0 animate-fade-in-up-delay-2 max-w-md mx-auto">
-                <div class="text-3xl font-bold mb-2">40&nbsp;Lotes&nbsp;–&nbsp;Etapa&nbsp;1</div>
-                <div class="text-chukum-200 font-medium">Oportunidad Exclusiva</div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60"></div>
+
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-6xl mt-16">
+            <span class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs tracking-widest uppercase mb-4 opacity-0 animate-fade-in-up">Riviera Maya, Q. Roo</span>
+            <h1 class="text-[clamp(2.5rem,9vw,5.5rem)] font-extrabold mb-6 tracking-tight leading-none opacity-0 animate-fade-in-up drop-shadow-lg">
+                BALAM <span class="text-chukum-400">BARABATA</span>
+            </h1>
+            <p class="text-[clamp(1.1rem,4vw,1.5rem)] text-white/95 mb-8 font-light max-w-3xl mx-auto opacity-0 animate-fade-in-up-delay drop-shadow-md">
+                No es solo un proyecto… es un llamado a recordar quiénes somos. <br class="hidden md:block" />
+                Una travesía que une lo humano, lo divino y lo científico.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 animate-fade-in-up-delay-2">
+                <a href="#ecosistema" class="group bg-chukum-500 hover:bg-chukum-600 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(184,100,32,0.4)] flex items-center">
+                    Descubre Más
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+                <a href="#contacto" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/50 text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105">
+                    Agendar Visita
+                </a>
+                <a href="/proyecto" class="bg-gradient-to-br from-chukum-50 to-white border border-chukum-200 text-selva font-semibold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:from-chukum-100 hover:to-white">
+                    Ver proyecto completo
+                </a>
             </div>
-            <div class="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center opacity-0 animate-fade-in-up-delay-2">
-                <a href="#etapas" class="inline-block bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">Ver Disponibilidad</a>
-                <a href="#contacto" class="inline-block border-2 border-white text-white hover:bg-white hover:text-selva font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Agendar Visita</a>
-                <a href="/proyecto" class="inline-block bg-gradient-to-br from-chukum-50 to-white border border-chukum-200 text-selva font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:from-chukum-100 hover:to-white">Ver proyecto completo</a>
-            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce opacity-80">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
         </div>
     </section>
 
@@ -287,6 +305,442 @@
                     <p class="text-gray-600 text-sm mb-3">Solo 200 familias, con mercado, plaza, centro de negocios y amenities de clase mundial.</p>
                     <div class="flex items-center gap-3 text-chukum-600/90"><i data-lucide="users" class="w-4 h-4"></i><i data-lucide="map-pin" class="w-4 h-4"></i></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concepto General -->
+    <section class="py-20 bg-gray-50 snap-start">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-chukum-600 font-semibold tracking-wider uppercase text-sm">Filosofía Constructiva</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mt-2 mb-4">Concepto General</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Conexión intrínseca con la tierra. Materiales locales y respeto absoluto por la orografía.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+                    <div class="w-14 h-14 bg-selva/10 rounded-xl flex items-center justify-center mb-6 text-selva">
+                        <i data-lucide="layers" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-selva mb-3">Materiales de la Región</h3>
+                    <p class="text-gray-600">
+                        La piedra caliza, maderas locales certificadas y el <strong>chukum</strong> son protagonistas.
+                        Belleza, durabilidad y huella ambiental mínima.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+                    <div class="w-14 h-14 bg-chukum-100 rounded-xl flex items-center justify-center mb-6 text-chukum-600">
+                        <i data-lucide="mountain" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-selva mb-3">Orografía Inalterable</h3>
+                    <p class="text-gray-600">
+                        Arquitectura integrativa para rellenar con material biológico solo lo necesario. El ecosistema,
+                        tallado por siglos, permanece casi intacto.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 animate-on-scroll">
+                    <div class="w-14 h-14 bg-selva/10 rounded-xl flex items-center justify-center mb-6 text-selva">
+                        <i data-lucide="sun" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-selva mb-3">Diseño Bioclimático</h3>
+                    <p class="text-gray-600">
+                        Columna vertebral de cada estructura. Orientación solar, ventilación cruzada natural y techos
+                        verdes para minimizar el uso de energía.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concepto Vivo (Parallax) -->
+    <section id="concepto-vivo" class="py-24 px-6 bg-selva relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-chukum-500/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-start lg:gap-16 relative z-10">
+            <div class="flex-shrink-0 mb-10 lg:mb-0 lg:sticky lg:top-32">
+                <span class="text-7xl md:text-9xl font-bold text-white/10 block -mb-6 lg:mb-0 select-none">01</span>
+                <h3 class="text-4xl md:text-5xl text-white font-semibold">
+                    ¿Cuál es la esencia <br>de Balam <span class="italic text-chukum-200">Barabata</span>?
+                </h3>
+            </div>
+
+            <div class="w-full pt-8">
+                <div class="pb-8 mb-16 max-w-2xl border-b border-white/10">
+                    <p class="text-white/80 text-base leading-relaxed mb-6 font-light">
+                        Le invitamos a reconectar con lo esencial. Balam Barabata es un proyecto que honra la tierra que lo acoge,
+                        inspirándose en la geometría sagrada Maya y fusionándola con una visión de futuro sostenible, donde cada detalle
+                        es una invitación a sentir, a vivir, a ser.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="group relative flex flex-col gap-6 cursor-pointer" data-parallax-card data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCIsjIGtCkrzVrhCk5zEriwo7fkhbUZQ9cdWRX859E5HgnFVlPvanrYYJEtD3J2gNB2dFOjHwHngtdnC0Wu-SkHtRGU0YDedjADMEKn6o5rYnlQf51_Ak4rzzwCNWPzzMwgg698fzYr1kioo-X247fFwFXq3fJvq9vhCTkNl2LXFJ85A3IopRZSCaS8f7Y6KoAJ3g9VqUsmR7HxXskdcOhxtSq5kaLZ24gDikvR3avVwDegwL_iL5WtA5FAS2kYvl1ZjJ7oawUzEDt1" data-modal-title="Reconexión" data-modal-desc="Volver al origen. Espacios diseñados para silenciar el ruido externo y escuchar el pulso de la selva.">
+                        <div class="overflow-hidden rounded-lg aspect-[3/4] relative z-0 shadow-xl border border-white/10" data-parallax-container>
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-20 duration-500 pointer-events-none"></div>
+                            <div class="absolute inset-0 w-full h-[120%] -top-[10%] will-change-transform" data-parallax-image>
+                                <div class="w-full h-full bg-cover bg-center transition-transform duration-[1.5s] ease-out group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIsjIGtCkrzVrhCk5zEriwo7fkhbUZQ9cdWRX859E5HgnFVlPvanrYYJEtD3J2gNB2dFOjHwHngtdnC0Wu-SkHtRGU0YDedjADMEKn6o5rYnlQf51_Ak4rzzwCNWPzzMwgg698fzYr1kioo-X247fFwFXq3fJvq9vhCTkNl2LXFJ85A3IopRZSCaS8f7Y6KoAJ3g9VqUsmR7HxXskdcOhxtSq5kaLZ24gDikvR3avVwDegwL_iL5WtA5FAS2kYvl1ZjJ7oawUzEDt1');"></div>
+                            </div>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-2 text-chukum-200">
+                                <i data-lucide="leaf" class="w-6 h-6"></i>
+                                <h4 class="text-2xl text-white font-semibold">Reconexión</h4>
+                            </div>
+                            <p class="text-white/70 text-sm leading-relaxed">Volver al origen. Espacios diseñados para silenciar el ruido externo y escuchar el pulso de la selva.</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative flex flex-col gap-6 cursor-pointer md:mt-20" data-parallax-card data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDfmo7kD8hdVwjhbGybT5_75TAVIgM_M7pxAfg9xzozom8e3FqLNIsS_DZqkl5ZrxQ8kFz1V6MNiYWdFYE1BoRvE6ZNY44Jd9l2QuIJTyUO_-SJD22VXFLA_4ZVfDMlXMv10MBH0249Lr3vXDlH2Y5-1bRUZ0hcSqyXPDVM-W3eNHhqlmIk50xyxDbIf8QkwhQ56DXoPmXIoJvJ2FdxKUzpLS4A6DD2C3s0XdCYuP4ds3rCkS5Sc34wmO3T2mKg4owGsM206JZlaREd" data-modal-title="Arquitectura Ancestral" data-modal-desc="Geometría sagrada y materiales locales como chukum y piedra caliza que envejecen con dignidad.">
+                        <div class="overflow-hidden rounded-lg aspect-[3/4] relative z-0 shadow-xl border border-white/10" data-parallax-container>
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-20 duration-500 pointer-events-none"></div>
+                            <div class="absolute inset-0 w-full h-[120%] -top-[10%] will-change-transform" data-parallax-image>
+                                <div class="w-full h-full bg-cover bg-center transition-transform duration-[1.5s] ease-out group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDfmo7kD8hdVwjhbGybT5_75TAVIgM_M7pxAfg9xzozom8e3FqLNIsS_DZqkl5ZrxQ8kFz1V6MNiYWdFYE1BoRvE6ZNY44Jd9l2QuIJTyUO_-SJD22VXFLA_4ZVfDMlXMv10MBH0249Lr3vXDlH2Y5-1bRUZ0hcSqyXPDVM-W3eNHhqlmIk50xyxDbIf8QkwhQ56DXoPmXIoJvJ2FdxKUzpLS4A6DD2C3s0XdCYuP4ds3rCkS5Sc34wmO3T2mKg4owGsM206JZlaREd');"></div>
+                            </div>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-2 text-chukum-200">
+                                <i data-lucide="hexagon" class="w-6 h-6"></i>
+                                <h4 class="text-2xl text-white font-semibold">Arquitectura Ancestral</h4>
+                            </div>
+                            <p class="text-white/70 text-sm leading-relaxed">Geometría sagrada y materiales locales como chukum y piedra caliza que envejecen con dignidad.</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative flex flex-col gap-6 cursor-pointer" data-parallax-card data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuB7dagkPaDivMkAuB89I90MG4UZ-fs2UtrCA8Du5ap8y5tiN6bca_OVzKOwx-QQo16FECvB6MXcp4pfU2hOjzGAWhziJ12zJR1W6pHH0VfRwqaI_LZRJHZL1UkMPIg6ON7kcKOAcFJjmZb3v1bNtlyfxZoOLz-SwCDB3nbpLgCOPVolhXLFnbke5xEhEAYBwIsJ14VZjFSewCmfcpn4i8kvbY7p8dBesLDaHkWv3FIg9WzXN0wQDkH2xijIo4Lx3-dGaYOXZDIylHRt" data-modal-title="Sustentabilidad" data-modal-desc="Respeto absoluto por el entorno. 70% de áreas verdes preservadas y sistemas de energía renovable.">
+                        <div class="overflow-hidden rounded-lg aspect-[3/4] relative z-0 shadow-xl border border-white/10" data-parallax-container>
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-20 duration-500 pointer-events-none"></div>
+                            <div class="absolute inset-0 w-full h-[120%] -top-[10%] will-change-transform" data-parallax-image>
+                                <div class="w-full h-full bg-cover bg-center transition-transform duration-[1.5s] ease-out group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7dagkPaDivMkAuB89I90MG4UZ-fs2UtrCA8Du5ap8y5tiN6bca_OVzKOwx-QQo16FECvB6MXcp4pfU2hOjzGAWhziJ12zJR1W6pHH0VfRwqaI_LZRJHZL1UkMPIg6ON7kcKOAcFJjmZb3v1bNtlyfxZoOLz-SwCDB3nbpLgCOPVolhXLFnbke5xEhEAYBwIsJ14VZjFSewCmfcpn4i8kvbY7p8dBesLDaHkWv3FIg9WzXN0wQDkH2xijIo4Lx3-dGaYOXZDIylHRt');"></div>
+                            </div>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-2 text-chukum-200">
+                                <i data-lucide="sun" class="w-6 h-6"></i>
+                                <h4 class="text-2xl text-white font-semibold">Sustentabilidad</h4>
+                            </div>
+                            <p class="text-white/70 text-sm leading-relaxed">Respeto absoluto por el entorno. 70% de áreas verdes preservadas y sistemas de energía renovable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenidades (20 Items) -->
+    <section id="amenidades" class="py-24 px-6 bg-selva">
+        <div class="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-start lg:gap-16">
+            <div class="flex-shrink-0 mb-10 lg:mb-0 lg:sticky lg:top-32">
+                <span class="text-7xl md:text-9xl font-bold text-white/10 block -mb-6 lg:mb-0 select-none">02</span>
+                <h3 class="text-4xl md:text-5xl text-white font-semibold">
+                    ¿Qué le ofrece <br>Balam <span class="italic text-chukum-200">Barabata</span>?
+                </h3>
+            </div>
+
+            <div class="w-full pt-8">
+                <p class="text-white/80 text-lg max-w-3xl mb-8">
+                    En Balam Barabata, hemos curado espacios para elevar su espíritu y fomentar la comunidad en un entorno de baja densidad. Un ecosistema diseñado para la plenitud.
+                </p>
+
+                <div class="text-center mb-12">
+                    <span class="text-chukum-200 font-semibold tracking-wider uppercase text-sm">Experiencia de Vida</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">20 Amenidades Exclusivas</h2>
+                    <p class="text-white/70 max-w-3xl mx-auto">
+                        Diseñadas para conectar lo humano, lo divino y lo natural.
+                    </p>
+                </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:auto-rows-[240px]">
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[400px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuAdKxNey4bZhfQ_qef8C7-iPvVZxRHpqrqfncZRmDLrwkr02ALmm9PdPI3d1YCmTuNboiM0ZLUxXcAR4oFMoDj2710UJYGMk1F0uXRKNRJ3Baluw0fXurSkCSO4QOWZcpTHsxNSuBKLGle8DoL1sj5t_9xwtSlx-4mzxA4CrswwcQIjk4_6dARdRN_cijMGGi4r5_74yJAPpr5rKimdJL9CRJ5H2crw4IFeXmrLnNPwyFiKrgFk4ftXhympO4jgOVibX4Ihs53DSxf_" data-modal-title="Cenote Spa" data-modal-desc="Rituales mayas de sanación y piscinas naturales subterráneas para reconectar con su esencia interior.">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdKxNey4bZhfQ_qef8C7-iPvVZxRHpqrqfncZRmDLrwkr02ALmm9PdPI3d1YCmTuNboiM0ZLUxXcAR4oFMoDj2710UJYGMk1F0uXRKNRJ3Baluw0fXurSkCSO4QOWZcpTHsxNSuBKLGle8DoL1sj5t_9xwtSlx-4mzxA4CrswwcQIjk4_6dARdRN_cijMGGi4r5_74yJAPpr5rKimdJL9CRJ5H2crw4IFeXmrLnNPwyFiKrgFk4ftXhympO4jgOVibX4Ihs53DSxf_');"></div>
+                    <div class="absolute bottom-8 left-8 z-20 right-8">
+                        <div class="w-12 h-12 rounded-full bg-chukum-200/20 backdrop-blur-md flex items-center justify-center mb-4 text-chukum-200 border border-chukum-200/30 transition-transform duration-500 group-hover:scale-90">
+                            <i data-lucide="flower" class="w-6 h-6"></i>
+                        </div>
+                        <div class="relative">
+                            <h4 class="text-3xl text-white mb-2 transition-transform duration-500 group-hover:-translate-y-2">Cenote Spa</h4>
+                            <p class="text-white/70 text-sm max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0">
+                                Rituales mayas de sanación y piscinas naturales subterráneas para reconectar con su esencia interior.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDhEtwfRdPwekFGPZjKUOCjG1Hl7lhgI6wTUrykI-loLwbfG2FwgA8Way28jfTwv83zzMKsJMmiqIvECdR1k-oDrf9YCTR1_nMPj-wIH5xaC-D_ZRTg30FJXzqbtgUC2VmPbMeTKZkzuJL5ElpC72-wuaxVnIoiCRPAY6QlVgCz1g8ZKZdqPQIU6BparX2LY2xTT6EDo6-bXEhH9fcv9_7P78yLsaYWpPEUlAEUfoUSHVm9akaU1j5l_I-goZ4UAEhi4xuTAaR-IG8p" data-modal-title="Jungle Gym" data-modal-desc="Entrenamiento funcional inmerso en la naturaleza viva.">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhEtwfRdPwekFGPZjKUOCjG1Hl7lhgI6wTUrykI-loLwbfG2FwgA8Way28jfTwv83zzMKsJMmiqIvECdR1k-oDrf9YCTR1_nMPj-wIH5xaC-D_ZRTg30FJXzqbtgUC2VmPbMeTKZkzuJL5ElpC72-wuaxVnIoiCRPAY6QlVgCz1g8ZKZdqPQIU6BparX2LY2xTT6EDo6-bXEhH9fcv9_7P78yLsaYWpPEUlAEUfoUSHVm9akaU1j5l_I-goZ4UAEhi4xuTAaR-IG8p');"></div>
+                    <div class="absolute bottom-8 left-6 right-6 z-20">
+                        <div class="relative">
+                            <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                <i data-lucide="dumbbell" class="text-chukum-200 w-5 h-5"></i>
+                                <h4 class="text-lg text-white">Jungle Gym</h4>
+                            </div>
+                            <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                Entrenamiento funcional inmerso en la naturaleza viva.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCvQNHnqFZ2GQRvjb8DsX8vPHgIWaludjxOAOKXFl8rB2SMRJ3vhqAH-cfH6ZEn6Lb3rM2UsUqFA1AhNZqnfH2E5Qmsrk7CVVl9Qi98PumIc77_afJAbRjJC7t7ydUsH3eUhOErIN9ON1iyo-wF-p_5tMSB8SwZJQFokWhKd7uNizKbRczJl4FAWBoq85OYXV4DEawZ-AvcAvldE4CmmgljNQVNDoLFajUmrrAPMwOFelLm1MJQfxgV0lOD2zEAazEYZeFMM4ImvTbP" data-modal-title="Infinity Pools" data-modal-desc="Espejos de agua que se funden con el horizonte selvático.">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvQNHnqFZ2GQRvjb8DsX8vPHgIWaludjxOAOKXFl8rB2SMRJ3vhqAH-cfH6ZEn6Lb3rM2UsUqFA1AhNZqnfH2E5Qmsrk7CVVl9Qi98PumIc77_afJAbRjJC7t7ydUsH3eUhOErIN9ON1iyo-wF-p_5tMSB8SwZJQFokWhKd7uNizKbRczJl4FAWBoq85OYXV4DEawZ-AvcAvldE4CmmgljNQVNDoLFajUmrrAPMwOFelLm1MJQfxgV0lOD2zEAazEYZeFMM4ImvTbP');"></div>
+                    <div class="absolute bottom-8 left-6 right-6 z-20">
+                        <div class="relative">
+                            <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                <i data-lucide="waves" class="text-chukum-200 w-5 h-5"></i>
+                                <h4 class="text-lg text-white">Infinity Pools</h4>
+                            </div>
+                            <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                Espejos de agua que se funden con el horizonte selvático.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://lh3.googleusercontent.com/aida-public/AB6AXuBXs5KUNziqvYYVnf6hiU4QICMf61RoK1-aDgw33dHM9ClgOsw6brbVg35tcZ54B_qfY1YLlsHmkBM3w6070fGdgmDxGPDcpcTGZIn4nuXoqGslmJJT2VpObuV3Gb4nJt0wGZAukHlYfqJ_d_0q6YEEt5jQTmWnlKzUEf9sPV1gckiWO29tPNoeUbAz7pU9-ff5FDqdmjrWmyeRkLltOlzlAC7Aa2AVehhTZwqyjVqOo2LebZmk8P4QuEwSZS3NSDyea_LMAyBbA-zY" data-modal-title="Central Plaza" data-modal-desc="El corazón palpitante de nuestra comunidad consciente.">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXs5KUNziqvYYVnf6hiU4QICMf61RoK1-aDgw33dHM9ClgOsw6brbVg35tcZ54B_qfY1YLlsHmkBM3w6070fGdgmDxGPDcpcTGZIn4nuXoqGslmJJT2VpObuV3Gb4nJt0wGZAukHlYfqJ_d_0q6YEEt5jQTmWnlKzUEf9sPV1gckiWO29tPNoeUbAz7pU9-ff5FDqdmjrWmyeRkLltOlzlAC7Aa2AVehhTZwqyjVqOo2LebZmk8P4QuEwSZS3NSDyea_LMAyBbA-zY');"></div>
+                    <div class="absolute bottom-8 left-6 right-6 z-20">
+                        <div class="relative">
+                            <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                <i data-lucide="flame" class="text-chukum-200 w-5 h-5"></i>
+                                <h4 class="text-lg text-white">Central Plaza</h4>
+                            </div>
+                            <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                El corazón palpitante de nuestra comunidad consciente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop" data-modal-title="Gastronomía" data-modal-desc="Fusión culinaria de ingredientes locales y técnicas globales.">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format&fit=crop');"></div>
+                    <div class="absolute bottom-8 left-6 right-6 z-20">
+                        <div class="relative">
+                            <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                <i data-lucide="utensils" class="text-chukum-200 w-5 h-5"></i>
+                                <h4 class="text-lg text-white">Gastronomía</h4>
+                            </div>
+                            <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                Fusión culinaria de ingredientes locales y técnicas globales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070&auto=format&fit=crop" data-modal-title="Yoga Shala" data-modal-desc="Santuario de bambú para alinear cuerpo, mente y espíritu.">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=2070&auto=format&fit=crop');"></div>
+                    <div class="absolute bottom-8 left-6 right-6 z-20">
+                        <div class="relative">
+                            <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                <i data-lucide="sun" class="text-chukum-200 w-5 h-5"></i>
+                                <h4 class="text-lg text-white">Yoga Shala</h4>
+                            </div>
+                            <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                Santuario de bambú para alinear cuerpo, mente y espíritu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10 min-h-[240px] h-full" data-modal-image="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2049&auto=format&fit=crop" data-modal-title="Beach Club" data-modal-desc="Su extensión privada hacia las aguas turquesas del Caribe.">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10 opacity-60 group-hover:opacity-90 transition-opacity duration-500"></div>
+                    <div class="absolute top-4 right-4 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40 backdrop-blur-md p-2 rounded-full text-white">
+                        <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=2049&auto=format&fit=crop');"></div>
+                    <div class="absolute bottom-8 left-6 right-6 z-20">
+                        <div class="relative">
+                            <div class="flex items-center gap-3 transition-transform duration-500 group-hover:-translate-y-1">
+                                <i data-lucide="tree-pine" class="text-chukum-200 w-5 h-5"></i>
+                                <h4 class="text-lg text-white">Beach Club</h4>
+                            </div>
+                            <p class="text-white/70 text-sm font-light leading-relaxed max-w-md opacity-0 blur-sm scale-95 group-hover:opacity-100 group-hover:blur-0 group-hover:scale-100 transition-all duration-500 ease-out origin-left absolute top-full left-0 pt-2">
+                                Su extensión privada hacia las aguas turquesas del Caribe.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-2xl cursor-pointer bg-white/10 border border-white/10 flex flex-col items-center justify-center p-6 text-center hover:bg-white/15 transition-colors min-h-[240px] h-full">
+                    <span class="text-chukum-200 text-5xl mb-2 block transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">+15</span>
+                    <p class="text-white font-medium mb-4 relative z-10">Más Amenidades Exclusivas</p>
+                    <span class="text-xs text-white/70 uppercase tracking-widest border-b border-white/30 pb-1 group-hover:border-chukum-200 group-hover:text-white transition-all duration-300 group-hover:scale-110">Desvelar todas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Área Comercial (10 Items) -->
+    <section class="py-20 bg-white snap-start">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-chukum-600 font-semibold tracking-wider uppercase text-sm">Lifestyle Center</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mt-2 mb-4">Área Comercial</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Destino para la transformación personal y el consumo consciente.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-morphism bg-selva rounded-2xl p-6 text-white col-span-1 md:col-span-2 lg:col-span-1 animate-on-scroll">
+                    <h3 class="text-2xl font-bold mb-2">Cámara Hiperbárica & Spa</h3>
+                    <p class="text-white/80 text-sm mb-4">Tecnología de vanguardia en un ambiente de calma. El oxígeno se potencia y se convierte en oración invisible.</p>
+                </div>
+                <div class="bg-chukum-50 rounded-2xl p-6 border border-chukum-100 animate-on-scroll">
+                    <h3 class="text-xl font-bold text-selva mb-2">Restaurante Orgánico</h3>
+                    <p class="text-gray-600 text-sm">Sabores de la tierra. Ingredientes frescos y locales.</p>
+                </div>
+                <div class="bg-chukum-50 rounded-2xl p-6 border border-chukum-100 animate-on-scroll">
+                    <h3 class="text-xl font-bold text-selva mb-2">Cafetería Ramón</h3>
+                    <p class="text-gray-600 text-sm">Productos del árbol ramón (brosimum alicastrum), alimento ancestral.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-4 shadow-sm flex items-center gap-3 animate-on-scroll border border-gray-100">
+                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700">✓</div>
+                    <span class="font-medium text-gray-700">Bar de Jugos</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm flex items-center gap-3 animate-on-scroll border border-gray-100">
+                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700">✓</div>
+                    <span class="font-medium text-gray-700">Herbolaria Ancestral</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm flex items-center gap-3 animate-on-scroll border border-gray-100">
+                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700">✓</div>
+                    <span class="font-medium text-gray-700">Agencia de Viajes</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm flex items-center gap-3 animate-on-scroll border border-gray-100">
+                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700">✓</div>
+                    <span class="font-medium text-gray-700">Boutique y Regalos</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm flex items-center gap-3 animate-on-scroll border border-gray-100">
+                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700">✓</div>
+                    <span class="font-medium text-gray-700">Tienda de Conveniencia</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm flex items-center gap-3 animate-on-scroll border border-gray-100">
+                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700">✓</div>
+                    <span class="font-medium text-gray-700">Cinema Consciente</span>
+                </div>
+                <div class="bg-white rounded-xl p-4 shadow-sm flex items-center gap-3 animate-on-scroll border border-gray-100">
+                    <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-700">✓</div>
+                    <span class="font-medium text-gray-700">Farmacia Integral</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especificaciones Técnicas (Accordion) -->
+    <section class="py-20 bg-white snap-start">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-chukum-600 font-semibold tracking-wider uppercase text-sm">Detalles Técnicos</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mt-2 mb-4">Especificaciones del Proyecto</h2>
+            </div>
+
+            <div class="space-y-4 animate-on-scroll">
+                <details class="group bg-gray-50 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:bg-gray-100 open:bg-white open:ring-1 open:ring-chukum-200 open:shadow-lg">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg text-selva select-none">
+                        <span>Master Plan & Zonificación</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-6 h-6 text-chukum-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>50 hectáreas totales de selva virgen.</li>
+                            <li>214 lotes de 1000m² promedio.</li>
+                            <li>Zonificación clara: Área residencial, Área comercial, Área de conservación voluntaria (ADVC).</li>
+                            <li>Reglamento de construcción estricto para preservar la imagen urbana y ecológica.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-gray-50 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:bg-gray-100 open:bg-white open:ring-1 open:ring-chukum-200 open:shadow-lg">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg text-selva select-none">
+                        <span>Arquitectura Bioclimática</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-6 h-6 text-chukum-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                        <p class="mb-2">Diseño pasivo para confort térmico sin energía excesiva:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Orientación estratégica para aprovechar vientos dominantes.</li>
+                            <li>Protección solar mediante aleros y vegetación.</li>
+                            <li>Ventilación cruzada en todas las edificaciones.</li>
+                            <li>Iluminación natural maximizada.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-gray-50 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:bg-gray-100 open:bg-white open:ring-1 open:ring-chukum-200 open:shadow-lg">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg text-selva select-none">
+                        <span>Materiales Sustentables</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-6 h-6 text-chukum-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Piedra Local:</strong> Uso de piedra caliza de la excavación para muros y cimientos.</li>
+                            <li><strong>Maderas Certificadas:</strong> Proveedores locales con manejo forestal responsable.</li>
+                            <li><strong>Chukum:</strong> Acabado tradicional maya, impermeable y térmico.</li>
+                            <li><strong>Bambú:</strong> Estructuras ligeras y renovables en áreas comunes.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="group bg-gray-50 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:bg-gray-100 open:bg-white open:ring-1 open:ring-chukum-200 open:shadow-lg">
+                    <summary class="flex justify-between items-center p-6 font-semibold text-lg text-selva select-none">
+                        <span>Instalaciones Especiales</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <svg class="w-6 h-6 text-chukum-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Agua:</strong> Captación pluvial obligatoria y sistemas de tratamiento de aguas residuales (biodigestores/humedales).</li>
+                            <li><strong>Energía:</strong> Infraestructura para paneles solares y calentadores solares. Iluminación LED en áreas comunes.</li>
+                            <li><strong>Residuos:</strong> Centro de compostaje comunitario y separación de residuos.</li>
+                        </ul>
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -452,75 +906,115 @@
     </section>
 
     <!-- Etapas de Inversión -->
-    <section id="etapas" class="py-20 bg-white">
+    <section id="etapas" class="py-20 bg-gray-50 snap-start">
+        <span id="inversión" class="sr-only"></span>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">Etapas de Inversión</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">Tres fases estratégicas con diferentes oportunidades de precio, acceso y retorno.</p>
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-chukum-600 font-semibold tracking-wider uppercase text-sm">Oportunidad Única</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-selva mt-2 mb-4">Etapas de Inversión</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Plusvalía garantizada desde el primer día.
+                </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-chukum-50 to-white rounded-2xl p-8 border border-chukum-200 animate-on-scroll">
-                    <h3 class="text-xl font-semibold text-selva mb-2">Etapa 1 · Fundadores</h3>
-                    <p class="text-gray-600">Descuento de lanzamiento, amenidades exclusivas y primera selección de lotes.</p>
-                </div>
-                <div class="bg-white rounded-2xl p-8 border-2 border-gray-200 animate-on-scroll">
-                    <h3 class="text-xl font-semibold text-selva mb-2">Etapa 2 · Comunidad</h3>
-                    <p class="text-gray-600">Consolidación de modelo de regalo y expansión de servicios.</p>
-                </div>
-                <div class="bg-white rounded-2xl p-8 border-2 border-gray-200 animate-on-scroll">
-                    <h3 class="text-xl font-semibold text-selva mb-2">Etapa 3 · Premium</h3>
-                    <p class="text-gray-600">Ubicaciones privilegiadas cercanas a áreas comerciales y de servicios.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Oferta Fundadores · Etapa 1 -->
-    <section id="inversión" class="py-20 bg-chukum-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-selva mb-4 animate-on-scroll">Oferta Fundadores · Etapa 1</h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto animate-on-scroll">Sé uno de los <strong>40 lotes pioneros</strong> y obtén descuento escalonado por lanzamiento.</p>
-            </div>
-            <div class="animate-on-scroll">
-                <div class="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-200 bg-white">
-                    <div class="absolute -inset-x-1 -top-1 h-1 bg-gradient-to-r from-selva via-chukum-600 to-selva"></div>
-                    <table class="w-full text-left text-sm">
-                        <thead class="bg-gradient-to-r from-selva to-chukum-700 text-white">
-                            <tr>
-                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Lotes</th>
-                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Precio especial</th>
-                                <th class="px-6 py-3 uppercase tracking-wider text-xs/relaxed">Descuento vs. mercado</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100">
-                            <tr class="hover:bg-chukum-50/70 transition-colors">
-                                <td class="px-6 py-4 font-semibold text-selva">1‑10</td>
-                                <td class="px-6 py-4 font-semibold">$840,000 MXN</td>
-                                <td class="px-6 py-4 font-semibold text-chukum-700">‑30 %</td>
-                            </tr>
-                            <tr class="hover:bg-chukum-50/70 transition-colors">
-                                <td class="px-6 py-4 font-semibold text-selva">11‑25</td>
-                                <td class="px-6 py-4 font-semibold">$960,000 MXN</td>
-                                <td class="px-6 py-4 font-semibold text-chukum-700">‑20 %</td>
-                            </tr>
-                            <tr class="hover:bg-chukum-50/70 transition-colors">
-                                <td class="px-6 py-4 font-semibold text-selva">26‑40</td>
-                                <td class="px-6 py-4 font-semibold">$1,080,000 MXN</td>
-                                <td class="px-6 py-4 font-semibold text-chukum-700">‑10 %</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative bg-white rounded-3xl p-8 border-2 border-chukum-400 shadow-2xl transform md:-translate-y-4 z-10 animate-on-scroll">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-chukum-600 text-white px-6 py-2 rounded-full text-sm font-bold tracking-wider shadow-lg">
+                        MEJOR OPCIÓN
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-selva mb-2">Fase 1: La Primicia</h3>
+                        <div class="text-gray-500 text-sm mb-4">Inversionistas Visionarios</div>
+                        <div class="text-5xl font-extrabold text-chukum-600 mb-2">$750<span class="text-xl text-gray-400 font-normal">/m²</span></div>
+                        <div class="text-green-600 font-medium bg-green-50 inline-block px-3 py-1 rounded-lg text-sm">
+                            Ahorro Máximo
+                        </div>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-chukum-500 shrink-0"></i>
+                            <span>40 Lotes Exclusivos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-chukum-500 shrink-0"></i>
+                            <span>Acceso a Alberca Privada</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-chukum-500 shrink-0"></i>
+                            <span>Temazcal Exclusivo</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-chukum-500 shrink-0"></i>
+                            <span>Ubicación Prime</span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-4 bg-chukum-600 hover:bg-chukum-700 text-white text-center rounded-xl font-bold transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+                        Reservar Ahora
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg opacity-90 animate-on-scroll">
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Fase 2: Comunidad</h3>
+                        <div class="text-gray-500 text-sm mb-4">Sustentable</div>
+                        <div class="text-4xl font-bold text-gray-700 mb-2">$1,650<span class="text-lg text-gray-400 font-normal">/m²</span></div>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                            <span>Friends & Family</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                            <span>80 Lotes Disponibles</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                            <span>Alberca Privada</span>
+                        </li>
+                    </ul>
+                    <button disabled class="block w-full py-3 bg-gray-100 text-gray-400 text-center rounded-xl font-medium cursor-not-allowed">
+                        Próximamente
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg opacity-90 animate-on-scroll">
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Fase 3: Eco-bio</h3>
+                        <div class="text-gray-500 text-sm mb-4">Público General</div>
+                        <div class="text-4xl font-bold text-gray-700 mb-2">$2,330<span class="text-lg text-gray-400 font-normal">/m²</span></div>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                            <span>Ubicación Comercial</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                            <span>80 Lotes</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check" class="w-5 h-5 text-gray-400 shrink-0"></i>
+                            <span>Acceso a Todo</span>
+                        </li>
+                    </ul>
+                    <button disabled class="block w-full py-3 bg-gray-100 text-gray-400 text-center rounded-xl font-medium cursor-not-allowed">
+                        Próximamente
+                    </button>
                 </div>
             </div>
-            <p class="mt-6 text-center text-sm text-gray-600 animate-on-scroll">*Precios de lanzamiento. Incluye alberca y temazcal exclusivos para la privada de la Etapa 1.</p>
         </div>
     </section>
 
     <!-- CTA Final -->
-    <section class="py-20 bg-cover bg-bottom relative" style="background-image: url('/images/galery/selva.jpeg');">
-        <!-- Overlay oscuro transparente -->
-        <div class="absolute inset-0 bg-black/40"></div>
+    <section class="py-20 relative bg-[#0C1714] overflow-hidden">
+        <!-- Single background image with parallax -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('/images/galery/selva.jpeg');" data-parallax-bg data-parallax-speed="0.15"></div>
+        <!-- Subtle ambient gradients -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(184,100,32,0.18),_transparent_60%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(255,255,255,0.06),_transparent_60%)]"></div>
+        <!-- Transition blend to next section -->
+        <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent via-[#0F1C18]/40 to-[#0F1C18]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Conversemos sobre tu lote ideal</h2>
             <p class="text-lg text-white/90 mb-8">Agenda una visita o recibe el dossier completo con planes de financiamiento.</p>
@@ -695,6 +1189,92 @@
             document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModalFunc(); });
         });
     </script>
+    <script>
+        // Modal triggers for parallax/bento sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            if (!modal || !modalImage || !modalTitle) return;
+
+            const triggers = document.querySelectorAll('[data-modal-image]');
+            triggers.forEach((trigger) => {
+                trigger.addEventListener('click', function() {
+                    const image = trigger.getAttribute('data-modal-image');
+                    if (!image) return;
+                    modalImage.src = image;
+                    modalImage.alt = trigger.getAttribute('data-modal-title') || '';
+                    modalTitle.textContent = trigger.getAttribute('data-modal-title') || '';
+                    if (modalDesc) modalDesc.textContent = trigger.getAttribute('data-modal-desc') || '';
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+        });
+    </script>
+    <script>
+        // Parallax effect for concept cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = Array.from(document.querySelectorAll('[data-parallax-card]'));
+            if (!cards.length) return;
+            let rafId = null;
+
+            function updateParallax() {
+                rafId = null;
+                const viewportHeight = window.innerHeight;
+                cards.forEach((card) => {
+                    const container = card.querySelector('[data-parallax-container]');
+                    const image = card.querySelector('[data-parallax-image]');
+                    if (!container || !image) return;
+                    const rect = container.getBoundingClientRect();
+                    if (rect.top < viewportHeight + 100 && rect.bottom > -100) {
+                        const distanceFromCenter = (viewportHeight / 2) - (rect.top + rect.height / 2);
+                        image.style.transform = `translateY(${distanceFromCenter * 0.15}px)`;
+                    }
+                });
+            }
+
+            function onScroll() {
+                if (rafId) return;
+                rafId = window.requestAnimationFrame(updateParallax);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            updateParallax();
+        });
+    </script>
+    <script>
+        // Parallax background for CTA section
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = Array.from(document.querySelectorAll('[data-parallax-bg]'));
+            if (!sections.length) return;
+            let rafId = null;
+
+            function updateParallax() {
+                rafId = null;
+                const viewportHeight = window.innerHeight;
+                sections.forEach((section) => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.bottom < 0 || rect.top > viewportHeight) return;
+                    const speed = parseFloat(section.getAttribute('data-parallax-speed') || '0.2');
+                    const offset = (rect.top - viewportHeight / 2) * speed;
+                    section.style.backgroundPosition = `center ${offset}px`;
+                });
+            }
+
+            function onScroll() {
+                if (rafId) return;
+                rafId = window.requestAnimationFrame(updateParallax);
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            updateParallax();
+        });
+    </script>
     <script type="module">
       // Masterplan hotspots interactions (import from public path)
       import { hotspots } from '/content/masterplan-hotspots.js';
@@ -727,124 +1307,322 @@
       }
     </script>
 
-    <!-- Final Call to Action -->
-<section id="contacto" class="py-20 hero-gradient">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 animate-on-scroll">
-            Asegura Tu Posición en Balam Barabata
-        </h2>
-        <p class="text-xl text-chukum-100 mb-12 animate-on-scroll leading-relaxed">
-            La Etapa 1 representa una oportunidad única de formar parte del desarrollo sustentable 
-            más exclusivo de la Riviera Maya desde su fase inicial.
-        </p>
+    <!-- Final Call to Action - Premium Design Revised -->
+    <section id="contacto" class="relative py-24 md:py-32 overflow-hidden bg-[#0F1C18]">
+        <!-- Sophisticated Background System -->
+        <div class="absolute inset-0 z-0">
+             <!-- Texture Image with overlay blend -->
+            <div class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay saturate-0" style="background-image: url('/images/galery/selva.jpeg');"></div>
+            <!-- Radial Gradient for focus -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-chukum-900/20 via-[#0F1C18]/80 to-[#0F1C18]"></div>
+            <!-- Top fading gradient -->
+            <div class="absolute top-0 left-0 right-0 h-64 bg-gradient-to-b from-[#0F1C18] to-transparent"></div>
+        </div>
         
-        <div class="glass-morphism rounded-2xl p-8 mb-12 animate-on-scroll">
-            <h3 class="text-2xl font-bold text-white mb-4">Oferta Exclusiva Etapa 1</h3>
-            <div class="text-4xl font-bold text-chukum-200 mb-2">$500,000 MN</div>
-            <p class="text-chukum-100 mb-4"><strong>Enganche 500 mil pesos M.N</strong>, apartado 50 mil pesos M.N, saldo contraentrega</p>
-            <div class="inline-flex items-center space-x-2 bg-chukum-600/20 rounded-full px-4 py-2">
-                <svg class="w-5 h-5 text-chukum-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span class="text-chukum-100 font-medium">Disponibilidad limitada</span>
+        <!-- Decorative subtle lines -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
+            <div class="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
+            <div class="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-white to-transparent"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header Redesigned -->
+            <div class="relative max-w-5xl mx-auto text-center mb-24 animate-on-scroll">
+                <!-- Badge -->
+                <div class="flex justify-center mb-8">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-chukum-500/30 bg-chukum-900/20 backdrop-blur-sm text-chukum-200 text-xs font-bold tracking-[0.2em] uppercase shadow-[0_0_20px_rgba(184,100,32,0.1)]">
+                        <span class="w-1.5 h-1.5 rounded-full bg-chukum-400 animate-pulse"></span>
+                        Oportunidad Exclusiva
+                    </span>
+                </div>
+                
+                <!-- Main Title Group -->
+                <h2 class="flex flex-col items-center justify-center font-bold text-white mb-10 leading-none">
+                    <span class="text-xl md:text-2xl font-light text-white/50 mb-4 tracking-[0.1em] font-sans uppercase">Asegura tu posición en</span>
+                    <span class="flex flex-col md:block text-5xl md:text-7xl lg:text-8xl tracking-tight">
+                        <span class="text-white drop-shadow-2xl">BALAM</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-br from-chukum-200 via-chukum-400 to-chukum-600 font-serif italic md:ml-4">Barabata</span>
+                    </span>
+                </h2>
+                
+                <!-- Description with side lines -->
+                <div class="flex items-center justify-center gap-4 md:gap-8">
+                    <div class="h-px w-8 md:w-24 bg-gradient-to-r from-transparent to-white/20"></div>
+                    <p class="text-lg md:text-xl text-gray-400 max-w-2xl text-center leading-relaxed font-light">
+                        La <strong class="text-white font-medium">Etapa 1</strong> representa una oportunidad única de formar parte del desarrollo sustentable más exclusivo de la Riviera Maya desde su fase inicial.
+                    </p>
+                    <div class="h-px w-8 md:w-24 bg-gradient-to-l from-transparent to-white/20"></div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
+                
+                <!-- Pricing Card (Left) -->
+                <div class="animate-on-scroll relative group">
+                    <!-- Card Glow Background -->
+                    <div class="absolute -inset-1 bg-gradient-to-b from-chukum-500/20 to-transparent rounded-[2.5rem] blur-xl opacity-50 group-hover:opacity-75 transition duration-500"></div>
+                    
+                    <div class="relative bg-[#15231F] rounded-[2rem] p-8 md:p-10 border border-white/5 shadow-2xl overflow-hidden">
+                        <!-- Inner texture -->
+                        <div class="absolute inset-0 bg-[url('/images/noise.png')] opacity-5 mix-blend-overlay"></div>
+                        
+                        <div class="relative z-10">
+                            <!-- Header Card -->
+                            <div class="flex justify-between items-start mb-8 pb-8 border-b border-white/5">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white mb-1">Oferta Fundadores</h3>
+                                    <p class="text-chukum-400 text-sm font-medium tracking-wide">ETAPA 1 — LOTES PREMIUM</p>
+                                </div>
+                                <div class="w-12 h-12 rounded-full bg-chukum-500/10 flex items-center justify-center border border-chukum-500/20">
+                                    <i data-lucide="crown" class="w-6 h-6 text-chukum-400"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Price -->
+                            <div class="mb-10">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-5xl md:text-7xl font-bold text-white tracking-tight">$500,000</span>
+                                    <span class="text-xl text-white/40 font-light">MXN</span>
+                                </div>
+                                <p class="text-white/40 text-sm mt-2">Precio total por lote de 1,000 m²</p>
+                            </div>
+                            
+                            <!-- Steps -->
+                            <div class="space-y-5 mb-10">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-xs text-white font-bold border border-white/10">1</div>
+                                    <div class="flex-1 flex justify-between items-center">
+                                        <span class="text-gray-300">Apartado</span>
+                                        <span class="text-white font-semibold">$50,000</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-xs text-white font-bold border border-white/10">2</div>
+                                    <div class="flex-1 flex justify-between items-center">
+                                        <span class="text-gray-300">Enganche</span>
+                                        <span class="text-white font-semibold">$500,000</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-xs text-white font-bold border border-white/10">3</div>
+                                    <div class="flex-1 flex justify-between items-center">
+                                        <span class="text-gray-300">Saldo</span>
+                                        <span class="text-white/60 text-sm">Contraentrega</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Status Bar -->
+                            <div class="w-full bg-black/20 rounded-full h-1.5 mb-2 overflow-hidden">
+                                <div class="bg-gradient-to-r from-chukum-600 to-chukum-400 h-full w-[80%] rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between text-xs text-white/40 font-medium tracking-wide uppercase">
+                                <span>Progreso Etapa 1</span>
+                                <span class="text-chukum-400">Últimos Lotes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons & Advisor (Right) -->
+                <div class="space-y-6 animate-on-scroll">
+                    <!-- Primary CTA -->
+                    <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20reservar%20un%20lote%20en%20Balam%20Barabata%20Etapa%201" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="group relative w-full flex items-center justify-between p-6 bg-chukum-600 hover:bg-chukum-500 rounded-2xl transition-all duration-300 shadow-xl shadow-chukum-900/20 overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                        <div class="flex items-center gap-5 relative z-10">
+                            <div class="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center text-white">
+                                <i data-lucide="message-circle" class="w-7 h-7"></i>
+                            </div>
+                            <div class="text-left">
+                                <span class="block text-xl font-bold text-white mb-1">Reservar Lote Ahora</span>
+                                <span class="block text-sm text-chukum-100">Respuesta inmediata vía WhatsApp</span>
+                            </div>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-chukum-600 transition-all">
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </div>
+                    </a>
+
+                    <!-- Secondary CTAs Grid -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <a href="mailto:contacto@balambarabata.page" 
+                           class="flex flex-col items-center justify-center p-6 bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 rounded-2xl transition-all duration-300 text-center group">
+                            <i data-lucide="calendar" class="w-8 h-8 text-white/60 group-hover:text-white mb-3 transition-colors"></i>
+                            <span class="text-white font-semibold mb-1">Agendar Visita VIP</span>
+                            <span class="text-xs text-white/40">Recorrido privado</span>
+                        </a>
+                        
+                        <a href="/proyecto" 
+                           class="flex flex-col items-center justify-center p-6 bg-white/5 hover:bg-white/10 border border-white/5 hover:border-white/20 rounded-2xl transition-all duration-300 text-center group">
+                            <i data-lucide="file-text" class="w-8 h-8 text-white/60 group-hover:text-white mb-3 transition-colors"></i>
+                            <span class="text-white font-semibold mb-1">Ver Proyecto</span>
+                            <span class="text-xs text-white/40">Detalles completos</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Email Link -->
+                    <a href="mailto:contacto@balambarabata.page" class="flex items-center justify-center gap-2 w-full py-4 text-white/40 hover:text-white transition-colors text-sm font-medium border-t border-white/5 mt-4">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>O envía un correo electrónico</span>
+                    </a>
+
+                    <!-- Advisor Compact -->
+                    <div class="mt-8 pt-8 border-t border-white/10">
+                         <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-900 border border-white/10 flex items-center justify-center shrink-0">
+                                <span class="text-white font-bold text-lg">BC</span>
+                            </div>
+                            <div>
+                                <p class="text-xs text-chukum-400 uppercase tracking-wider font-bold mb-0.5">Asesoría Especializada</p>
+                                <p class="text-white font-medium">Berne Cante</p>
+                                <p class="text-white/40 text-xs">Consultor en Inversión Sustentable</p>
+                            </div>
+                             <div class="ml-auto flex gap-2">
+                                <a href="tel:+529981981107" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/20 flex items-center justify-center text-white transition-colors" title="Llamar">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                </a>
+                                <a href="mailto:contacto@balambarabata.page" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/20 flex items-center justify-center text-white transition-colors" title="Email">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
-            <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20Balam%20Barabata%20Etapa%201" target="_blank" rel="noopener noreferrer"
-               class="bg-chukum-600 hover:bg-chukum-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Reservar Lote Ahora
-            </a>
-            <a href="mailto:contacto@balambarabata.page?subject=Visita%20VIP%20Balam%20Barabata&body=Hola,%20me%20interesa%20agendar%20una%20visita%20VIP%20a%20Balam%20Barabata" 
-               class="border-2 border-white text-white hover:bg-white hover:text-selva font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Agendar Visita VIP
-            </a>
-            <a href="/contacto/" 
-               class="bg-selva hover:bg-selva/90 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Envía un Mail
-            </a>
-        </div>
-        
-        <!-- CTA to full project within Final CTA section -->
-        <div class="mt-8 animate-on-scroll">
-            <a href="/proyecto" class="inline-block bg-gradient-to-br from-chukum-50 to-white border border-chukum-200 text-selva font-semibold py-3 px-8 rounded-lg transition-all duration-200 hover:from-chukum-100 hover:to-white">
-                Ver proyecto completo
-            </a>
-        </div>
-        
-        <div class="mt-12 glass-morphism rounded-xl p-6 animate-on-scroll">
-            <h4 class="text-lg font-semibold text-chukum-200 mb-4">Asesoría Especializada</h4>
-            <div class="text-white space-y-2">
-                <p class="font-medium">Berne Cante - Consultor en Inversión Inmobiliaria Sustentable</p>
-                <div class="flex justify-center space-x-6 text-sm">
-                    <a href="tel:+529981981107" class="text-chukum-200 hover:text-white transition-colors font-medium">
-                        📱 998 198 1107
-                    </a>
-                    <a href="mailto:contacto@balambarabata.page" class="text-chukum-200 hover:text-white transition-colors font-medium">
-                        ✉️ contacto@balambarabata.page
+    </section>
+
+    <!-- Footer Premium -->
+    <footer class="bg-gradient-to-b from-selva to-[#1a3329] text-white">
+        <!-- Main Footer Content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+            <!-- Top Section with CTA -->
+            <div class="text-center mb-16 pb-16 border-b border-white/10">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-chukum-500/20 border border-chukum-400/30 mb-6">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-chukum-300"></i>
+                    <span class="text-chukum-200 text-sm font-medium">Forma parte del cambio</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Únete a nosotros</h2>
+                <p class="text-lg text-white/70 max-w-2xl mx-auto">
+                    Sé parte de un proyecto que conserva el <strong class="text-chukum-200">70%</strong> de su área natural para las generaciones futuras.
+                </p>
+            </div>
+
+            <!-- Footer Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+                <!-- Brand Column -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="/images/balam-glyph.png" alt="Balam Barabata" class="w-10 h-10">
+                        <span class="text-2xl font-bold">Barabata</span>
+                    </div>
+                    <p class="text-white/70 mb-6 leading-relaxed">
+                        Desarrollo inmobiliario regenerativo en el corazón de la selva maya. Comprometidos con la sustentabilidad y el respeto por la naturaleza.
+                    </p>
+                    <!-- Social Links -->
+                    <div class="flex gap-3">
+                        <a href="https://www.facebook.com/share/1HGHNhMKKB/" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 rounded-xl bg-white/10 hover:bg-chukum-500 flex items-center justify-center transition-all duration-300 group"
+                           aria-label="Facebook">
+                            <svg class="w-5 h-5 text-white/70 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/balambarabata/" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 rounded-xl bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 flex items-center justify-center transition-all duration-300 group"
+                           aria-label="Instagram">
+                            <svg class="w-5 h-5 text-white/70 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20Balam%20Barabata" target="_blank" rel="noopener noreferrer" 
+                           class="w-10 h-10 rounded-xl bg-white/10 hover:bg-green-500 flex items-center justify-center transition-all duration-300 group"
+                           aria-label="WhatsApp">
+                            <svg class="w-5 h-5 text-white/70 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Column -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">Navegación</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/presentacion-embed/" class="text-white/70 hover:text-chukum-200 transition-colors inline-flex items-center gap-2 group"><i data-lucide="chevron-right" class="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>Inicio</a></li>
+                        <li><a href="/proyecto/" class="text-white/70 hover:text-chukum-200 transition-colors inline-flex items-center gap-2 group"><i data-lucide="chevron-right" class="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>Proyecto</a></li>
+                        <li><a href="/amenidades/" class="text-white/70 hover:text-chukum-200 transition-colors inline-flex items-center gap-2 group"><i data-lucide="chevron-right" class="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>Amenidades</a></li>
+                        <li><a href="/etapas/" class="text-white/70 hover:text-chukum-200 transition-colors inline-flex items-center gap-2 group"><i data-lucide="chevron-right" class="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>Etapas</a></li>
+                        <li><a href="/contacto/" class="text-white/70 hover:text-chukum-200 transition-colors inline-flex items-center gap-2 group"><i data-lucide="chevron-right" class="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>Contacto</a></li>
+                        <li><a href="/faq/" class="text-white/70 hover:text-chukum-200 transition-colors inline-flex items-center gap-2 group"><i data-lucide="chevron-right" class="w-4 h-4 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">Contacto</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="tel:+529981981107" class="flex items-start gap-3 text-white/70 hover:text-white transition-colors group">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 group-hover:bg-chukum-500/30 flex items-center justify-center flex-shrink-0 transition-colors">
+                                    <i data-lucide="phone" class="w-5 h-5 text-chukum-300"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-white/50">Teléfono</p>
+                                    <p class="font-medium">+52 998 198 1107</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contacto@balambarabata.page" class="flex items-start gap-3 text-white/70 hover:text-white transition-colors group">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 group-hover:bg-chukum-500/30 flex items-center justify-center flex-shrink-0 transition-colors">
+                                    <i data-lucide="mail" class="w-5 h-5 text-chukum-300"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-white/50">Email</p>
+                                    <p class="font-medium">contacto@balambarabata.page</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Location Column -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">Ubicación</h4>
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-chukum-300"></i>
+                        </div>
+                        <div class="text-white/70">
+                            <p class="leading-relaxed">
+                                12 km del poblado de Uxuxubí, a 1 km del ANP "Felipe Carrillo Puerto"
+                            </p>
+                            <p class="text-sm text-white/50 mt-2">Solidaridad, Quintana Roo, México</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Mini CTA -->
+                    <a href="https://wa.me/529981981107?text=Hola,%20me%20interesa%20conocer%20la%20ubicaci%C3%B3n%20exacta%20de%20Balam%20Barabata" 
+                       target="_blank" rel="noopener noreferrer"
+                       class="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-chukum-500/20 hover:bg-chukum-500/30 text-chukum-200 text-sm font-medium transition-colors">
+                        <i data-lucide="navigation" class="w-4 h-4"></i>
+                        <span>Solicitar ubicación</span>
                     </a>
                 </div>
-                <!-- <p class="text-chukum-100 text-sm mt-4 italic">
-                    Desarrollador: Antonio de la Cruz Barabata
-                </p> -->
             </div>
-        </div>
-    </div>
-</section>
 
-<footer class="bg-selva text-white">
-      <div class="max-w-7xl mx-auto py-6 md:py-8 px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-10">
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">Únete a nosotros</h2>
-          <p class="mt-2 text-base sm:text-lg text-chukum-200 max-w-2xl mx-auto">
-            Sé parte de un proyecto que conserva el <strong>70&nbsp;%</strong> de su área natural para las generaciones futuras.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div>
-            <h3 class="text-lg sm:text-xl font-bold mb-3">Balam Barabata</h3>
-            <p class="text-sm sm:text-base text-gray-300 mb-4">Desarrollo inmobiliario regenerativo en el corazón de la selva maya.</p>
-            <p class="text-sm text-gray-400">Comprometidos con la sustentabilidad y el respeto por la naturaleza.</p>
-          </div>
-          <div>
-            <h4 class="text-sm sm:text-base font-semibold mb-3">Navegación</h4>
-            <ul class="space-y-2">
-              <li><a href="/presentacion/" class="text-gray-300 hover:text-white transition-colors">Inicio</a></li>
-              <li><a href="/proyecto/" class="text-gray-300 hover:text-white transition-colors">Proyecto</a></li>
-              <li><a href="/amenidades/" class="text-gray-300 hover:text-white transition-colors">Amenidades</a></li>
-              <li><a href="/etapas/" class="text-gray-300 hover:text-white transition-colors">Etapas</a></li>
-              <li><a href="/contacto/" class="text-gray-300 hover:text-white transition-colors">Contacto</a></li>
-              <li><a href="/faq/" class="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="text-sm sm:text-base font-semibold mb-3">Contacto</h4>
-            <div class="space-y-2 text-gray-300">
-              <p>📍 12 km del poblado de Uxuxubí y a 1 km del ANP "Felipe Carrillo Puerto", Selva Maya en el municipio de Solidaridad, México</p>
-              <p>📞 +52 998 198 1107</p>
-              <p>✉️ contacto@balambarabata.page</p>
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-white/10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-sm text-white/50">
+                        © <span id="year"></span> Balam Barabata. Todos los derechos reservados.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="/aviso-de-privacidad" class="text-sm text-white/50 hover:text-white transition-colors">Aviso de Privacidad</a>
+                        <a href="/terminos-y-condiciones" class="text-sm text-white/50 hover:text-white transition-colors">Términos y Condiciones</a>
+                    </div>
+                </div>
             </div>
-            <div class="mt-4">
-              <p class="text-sm text-gray-400">Síguenos en redes sociales</p>
-              <div class="flex space-x-4 mt-2">
-                <a href="https://www.facebook.com/share/1HGHNhMKKB/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors" aria-label="Facebook">Facebook</a>
-                <a href="#" class="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">Instagram</a>
-                <a href="https://wa.me/529981981107?text=Hola%20Berne,%20estoy%20interesado%20en%20Balam%20Barabata" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors" aria-label="WhatsApp">WhatsApp</a>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="mt-5 pt-5 border-t border-gray-700">
-          <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm text-gray-400">© <span id="year"></span> Balam Barabata. Todos los derechos reservados.</p>
-            <div class="mt-4 md:mt-0">
-              <a href="/aviso-de-privacidad" class="text-sm text-gray-400 hover:text-white transition-colors mr-6">Aviso de Privacidad</a>
-              <a href="/terminos-y-condiciones" class="text-sm text-gray-400 hover:text-white transition-colors">Términos y Condiciones</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script>document.addEventListener('DOMContentLoaded',function(){var y=document.getElementById('year');if(y) y.textContent=String(new Date().getFullYear());});</script>
+        <script>document.addEventListener('DOMContentLoaded',function(){var y=document.getElementById('year');if(y) y.textContent=String(new Date().getFullYear());});</script>
     </footer>
     
     <script>
